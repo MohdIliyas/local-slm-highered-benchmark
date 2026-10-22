@@ -1,0 +1,16 @@
+Course: CS 101 - Introduction to Computer Science
+Term: Fall 2026
+Instructor: Dr. Jane Doe (Email: jdoe@university.edu)
+Office Hours: Tuesdays and Thursdays 2:00 PM - 4:00 PM in Science Hall 304
+
+Course Description:
+An introductory course in algorithms, problem solving, and Python programming.
+
+Grading Scheme:
+- Homework Assignments: 30%
+- Midterm Examination: 30%
+- Final Project: 30%
+- Class Participation: 10%
+
+Accessibility Policy:
+Students with documented disabilities requiring academic accommodations must contact Disability Support Services within the first two weeks of classes.
