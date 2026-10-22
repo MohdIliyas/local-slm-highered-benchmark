@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TICK-001",
+    "category": "LMS Access",
+    "text": "I registered for CS 201 yesterday afternoon, but Blackboard still shows that I am not enrolled in the course site. Can you grant me access?"
+  },
+  {
+    "id": "TICK-002",
+    "category": "Grade Disputes",
+    "text": "My midterm grade was posted with a 10-point deduction for Question 4, but my rubric matches the instructor's solution key. I would like to request a formal re-grade."
+  },
+  {
+    "id": "TICK-003",
+    "category": "Online Proctoring",
+    "text": "During my remote exam on Lockdown Browser, the webcam feed cut out at 42 minutes. The system logged me out and I could not resume."
+  },
+  {
+    "id": "TICK-004",
+    "category": "Accessibility/Captions",
+    "text": "The lecture videos posted for Week 3 lack synchronized closed captioning. As per my student accommodation plan, could automatic or manual captions be uploaded?"
+  },
+  {
+    "id": "TICK-005",
+    "category": "Course Enrollment",
+    "text": "I am trying to register for Math 301, but the registration portal says I have a missing prerequisite hold even though I passed Math 201 with a B."
+  },
+  {
+    "id": "TICK-006",
+    "category": "Login/Account Lockout",
+    "text": "My university account is locked out after three incorrect password attempts on the multi-factor authentication portal. Please reset my session."
+  },
+  {
+    "id": "TICK-007",
+    "category": "Exam Rescheduling",
+    "text": "I have two final exams scheduled at the exact same time slot on Thursday from 10:00 AM to 12:00 PM. How do I petition for an alternate exam time?"
+  },
+  {
+    "id": "TICK-008",
+    "category": "General Inquiries",
+    "text": "Where can I find the official academic calendar indicating when spring break begins and the last day to withdraw with a W?"
+  }
+]
