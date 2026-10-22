@@ -1,0 +1,120 @@
+﻿\documentclass[sigconf,nonacm]{acmart}
+
+\usepackage{booktabs}
+\usepackage{microtype}
+
+\title{Empirical Evaluation of On-Device SLMs on Consumer Laptops for Privacy-Compliant University Workflows}
+
+\author{Mohammed Iliyas Sanjamala}
+\affiliation{%
+  \institution{Department of Computer Science}
+  \country{}
+}
+\email{mohdiliyas83@outlook.com}
+
+\author{Karthikeyan Prem Kumar}
+\affiliation{%
+  \institution{Department of Computer Science}
+  \country{}
+}
+
+\author{Richard Smith}
+\affiliation{%
+  \institution{Center for Digital Learning and Academic Technology}
+  \country{}
+}
+
+\author{Aditi Singh}
+\affiliation{%
+  \institution{Department of Computer Science}
+  \country{}
+}
+
+\begin{abstract}
+Higher education institutions face increasing pressure to automate administrative workflows while strictly adhering to statutory privacy mandates under the Family Educational Rights and Privacy Act (FERPA) and Title II of the Americans with Disabilities Act (ADA). While proprietary cloud-hosted Large Language Models (LLMs) offer high generative fluencies, their deployment introduces critical data-perimeter risks and recurring subscription overheads. On-device Small Language Models (SLMs) running locally on commodity enterprise workstations present a viable alternative; however, their capacity to execute rigorous institutional text workflows remains under-characterized. In this study, we empirically evaluate two open-weight models (\texttt{llama3.2:3b} and \texttt{qwen2.5:7b}) deployed on a commodity enterprise workstation (Intel Core i7, 16 GB RAM, CPU-only execution) across four authentic higher-education tasks: structured syllabus metadata extraction, institutional policy summarization, support ticket classification, and administrative reply drafting. Our findings demonstrate that while the 3B model achieves higher generation throughput (~108 tokens/sec vs. ~54 tokens/sec), it consistently fails strict JSON schema primitive type casting and hallucinates fictitious administrative policies. Conversely, the 7B model achieves 100\% schema validity, strictly adheres to negative formatting constraints, delivers 87.5\% classification accuracy, and mitigates hallucination risk through safe slot-filling templating. We conclude that 7B-parameter models represent the practical capability boundary for unattended on-premises administrative automation on commodity campus fleets.
+\end{abstract}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Higher education institutions face conflicting pressures at the intersection of operational scaling and statutory compliance. Expanding administrative workloads---including student helpdesk triage, syllabus compliance auditing, and policy communication---present natural use-cases for generative artificial intelligence. However, standard commercial implementations relying on proprietary cloud APIs introduce substantial data governance vulnerabilities under the Family Educational Rights and Privacy Act (FERPA) and institutional data-perimeter mandates~\cite{dong2025minimizing}. Transmitting student inquiries, grade dispute appeals, and unvetted course materials beyond campus boundaries creates unacceptable institutional exposure.
+
+Simultaneously, regulatory obligations---such as the Department of Justice Title II digital accessibility guidelines---demand rigorous, accurate processing of course artifacts and student communications. While large-scale centralized models demonstrate strong conversational fluencies, university IT departments require privacy-preserving, cost-effective alternatives that run directly on existing campus hardware fleets without dedicated GPU servers or per-token operational expenditures.
+
+Recent advancements in quantization and small language models (SLMs) spanning 3B to 7B parameters suggest that edge deployment on commodity x86 office laptops is theoretically feasible~\cite{husom2025sustainable, kurt2026quantization}. Nevertheless, significant empirical questions remain regarding whether sub-8B models possess sufficient capability to reliably execute bounded administrative operations without catastrophic constraint degradation or deceptive hallucinations.
+
+This paper delivers an empirical evaluation of on-device open-weight SLMs (\texttt{llama3.2:3b} and \texttt{qwen2.5:7b}) deployed on a standard university enterprise laptop across four authentic administrative workflows:
+\begin{enumerate}
+    \item \textbf{Structured Syllabus Metadata Extraction} against strict JSON schema typing contracts.
+    \item \textbf{Institutional Policy Summarization} evaluating numeric constraint preservation and negative prompt adherence.
+    \item \textbf{Support Ticket Classification} across an 8-class digital learning taxonomy.
+    \item \textbf{Administrative Reply Drafting} characterizing hallucination risks and measuring Human Intervention Rates (HIR).
+\end{enumerate}
+
+\section{Related Work}
+\subsection{Edge \& Consumer Hardware Model Inference}
+Benchmarking local language models on resource-constrained hardware has gained significant momentum as edge quantization formats mature. Husom et al.~\cite{husom2025sustainable} systematically evaluated quantized open models in Ollama, establishing that consumer-grade processors can sustain viable operational latencies when properly configured. Similarly, Kurt~\cite{kurt2026quantization} demonstrated that 4-bit Medium (\texttt{Q4\_K\_M}) quantization maintains approximately 99\% of full-precision general capability while significantly curbing RAM consumption.
+
+\subsection{Institutional Privacy \& FERPA Compliance}
+Cloud-based AI architectures present unresolved compliance hurdles in higher education. Dong \& Liebowitz~\cite{dong2025minimizing} identified that commercial LLM APIs inherently expand an institution's data perimeter, complicating compliance with FERPA data-privacy protections. Operating models on-premises guarantees that course evaluations, student grievances, and accommodation requests never exit institutional control.
+
+\subsection{Task-Grounded Administrative Benchmarking}
+Traditional academic benchmarks (e.g., MMLU, GSM8K) fail to evaluate the concrete constraints required in administrative settings. Work in structured outputs and applied domain triage~\cite{bhetwal2026benchmarking} highlights the necessity of evaluating models on format validity, constraint retention, and human intervention costs rather than abstract reasoning puzzles.
+
+\section{Methodology \& Experimental Setup}
+\subsection{Hardware Environment \& Deployment Stack}
+Experiments were conducted on an enterprise-standard x86 mobile workstation: Intel Core i7 CPU (16 cores, base AVX2 instruction set), 16 GB DDR5 RAM, and integrated graphics (CPU-only execution). Local inference was orchestrated via Ollama serving 4-bit Medium quantized weights (\texttt{Q4\_K\_M}) using default \texttt{llama.cpp} CPU thread allocations. All runs enforced greedy decoding ($\text{temperature} = 0.0$, $\text{seed} = 42$).
+
+\subsection{Evaluation Workflows}
+\begin{itemize}
+    \item \textbf{Task 1 (Syllabus Extraction):} Zero-shot extraction of structured course metadata across STEM, Humanities, and Business syllabi evaluated against strict JSON schema typing constraints.
+    \item \textbf{Task 2 (Policy Summarization):} Compression of institutional policies into exactly three bullet points while preserving quantitative deadlines and evaluating negative constraint adherence (zero preamble).
+    \item \textbf{Task 3 (Ticket Classification):} Intent triage across eight operational categories evaluated against hand-annotated ground truth.
+    \item \textbf{Task 4 (Reply Drafting \& HIR):} Generation of student email responses evaluating hallucination risks and measuring the Human Intervention Rate (HIR).
+\end{itemize}
+
+\section{Empirical Results \& Discussion}
+\subsection{Systems Performance}
+Both models cleared real-time reading speed thresholds (~15--20 tokens/sec) on the Intel Core i7 CPU:
+\begin{itemize}
+    \item \texttt{llama3.2:3b}: \textbf{105.2--111.2 tps} (TTFT: 0.01--0.09s), ~2.2 GB RAM footprint.
+    \item \texttt{qwen2.5:7b}: \textbf{52.4--56.1 tps} (TTFT: 0.02--0.22s), ~4.9 GB RAM footprint.
+\end{itemize}
+
+\subsection{Task Performance Summary}
+\begin{table*}[t]
+\centering
+\small
+\caption{Cross-Task Empirical Evaluation Summary}
+\begin{tabular}{llll}
+\toprule
+\textbf{Metric / Task} & \textbf{\texttt{llama3.2:3b}} & \textbf{\texttt{qwen2.5:7b}} & \textbf{Operational Finding} \\
+\midrule
+Throughput (TPS) & $\sim tps & $\sim tps & Both suitable for real-time local deployment. \\
+Task 1: Schema Compliance & 0.0\% (Type failure) & 100.0\% (Passed) & 7B required for database ingestion contracts. \\
+Task 2: Policy Formatting & 5/5 constraints (Failed preamble) & 5/5 constraints (0 preamble) & 7B strictly follows negative prompt bounds. \\
+Task 3: Ticket Classification & 75.0\% & 87.5\% & 7B better resolves adjacent operational boundaries. \\
+Task 4: Hallucination Risk & High HIR (Fabricated policies) & Low HIR (Slot-filling placeholders) & 3B requires re-authoring; 7B requires slot-filling. \\
+\bottomrule
+\end{tabular}
+\label{tab:empirical_summary}
+\end{table*}
+
+\section{Institutional Governance}
+Deploying language models within university administration does not eliminate human labor; it shifts personnel time to verification and error auditing. Sub-4B models exhibit deceptive fluency that masks procedural hallucinations (e.g., inventing nonexistent portal navigation steps or citing fictitious policy clauses), yielding an HIR of 1.0. In contrast, 7B models employ transparent slot-filling placeholders (\texttt{[insert deadline]}), reducing human verification to routine variable insertion and substantially lowering administrative overhead.
+
+\section{Conclusion}
+This study evaluated on-device small language models on commodity enterprise hardware within a privacy-sensitive university setting. Our results demonstrate that while sub-4B models offer high throughput on CPU, 7B open-weight models (\texttt{qwen2.5:7b}) represent the minimal viable threshold for zero-shot schema adherence, negative constraint compliance, and reliable administrative triage without recurring cloud costs.
+
+\section*{Author Contributions (CRediT Statement)}
+\textbf{Mohammed Iliyas Sanjamala:} Conceptualization, Methodology, Software, Investigation, Formal Analysis, Writing -- Original Draft, Project Administration. 
+\textbf{Karthikeyan Prem Kumar:} Data Curation, Validation, Investigation, Writing -- Review \& Editing. 
+\textbf{Richard Smith:} Conceptualization (Higher Education Context), Validation, Supervision (Institutional Domain), Writing -- Review \& Editing. 
+\textbf{Aditi Singh:} Supervision (Technical Rigor), Methodology, Formal Analysis, Writing -- Review \& Editing.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}
