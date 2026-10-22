@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SyllabusExtraction",
+  "type": "object",
+  "properties": {
+    "course_code": {
+      "type": "string",
+      "description": "Course identifier (e.g., CS 101, EECS 281)"
+    },
+    "instructor_name": {
+      "type": "string",
+      "description": "Full name of the primary course instructor"
+    },
+    "office_hours": {
+      "type": "string",
+      "description": "Designated days, times, and location or format for office hours"
+    },
+    "grading_breakdown": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "weight_percent": { "type": "number" }
+        },
+        "required": ["category", "weight_percent"]
+      }
+    },
+    "has_accessibility_statement": {
+      "type": "boolean",
+      "description": "Whether an ADA / disability accommodations statement is present"
+    }
+  },
+  "required": [
+    "course_code",
+    "instructor_name",
+    "office_hours",
+    "grading_breakdown",
+    "has_accessibility_statement"
+  ]
+}
