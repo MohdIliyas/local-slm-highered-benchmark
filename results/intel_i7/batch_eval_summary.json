@@ -1,0 +1,40 @@
+{
+  "llama3.2:3b": {
+    "task1_extraction": {
+      "total": 3,
+      "valid_json": 3,
+      "schema_compliant": 0,
+      "schema_rate_pct": 0.0
+    },
+    "task2_policy": {
+      "total_policies": 3,
+      "bullet_format_adherence": "3/3",
+      "zero_preamble_adherence": "0/3",
+      "constraint_retention_pct": 91.7
+    },
+    "task3_classification": {
+      "total_tickets": 8,
+      "correct": 6,
+      "accuracy_pct": 75.0
+    }
+  },
+  "qwen2.5:7b": {
+    "task1_extraction": {
+      "total": 3,
+      "valid_json": 3,
+      "schema_compliant": 3,
+      "schema_rate_pct": 100.0
+    },
+    "task2_policy": {
+      "total_policies": 3,
+      "bullet_format_adherence": "2/3",
+      "zero_preamble_adherence": "3/3",
+      "constraint_retention_pct": 100.0
+    },
+    "task3_classification": {
+      "total_tickets": 8,
+      "correct": 7,
+      "accuracy_pct": 87.5
+    }
+  }
+}

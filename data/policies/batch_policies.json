@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": "POL-001",
+    "title": "Undergraduate Attendance Policy",
+    "text": "University Undergraduate Attendance and Course Absence Policy:\nRegular class attendance is required. Students seeking an excused absence must notify the instructor via email at least 24 hours prior to scheduled absences, or within 48 hours following an unforeseen emergency. Unexcused absences exceeding 20% of scheduled class sessions shall result in an administrative withdrawal or an automatic final grade of 'FA'. Students wishing to contest an FA notation must file a formal written petition with the Dean of Students within 5 business days following grade posting.",
+    "constraints": ["24 hours", "48 hours", "20%", "5", "fa"]
+  },
+  {
+    "id": "POL-002",
+    "title": "Academic Integrity Code & Sanctions",
+    "text": "Policy on Academic Integrity:\nSuspected violations of academic integrity (plagiarism, unauthorized collaboration, or illicit exam aids) must be formally submitted to the Academic Honor Board within 7 calendar days of discovery. First-tier infractions incur a mandatory zero ('0%') on the assignment. Students retain the right to submit an appeal to the Provost Office within 10 business days of written sanction notification. Repeat offenses carry a minimum suspension penalty of 1 academic term.",
+    "constraints": ["7 calendar days", "0%", "10 business days", "1 academic term"]
+  },
+  {
+    "id": "POL-003",
+    "title": "Final Grade Appeal Protocol",
+    "text": "Final Grade Dispute and Resolution Procedure:\nStudents questioning a semester final grade must initiate an informal consultation with the course instructor within 14 calendar days of official grade release. If unresolved, a formal Grade Appeal Form must be lodged with the Department Chair within 30 days. The departmental review committee must issue a final binding ruling within 21 business days of docket receipt.",
+    "constraints": ["14 calendar days", "30 days", "21 business days"]
+  }
+]

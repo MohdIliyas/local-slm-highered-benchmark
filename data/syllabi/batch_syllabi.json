@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id": "SYLL-001",
+    "discipline": "STEM",
+    "text": "Course: CS 101 - Introduction to Computer Science\nTerm: Fall 2026\nInstructor: Dr. Jane Doe (Email: jdoe@university.edu)\nOffice Hours: Tuesdays and Thursdays 2:00 PM - 4:00 PM in Science Hall 304\nCourse Description: An introductory course in algorithms, problem solving, and Python programming.\nGrading Scheme:\n- Homework Assignments: 30%\n- Midterm Examination: 30%\n- Final Project: 30%\n- Class Participation: 10%\nAccessibility Policy: Students with documented disabilities requiring academic accommodations must contact Disability Support Services within the first two weeks of classes.",
+    "ground_truth": {
+      "course_code": "CS 101",
+      "instructor_name": "Dr. Jane Doe",
+      "office_hours": "Tuesdays and Thursdays 2:00 PM - 4:00 PM in Science Hall 304",
+      "grading_breakdown": [
+        {"category": "Homework Assignments", "weight_percent": 30},
+        {"category": "Midterm Examination", "weight_percent": 30},
+        {"category": "Final Project", "weight_percent": 30},
+        {"category": "Class Participation", "weight_percent": 10}
+      ],
+      "has_accessibility_statement": true
+    }
+  },
+  {
+    "id": "SYLL-002",
+    "discipline": "Humanities",
+    "text": "HIST 210: Early Modern European History\nInstructor: Prof. Marcus Vance\nOffice Hours: Wednesdays 10:00 AM - 1:00 PM, Memorial Hall Room 112\nGrading Criteria:\n- Primary Source Analyses: 25%\n- Midterm Essay: 25%\n- Term Research Paper: 35%\n- Seminar Discussion: 15%\nAccommodations: University disability resource office facilitates all reasonable accommodation requests made in writing.",
+    "ground_truth": {
+      "course_code": "HIST 210",
+      "instructor_name": "Prof. Marcus Vance",
+      "office_hours": "Wednesdays 10:00 AM - 1:00 PM, Memorial Hall Room 112",
+      "grading_breakdown": [
+        {"category": "Primary Source Analyses", "weight_percent": 25},
+        {"category": "Midterm Essay", "weight_percent": 25},
+        {"category": "Term Research Paper", "weight_percent": 35},
+        {"category": "Seminar Discussion", "weight_percent": 15}
+      ],
+      "has_accessibility_statement": true
+    }
+  },
+  {
+    "id": "SYLL-003",
+    "discipline": "Business",
+    "text": "FIN 340 - Corporate Finance Principles\nSpring Semester\nLead Faculty: Dr. Sarah Lin\nConsultation Hours: Virtual by appointment via Zoom on Fridays 1:00 PM - 3:00 PM\nCourse Evaluation Breakdown: Financial Modeling Labs 40%, Case Studies 20%, Comprehensive Final Exam 40%.\nNo formal disability or accommodation clause specified in this outline.",
+    "ground_truth": {
+      "course_code": "FIN 340",
+      "instructor_name": "Dr. Sarah Lin",
+      "office_hours": "Virtual by appointment via Zoom on Fridays 1:00 PM - 3:00 PM",
+      "grading_breakdown": [
+        {"category": "Financial Modeling Labs", "weight_percent": 40},
+        {"category": "Case Studies", "weight_percent": 20},
+        {"category": "Comprehensive Final Exam", "weight_percent": 40}
+      ],
+      "has_accessibility_statement": false
+    }
+  }
+]
