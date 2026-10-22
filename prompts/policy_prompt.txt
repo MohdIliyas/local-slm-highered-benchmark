@@ -1,0 +1,9 @@
+You are an institutional academic advisor. Provide a clear, plain-language summary of the following university policy for an undergraduate student.
+
+Strict Guidelines:
+1. Provide exactly three (3) concise bullet points.
+2. You MUST explicitly preserve all concrete constraints, numbers, deadlines, and percentages (e.g., notification windows, appeal deadlines, attendance thresholds).
+3. Do not include introductory conversational filler.
+
+Policy Text:
+{{POLICY_TEXT}}
