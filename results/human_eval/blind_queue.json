@@ -1,1 +1,98 @@
-[]
+﻿[
+    {
+        "blind_id":  "BLIND-VAL-009",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Students must consult with the course instructor informally within 14 days of official grade release if they question their final grade.\n- If the informal consultation is unresolved, a formal Grade Appeal Form must be submitted to the Department Chair within 30 days.\n- The departmental review committee must provide a final binding ruling within 21 business days of receiving the appeal.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-011",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Course instructors must provide accessible course materials and syllabus formats upon request, in compliance with ADA Section 508.\n- Instructors must acknowledge accommodation letters from the Disability Resource Center within 3 business days of receiving them.\n- Disputes about reasonable accommodations should be escalated directly to the University ADA Coordinator for final resolution.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-010",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Unauthorized sharing of institutional credentials, bypassing network firewalls, or hosting unapproved external servers on the campus subnet leads to a 72-hour account suspension pending a security review.\n- Permanent revocation of access requires formal clearance from the Chief Information Security Officer.\n- These actions are strictly prohibited and can result in immediate account suspension.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-005",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the university policy in three concise bullet points:\n\n• Faculty must provide accessible course materials and syllabus formats upon request from students with disabilities.\n• If a student with a disability requests an accommodation letter from the Disability Resource Center, the course instructor must acknowledge receipt of the letter within 3 business days.\n• Disputes regarding reasonable accommodations are resolved directly with the University ADA Coordinator, who makes binding decisions.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-004",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the university policy in three concise bullet points:\n\n• To access university computing resources, you must have active institutional credentials.\n• If you share your credentials with others, bypass network firewalls, or host unapproved external servers on the campus subnet, your account will be suspended for 72 hours.\n• If your account is suspended, you can request a security review to have your account reinstated, but permanent revocation is possible if you do not receive formal clearance from the Chief Information Security Officer.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-008",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Suspected academic integrity violations must be reported to the Academic Honor Board within 7 calendar days of discovery.\n- First-time offenders receive a zero (\u00270%\u0027) on the assignment.\n- Students can appeal a written sanction to the Provost Office within 10 business days.\n- Repeat offenders face a minimum penalty of one academic term suspension.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-003",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the university policy in three concise bullet points:\n\n• If you disagree with your semester final grade, you must talk to your instructor within 14 calendar days of when the grade is officially released.\n• If you\u0027re still unhappy with the grade after talking to your instructor, you must submit a formal Grade Appeal Form to the Department Chair within 30 calendar days.\n• The Department Chair\u0027s review committee will make a final decision on your appeal within 21 business days of receiving your appeal.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-012",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Directory information can be disclosed without consent until a formal nondisclosure request is filed within the first 10 calendar days of the academic term.\n- Educational records, grades, and advisor notes are strictly confidential and cannot be shared with unvetted third-party cloud applications or external entities without a institutional data-use agreement.\n- There are no exceptions to these confidentiality rules; all university staff must adhere to these guidelines.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-006",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the university policy in three concise bullet points:\n\n• Within the first 10 calendar days of each academic term, you must submit a formal nondisclosure request to the university if you do not want your directory information (e.g., name, address, phone number) to be disclosed without your consent.\n• University staff are required to keep all educational records, grades, and advisor notes confidential and cannot share them with unvetted third-party cloud applications or external entities without a valid institutional data-use agreement.\n• There is no specific deadline for submitting a formal nondisclosure request, but it is recommended to do so within the first 10 calendar days of each term to ensure your directory information is not disclosed.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-007",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "qwen2.5:7b",
+        "anonymized_output":  "- Regular class attendance is mandatory.\n- Excused absences must be notified to the instructor via email at least 24 hours in advance or within 48 hours after an unforeseen emergency.\n- Unexcused absences exceeding 20% of scheduled class sessions will result in an administrative withdrawal or an automatic final grade of \u0027FA\u0027. Students can contest an \u0027FA\u0027 grade by filing a formal written petition with the Dean of Students within 5 business days after grades are posted.",
+        "rater_1_score":  5,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-002",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the policy in three concise bullet points:\n\n• If you suspect someone of academic integrity violation (plagiarism, unauthorized collaboration, or using illicit exam aids), you must report it to the Academic Honor Board within 7 calendar days.\n• If found guilty, the student will receive a zero (\u00270%\u0027) on the assignment, and they have 10 business days to submit an appeal to the Provost Office.\n• Repeat offenses can result in a minimum suspension penalty of 1 academic term.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    },
+    {
+        "blind_id":  "BLIND-VAL-001",
+        "task":  "Policy Summarization",
+        "source_model_hidden":  "llama3.2:3b",
+        "anonymized_output":  "Here is a summary of the university policy in three concise bullet points:\n\n• To receive an excused absence, notify your instructor via email at least 24 hours before the scheduled class or within 48 hours of an unforeseen emergency.\n• Unexcused absences exceeding 20% of scheduled class sessions will result in an administrative withdrawal or an automatic final grade of \u0027FA\u0027.\n• To contest an \u0027FA\u0027 notation, submit a formal written petition to the Dean of Students within 5 business days following grade posting.",
+        "rater_1_score":  3,
+        "rater_2_score":  null
+    }
+]
