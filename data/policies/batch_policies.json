@@ -16,5 +16,23 @@
     "title": "Final Grade Appeal Protocol",
     "text": "Final Grade Dispute and Resolution Procedure:\nStudents questioning a semester final grade must initiate an informal consultation with the course instructor within 14 calendar days of official grade release. If unresolved, a formal Grade Appeal Form must be lodged with the Department Chair within 30 days. The departmental review committee must issue a final binding ruling within 21 business days of docket receipt.",
     "constraints": ["14 calendar days", "30 days", "21 business days"]
+  },
+  {
+    "id": "POL-004",
+    "title": "Student Code of Conduct & IT Acceptable Use",
+    "text": "Campus Network and Computing Policy:\nAccess to university computing resources requires active institutional credentials. Unauthorized credential sharing, bypassing network firewalls, or hosting unapproved external servers on the campus subnet results in immediate account suspension for 72 hours pending a security review. Permanent revocation requires formal clearance from the Chief Information Security Officer.",
+    "constraints": ["72 hours", "Chief Information Security Officer"]
+  },
+  {
+    "id": "POL-005",
+    "title": "Disability Accommodation and Accessibility Guidelines",
+    "text": "ADA Section 508 Compliance and Academic Accommodations:\nFaculty must provide accessible course materials and syllabus formats upon request. Accommodation letters issued by the Disability Resource Center must be acknowledged by the course instructor within 3 business days of receipt. Disputes regarding reasonable accommodations are escalated directly to the University ADA Coordinator for binding resolution.",
+    "constraints": ["3 business days", "ADA Coordinator"]
+  },
+  {
+    "id": "POL-006",
+    "title": "Student Educational Records and Privacy Regulations (FERPA)",
+    "text": "Institutional Compliance with FERPA:\nDirectory information may be disclosed without prior consent unless a formal nondisclosure request is filed by the student within the first 10 calendar days of the academic term. All educational records, grades, and advisor notes maintained by university staff are strictly confidential and prohibited from transmission to unvetted third-party cloud applications or external entities lacking a institutional data-use agreement.",
+    "constraints": ["10 calendar days", "ferpa"]
   }
 ]
