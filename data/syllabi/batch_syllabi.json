@@ -1,86 +1,252 @@
-﻿[
+[
   {
-    "id": "SYLL-001",
-    "discipline": "STEM",
-    "text": "Course: CS 101 - Introduction to Computer Science\nTerm: Fall 2026\nInstructor: Dr. Jane Doe (Email: jdoe@university.edu)\nOffice Hours: Tuesdays and Thursdays 2:00 PM - 4:00 PM in Science Hall 304\nCourse Description: An introductory course in algorithms, problem solving, and Python programming.\nGrading Scheme:\n- Homework Assignments: 30%\n- Midterm Examination: 30%\n- Final Project: 30%\n- Class Participation: 10%\nAccessibility Policy: Students with documented disabilities requiring academic accommodations must contact Disability Support Services within the first two weeks of classes.",
-    "ground_truth": {
-      "course_code": "CS 101",
-      "instructor_name": "Dr. Jane Doe",
-      "office_hours": "Tuesdays and Thursdays 2:00 PM - 4:00 PM in Science Hall 304",
-      "grading_breakdown": [
-        {"category": "Homework Assignments", "weight_percent": 30},
-        {"category": "Midterm Examination", "weight_percent": 30},
-        {"category": "Final Project", "weight_percent": 30},
-        {"category": "Class Participation", "weight_percent": 10}
-      ],
-      "has_accessibility_statement": true
-    }
+    "id": "SYL-001",
+    "course_code": "CS 101",
+    "text": "Course Syllabus for CS 101. Instructor: Dr. Faculty 1. Office Hours: Mon/Wed 2-4 PM in Hall 1. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
   },
   {
-    "id": "SYLL-002",
-    "discipline": "Humanities",
-    "text": "HIST 210: Early Modern European History\nInstructor: Prof. Marcus Vance\nOffice Hours: Wednesdays 10:00 AM - 1:00 PM, Memorial Hall Room 112\nGrading Criteria:\n- Primary Source Analyses: 25%\n- Midterm Essay: 25%\n- Term Research Paper: 35%\n- Seminar Discussion: 15%\nAccommodations: University disability resource office facilitates all reasonable accommodation requests made in writing.",
-    "ground_truth": {
-      "course_code": "HIST 210",
-      "instructor_name": "Prof. Marcus Vance",
-      "office_hours": "Wednesdays 10:00 AM - 1:00 PM, Memorial Hall Room 112",
-      "grading_breakdown": [
-        {"category": "Primary Source Analyses", "weight_percent": 25},
-        {"category": "Midterm Essay", "weight_percent": 25},
-        {"category": "Term Research Paper", "weight_percent": 35},
-        {"category": "Seminar Discussion", "weight_percent": 15}
-      ],
-      "has_accessibility_statement": true
-    }
+    "id": "SYL-002",
+    "course_code": "MATH 102",
+    "text": "Course Syllabus for MATH 102. Instructor: Dr. Faculty 2. Office Hours: Mon/Wed 2-4 PM in Hall 2. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
   },
   {
-    "id": "SYLL-003",
-    "discipline": "Business",
-    "text": "FIN 340 - Corporate Finance Principles\nSpring Semester\nLead Faculty: Dr. Sarah Lin\nConsultation Hours: Virtual by appointment via Zoom on Fridays 1:00 PM - 3:00 PM\nCourse Evaluation Breakdown: Financial Modeling Labs 40%, Case Studies 20%, Comprehensive Final Exam 40%.\nNo formal disability or accommodation clause specified in this outline.",
-    "ground_truth": {
-      "course_code": "FIN 340",
-      "instructor_name": "Dr. Sarah Lin",
-      "office_hours": "Virtual by appointment via Zoom on Fridays 1:00 PM - 3:00 PM",
-      "grading_breakdown": [
-        {"category": "Financial Modeling Labs", "weight_percent": 40},
-        {"category": "Case Studies", "weight_percent": 20},
-        {"category": "Comprehensive Final Exam", "weight_percent": 40}
-      ],
-      "has_accessibility_statement": false
-    }
+    "id": "SYL-003",
+    "course_code": "ENG 103",
+    "text": "Course Syllabus for ENG 103. Instructor: Dr. Faculty 3. Office Hours: Mon/Wed 2-4 PM in Hall 3. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
   },
   {
-    "id": "SYLL-004",
-    "discipline": "STEM",
-    "text": "MATH 301: Ordinary Differential Equations\nInstructor: Dr. Alan Turing\nOffice Hours: Mondays 9:00 AM - 12:00 PM, Math Tower 502\nGrading Structure:\n- Weekly Problem Sets: 25%\n- Quizzes: 15%\n- Midterm Exam: 30%\n- Final Exam: 30%\nAccessibility statement: Accommodations are provided through the Center for Accessible Education.",
-    "ground_truth": {
-      "course_code": "MATH 301",
-      "instructor_name": "Dr. Alan Turing",
-      "office_hours": "Mondays 9:00 AM - 12:00 PM, Math Tower 502",
-      "grading_breakdown": [
-        {"category": "Weekly Problem Sets", "weight_percent": 25},
-        {"category": "Quizzes", "weight_percent": 15},
-        {"category": "Midterm Exam", "weight_percent": 30},
-        {"category": "Final Exam", "weight_percent": 30}
-      ],
-      "has_accessibility_statement": true
-    }
+    "id": "SYL-004",
+    "course_code": "BUS 104",
+    "text": "Course Syllabus for BUS 104. Instructor: Dr. Faculty 4. Office Hours: Mon/Wed 2-4 PM in Hall 4. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
   },
   {
-    "id": "SYLL-005",
-    "discipline": "Humanities",
-    "text": "ENGL 102: Critical Reading and Composition\nInstructor: Prof. Emily Dickinson\nOffice Hours: Thursdays 1:00 PM - 4:00 PM, Hall of Letters 204\nEvaluation:\n- Reading Responses: 20%\n- Portfolio Drafts: 30%\n- Research Essay: 40%\n- Participation: 10%\nNote: Students requiring ADA accommodations must submit paperwork during week one.",
-    "ground_truth": {
-      "course_code": "ENGL 102",
-      "instructor_name": "Prof. Emily Dickinson",
-      "office_hours": "Thursdays 1:00 PM - 4:00 PM, Hall of Letters 204",
-      "grading_breakdown": [
-        {"category": "Reading Responses", "weight_percent": 20},
-        {"category": "Portfolio Drafts", "weight_percent": 30},
-        {"category": "Research Essay", "weight_percent": 40},
-        {"category": "Participation", "weight_percent": 10}
-      ],
-      "has_accessibility_statement": true
-    }
+    "id": "SYL-005",
+    "course_code": "NURS 105",
+    "text": "Course Syllabus for NURS 105. Instructor: Dr. Faculty 5. Office Hours: Mon/Wed 2-4 PM in Hall 5. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-006",
+    "course_code": "HIST 106",
+    "text": "Course Syllabus for HIST 106. Instructor: Dr. Faculty 6. Office Hours: Mon/Wed 2-4 PM in Hall 6. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-007",
+    "course_code": "PHYS 107",
+    "text": "Course Syllabus for PHYS 107. Instructor: Dr. Faculty 7. Office Hours: Mon/Wed 2-4 PM in Hall 7. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-008",
+    "course_code": "ECON 108",
+    "text": "Course Syllabus for ECON 108. Instructor: Dr. Faculty 8. Office Hours: Mon/Wed 2-4 PM in Hall 8. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-009",
+    "course_code": "PSY 109",
+    "text": "Course Syllabus for PSY 109. Instructor: Dr. Faculty 9. Office Hours: Mon/Wed 2-4 PM in Hall 9. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-010",
+    "course_code": "CHEM 110",
+    "text": "Course Syllabus for CHEM 110. Instructor: Dr. Faculty 10. Office Hours: Mon/Wed 2-4 PM in Hall 10. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-011",
+    "course_code": "CS 111",
+    "text": "Course Syllabus for CS 111. Instructor: Dr. Faculty 11. Office Hours: Mon/Wed 2-4 PM in Hall 11. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-012",
+    "course_code": "MATH 112",
+    "text": "Course Syllabus for MATH 112. Instructor: Dr. Faculty 12. Office Hours: Mon/Wed 2-4 PM in Hall 12. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-013",
+    "course_code": "ENG 113",
+    "text": "Course Syllabus for ENG 113. Instructor: Dr. Faculty 13. Office Hours: Mon/Wed 2-4 PM in Hall 13. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-014",
+    "course_code": "BUS 114",
+    "text": "Course Syllabus for BUS 114. Instructor: Dr. Faculty 14. Office Hours: Mon/Wed 2-4 PM in Hall 14. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-015",
+    "course_code": "NURS 115",
+    "text": "Course Syllabus for NURS 115. Instructor: Dr. Faculty 15. Office Hours: Mon/Wed 2-4 PM in Hall 15. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-016",
+    "course_code": "HIST 116",
+    "text": "Course Syllabus for HIST 116. Instructor: Dr. Faculty 16. Office Hours: Mon/Wed 2-4 PM in Hall 16. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-017",
+    "course_code": "PHYS 117",
+    "text": "Course Syllabus for PHYS 117. Instructor: Dr. Faculty 17. Office Hours: Mon/Wed 2-4 PM in Hall 17. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-018",
+    "course_code": "ECON 118",
+    "text": "Course Syllabus for ECON 118. Instructor: Dr. Faculty 18. Office Hours: Mon/Wed 2-4 PM in Hall 18. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-019",
+    "course_code": "PSY 119",
+    "text": "Course Syllabus for PSY 119. Instructor: Dr. Faculty 19. Office Hours: Mon/Wed 2-4 PM in Hall 19. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-020",
+    "course_code": "CHEM 120",
+    "text": "Course Syllabus for CHEM 120. Instructor: Dr. Faculty 20. Office Hours: Mon/Wed 2-4 PM in Hall 20. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-021",
+    "course_code": "CS 121",
+    "text": "Course Syllabus for CS 121. Instructor: Dr. Faculty 21. Office Hours: Mon/Wed 2-4 PM in Hall 21. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-022",
+    "course_code": "MATH 122",
+    "text": "Course Syllabus for MATH 122. Instructor: Dr. Faculty 22. Office Hours: Mon/Wed 2-4 PM in Hall 22. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-023",
+    "course_code": "ENG 123",
+    "text": "Course Syllabus for ENG 123. Instructor: Dr. Faculty 23. Office Hours: Mon/Wed 2-4 PM in Hall 23. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-024",
+    "course_code": "BUS 124",
+    "text": "Course Syllabus for BUS 124. Instructor: Dr. Faculty 24. Office Hours: Mon/Wed 2-4 PM in Hall 24. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-025",
+    "course_code": "NURS 125",
+    "text": "Course Syllabus for NURS 125. Instructor: Dr. Faculty 25. Office Hours: Mon/Wed 2-4 PM in Hall 25. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-026",
+    "course_code": "HIST 126",
+    "text": "Course Syllabus for HIST 126. Instructor: Dr. Faculty 26. Office Hours: Mon/Wed 2-4 PM in Hall 26. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-027",
+    "course_code": "PHYS 127",
+    "text": "Course Syllabus for PHYS 127. Instructor: Dr. Faculty 27. Office Hours: Mon/Wed 2-4 PM in Hall 27. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-028",
+    "course_code": "ECON 128",
+    "text": "Course Syllabus for ECON 128. Instructor: Dr. Faculty 28. Office Hours: Mon/Wed 2-4 PM in Hall 28. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-029",
+    "course_code": "PSY 129",
+    "text": "Course Syllabus for PSY 129. Instructor: Dr. Faculty 29. Office Hours: Mon/Wed 2-4 PM in Hall 29. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-030",
+    "course_code": "CHEM 130",
+    "text": "Course Syllabus for CHEM 130. Instructor: Dr. Faculty 30. Office Hours: Mon/Wed 2-4 PM in Hall 30. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-031",
+    "course_code": "CS 131",
+    "text": "Course Syllabus for CS 131. Instructor: Dr. Faculty 31. Office Hours: Mon/Wed 2-4 PM in Hall 31. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-032",
+    "course_code": "MATH 132",
+    "text": "Course Syllabus for MATH 132. Instructor: Dr. Faculty 32. Office Hours: Mon/Wed 2-4 PM in Hall 32. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-033",
+    "course_code": "ENG 133",
+    "text": "Course Syllabus for ENG 133. Instructor: Dr. Faculty 33. Office Hours: Mon/Wed 2-4 PM in Hall 33. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-034",
+    "course_code": "BUS 134",
+    "text": "Course Syllabus for BUS 134. Instructor: Dr. Faculty 34. Office Hours: Mon/Wed 2-4 PM in Hall 34. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-035",
+    "course_code": "NURS 135",
+    "text": "Course Syllabus for NURS 135. Instructor: Dr. Faculty 35. Office Hours: Mon/Wed 2-4 PM in Hall 35. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-036",
+    "course_code": "HIST 136",
+    "text": "Course Syllabus for HIST 136. Instructor: Dr. Faculty 36. Office Hours: Mon/Wed 2-4 PM in Hall 36. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-037",
+    "course_code": "PHYS 137",
+    "text": "Course Syllabus for PHYS 137. Instructor: Dr. Faculty 37. Office Hours: Mon/Wed 2-4 PM in Hall 37. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-038",
+    "course_code": "ECON 138",
+    "text": "Course Syllabus for ECON 138. Instructor: Dr. Faculty 38. Office Hours: Mon/Wed 2-4 PM in Hall 38. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-039",
+    "course_code": "PSY 139",
+    "text": "Course Syllabus for PSY 139. Instructor: Dr. Faculty 39. Office Hours: Mon/Wed 2-4 PM in Hall 39. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-040",
+    "course_code": "CHEM 140",
+    "text": "Course Syllabus for CHEM 140. Instructor: Dr. Faculty 40. Office Hours: Mon/Wed 2-4 PM in Hall 40. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-041",
+    "course_code": "CS 141",
+    "text": "Course Syllabus for CS 141. Instructor: Dr. Faculty 41. Office Hours: Mon/Wed 2-4 PM in Hall 41. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-042",
+    "course_code": "MATH 142",
+    "text": "Course Syllabus for MATH 142. Instructor: Dr. Faculty 42. Office Hours: Mon/Wed 2-4 PM in Hall 42. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-043",
+    "course_code": "ENG 143",
+    "text": "Course Syllabus for ENG 143. Instructor: Dr. Faculty 43. Office Hours: Mon/Wed 2-4 PM in Hall 43. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-044",
+    "course_code": "BUS 144",
+    "text": "Course Syllabus for BUS 144. Instructor: Dr. Faculty 44. Office Hours: Mon/Wed 2-4 PM in Hall 44. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-045",
+    "course_code": "NURS 145",
+    "text": "Course Syllabus for NURS 145. Instructor: Dr. Faculty 45. Office Hours: Mon/Wed 2-4 PM in Hall 45. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-046",
+    "course_code": "HIST 146",
+    "text": "Course Syllabus for HIST 146. Instructor: Dr. Faculty 46. Office Hours: Mon/Wed 2-4 PM in Hall 46. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-047",
+    "course_code": "PHYS 147",
+    "text": "Course Syllabus for PHYS 147. Instructor: Dr. Faculty 47. Office Hours: Mon/Wed 2-4 PM in Hall 47. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-048",
+    "course_code": "ECON 148",
+    "text": "Course Syllabus for ECON 148. Instructor: Dr. Faculty 48. Office Hours: Mon/Wed 2-4 PM in Hall 48. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-049",
+    "course_code": "PSY 149",
+    "text": "Course Syllabus for PSY 149. Instructor: Dr. Faculty 49. Office Hours: Mon/Wed 2-4 PM in Hall 49. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
+  },
+  {
+    "id": "SYL-050",
+    "course_code": "CHEM 150",
+    "text": "Course Syllabus for CHEM 150. Instructor: Dr. Faculty 50. Office Hours: Mon/Wed 2-4 PM in Hall 50. Grading Breakdown: Assignments 30.0%, Midterm 30.0%, Final 40.0%. Key Policy: Late submissions incur a 10% penalty per 24 hours."
   }
 ]

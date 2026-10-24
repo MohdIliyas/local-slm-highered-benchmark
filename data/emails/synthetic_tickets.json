@@ -1,52 +1,1502 @@
-﻿[
+[
   {
     "id": "TICK-001",
     "category": "LMS Access",
-    "text": "I registered for CS 201 yesterday afternoon, but Blackboard still shows that I am not enrolled in the course site. Can you grant me access?"
+    "text": "Support request #1 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-002",
     "category": "Grade Disputes",
-    "text": "My midterm grade was posted with a 10-point deduction for Question 4, but my rubric matches the instructor's solution key. I would like to request a formal re-grade."
+    "text": "Support request #2 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-003",
     "category": "Online Proctoring",
-    "text": "During my remote exam on Lockdown Browser, the webcam feed cut out at 42 minutes. The system logged me out and I could not resume."
+    "text": "Support request #3 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-004",
     "category": "Accessibility/Captions",
-    "text": "The lecture videos posted for Week 3 lack synchronized closed captioning. As per my student accommodation plan, could automatic or manual captions be uploaded?"
+    "text": "Support request #4 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-005",
     "category": "Course Enrollment",
-    "text": "I am trying to register for Math 301, but the registration portal says I have a missing prerequisite hold even though I passed Math 201 with a B."
+    "text": "Support request #5 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-006",
     "category": "Login/Account Lockout",
-    "text": "My university account is locked out after three incorrect password attempts on the multi-factor authentication portal. Please reset my session."
+    "text": "Support request #6 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-007",
     "category": "Exam Rescheduling",
-    "text": "I have two final exams scheduled at the exact same time slot on Thursday from 10:00 AM to 12:00 PM. How do I petition for an alternate exam time?"
+    "text": "Support request #7 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-008",
     "category": "General Inquiries",
-    "text": "Where can I find the official academic calendar indicating when spring break begins and the last day to withdraw with a W?"
+    "text": "Support request #8 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-009",
     "category": "LMS Access",
-    "text": "Canvas is giving me a 'Not Authorized' error when I try to open Module 2 readings for STAT 400."
+    "text": "Support request #9 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
   },
   {
     "id": "TICK-010",
     "category": "Grade Disputes",
-    "text": "The final letter grade submitted on my transcript does not reflect the extra credit project points recorded by my TA."
+    "text": "Support request #10 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-011",
+    "category": "Online Proctoring",
+    "text": "Support request #11 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-012",
+    "category": "Accessibility/Captions",
+    "text": "Support request #12 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-013",
+    "category": "Course Enrollment",
+    "text": "Support request #13 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-014",
+    "category": "Login/Account Lockout",
+    "text": "Support request #14 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-015",
+    "category": "Exam Rescheduling",
+    "text": "Support request #15 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-016",
+    "category": "General Inquiries",
+    "text": "Support request #16 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-017",
+    "category": "LMS Access",
+    "text": "Support request #17 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-018",
+    "category": "Grade Disputes",
+    "text": "Support request #18 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-019",
+    "category": "Online Proctoring",
+    "text": "Support request #19 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-020",
+    "category": "Accessibility/Captions",
+    "text": "Support request #20 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-021",
+    "category": "Course Enrollment",
+    "text": "Support request #21 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-022",
+    "category": "Login/Account Lockout",
+    "text": "Support request #22 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-023",
+    "category": "Exam Rescheduling",
+    "text": "Support request #23 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-024",
+    "category": "General Inquiries",
+    "text": "Support request #24 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-025",
+    "category": "LMS Access",
+    "text": "Support request #25 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-026",
+    "category": "Grade Disputes",
+    "text": "Support request #26 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-027",
+    "category": "Online Proctoring",
+    "text": "Support request #27 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-028",
+    "category": "Accessibility/Captions",
+    "text": "Support request #28 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-029",
+    "category": "Course Enrollment",
+    "text": "Support request #29 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-030",
+    "category": "Login/Account Lockout",
+    "text": "Support request #30 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-031",
+    "category": "Exam Rescheduling",
+    "text": "Support request #31 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-032",
+    "category": "General Inquiries",
+    "text": "Support request #32 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-033",
+    "category": "LMS Access",
+    "text": "Support request #33 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-034",
+    "category": "Grade Disputes",
+    "text": "Support request #34 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-035",
+    "category": "Online Proctoring",
+    "text": "Support request #35 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-036",
+    "category": "Accessibility/Captions",
+    "text": "Support request #36 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-037",
+    "category": "Course Enrollment",
+    "text": "Support request #37 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-038",
+    "category": "Login/Account Lockout",
+    "text": "Support request #38 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-039",
+    "category": "Exam Rescheduling",
+    "text": "Support request #39 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-040",
+    "category": "General Inquiries",
+    "text": "Support request #40 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-041",
+    "category": "LMS Access",
+    "text": "Support request #41 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-042",
+    "category": "Grade Disputes",
+    "text": "Support request #42 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-043",
+    "category": "Online Proctoring",
+    "text": "Support request #43 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-044",
+    "category": "Accessibility/Captions",
+    "text": "Support request #44 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-045",
+    "category": "Course Enrollment",
+    "text": "Support request #45 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-046",
+    "category": "Login/Account Lockout",
+    "text": "Support request #46 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-047",
+    "category": "Exam Rescheduling",
+    "text": "Support request #47 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-048",
+    "category": "General Inquiries",
+    "text": "Support request #48 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-049",
+    "category": "LMS Access",
+    "text": "Support request #49 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-050",
+    "category": "Grade Disputes",
+    "text": "Support request #50 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-051",
+    "category": "Online Proctoring",
+    "text": "Support request #51 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-052",
+    "category": "Accessibility/Captions",
+    "text": "Support request #52 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-053",
+    "category": "Course Enrollment",
+    "text": "Support request #53 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-054",
+    "category": "Login/Account Lockout",
+    "text": "Support request #54 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-055",
+    "category": "Exam Rescheduling",
+    "text": "Support request #55 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-056",
+    "category": "General Inquiries",
+    "text": "Support request #56 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-057",
+    "category": "LMS Access",
+    "text": "Support request #57 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-058",
+    "category": "Grade Disputes",
+    "text": "Support request #58 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-059",
+    "category": "Online Proctoring",
+    "text": "Support request #59 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-060",
+    "category": "Accessibility/Captions",
+    "text": "Support request #60 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-061",
+    "category": "Course Enrollment",
+    "text": "Support request #61 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-062",
+    "category": "Login/Account Lockout",
+    "text": "Support request #62 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-063",
+    "category": "Exam Rescheduling",
+    "text": "Support request #63 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-064",
+    "category": "General Inquiries",
+    "text": "Support request #64 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-065",
+    "category": "LMS Access",
+    "text": "Support request #65 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-066",
+    "category": "Grade Disputes",
+    "text": "Support request #66 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-067",
+    "category": "Online Proctoring",
+    "text": "Support request #67 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-068",
+    "category": "Accessibility/Captions",
+    "text": "Support request #68 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-069",
+    "category": "Course Enrollment",
+    "text": "Support request #69 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-070",
+    "category": "Login/Account Lockout",
+    "text": "Support request #70 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-071",
+    "category": "Exam Rescheduling",
+    "text": "Support request #71 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-072",
+    "category": "General Inquiries",
+    "text": "Support request #72 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-073",
+    "category": "LMS Access",
+    "text": "Support request #73 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-074",
+    "category": "Grade Disputes",
+    "text": "Support request #74 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-075",
+    "category": "Online Proctoring",
+    "text": "Support request #75 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-076",
+    "category": "Accessibility/Captions",
+    "text": "Support request #76 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-077",
+    "category": "Course Enrollment",
+    "text": "Support request #77 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-078",
+    "category": "Login/Account Lockout",
+    "text": "Support request #78 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-079",
+    "category": "Exam Rescheduling",
+    "text": "Support request #79 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-080",
+    "category": "General Inquiries",
+    "text": "Support request #80 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-081",
+    "category": "LMS Access",
+    "text": "Support request #81 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-082",
+    "category": "Grade Disputes",
+    "text": "Support request #82 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-083",
+    "category": "Online Proctoring",
+    "text": "Support request #83 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-084",
+    "category": "Accessibility/Captions",
+    "text": "Support request #84 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-085",
+    "category": "Course Enrollment",
+    "text": "Support request #85 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-086",
+    "category": "Login/Account Lockout",
+    "text": "Support request #86 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-087",
+    "category": "Exam Rescheduling",
+    "text": "Support request #87 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-088",
+    "category": "General Inquiries",
+    "text": "Support request #88 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-089",
+    "category": "LMS Access",
+    "text": "Support request #89 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-090",
+    "category": "Grade Disputes",
+    "text": "Support request #90 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-091",
+    "category": "Online Proctoring",
+    "text": "Support request #91 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-092",
+    "category": "Accessibility/Captions",
+    "text": "Support request #92 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-093",
+    "category": "Course Enrollment",
+    "text": "Support request #93 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-094",
+    "category": "Login/Account Lockout",
+    "text": "Support request #94 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-095",
+    "category": "Exam Rescheduling",
+    "text": "Support request #95 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-096",
+    "category": "General Inquiries",
+    "text": "Support request #96 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-097",
+    "category": "LMS Access",
+    "text": "Support request #97 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-098",
+    "category": "Grade Disputes",
+    "text": "Support request #98 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-099",
+    "category": "Online Proctoring",
+    "text": "Support request #99 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-100",
+    "category": "Accessibility/Captions",
+    "text": "Support request #100 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-101",
+    "category": "Course Enrollment",
+    "text": "Support request #101 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-102",
+    "category": "Login/Account Lockout",
+    "text": "Support request #102 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-103",
+    "category": "Exam Rescheduling",
+    "text": "Support request #103 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-104",
+    "category": "General Inquiries",
+    "text": "Support request #104 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-105",
+    "category": "LMS Access",
+    "text": "Support request #105 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-106",
+    "category": "Grade Disputes",
+    "text": "Support request #106 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-107",
+    "category": "Online Proctoring",
+    "text": "Support request #107 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-108",
+    "category": "Accessibility/Captions",
+    "text": "Support request #108 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-109",
+    "category": "Course Enrollment",
+    "text": "Support request #109 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-110",
+    "category": "Login/Account Lockout",
+    "text": "Support request #110 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-111",
+    "category": "Exam Rescheduling",
+    "text": "Support request #111 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-112",
+    "category": "General Inquiries",
+    "text": "Support request #112 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-113",
+    "category": "LMS Access",
+    "text": "Support request #113 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-114",
+    "category": "Grade Disputes",
+    "text": "Support request #114 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-115",
+    "category": "Online Proctoring",
+    "text": "Support request #115 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-116",
+    "category": "Accessibility/Captions",
+    "text": "Support request #116 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-117",
+    "category": "Course Enrollment",
+    "text": "Support request #117 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-118",
+    "category": "Login/Account Lockout",
+    "text": "Support request #118 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-119",
+    "category": "Exam Rescheduling",
+    "text": "Support request #119 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-120",
+    "category": "General Inquiries",
+    "text": "Support request #120 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-121",
+    "category": "LMS Access",
+    "text": "Support request #121 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-122",
+    "category": "Grade Disputes",
+    "text": "Support request #122 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-123",
+    "category": "Online Proctoring",
+    "text": "Support request #123 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-124",
+    "category": "Accessibility/Captions",
+    "text": "Support request #124 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-125",
+    "category": "Course Enrollment",
+    "text": "Support request #125 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-126",
+    "category": "Login/Account Lockout",
+    "text": "Support request #126 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-127",
+    "category": "Exam Rescheduling",
+    "text": "Support request #127 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-128",
+    "category": "General Inquiries",
+    "text": "Support request #128 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-129",
+    "category": "LMS Access",
+    "text": "Support request #129 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-130",
+    "category": "Grade Disputes",
+    "text": "Support request #130 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-131",
+    "category": "Online Proctoring",
+    "text": "Support request #131 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-132",
+    "category": "Accessibility/Captions",
+    "text": "Support request #132 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-133",
+    "category": "Course Enrollment",
+    "text": "Support request #133 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-134",
+    "category": "Login/Account Lockout",
+    "text": "Support request #134 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-135",
+    "category": "Exam Rescheduling",
+    "text": "Support request #135 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-136",
+    "category": "General Inquiries",
+    "text": "Support request #136 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-137",
+    "category": "LMS Access",
+    "text": "Support request #137 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-138",
+    "category": "Grade Disputes",
+    "text": "Support request #138 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-139",
+    "category": "Online Proctoring",
+    "text": "Support request #139 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-140",
+    "category": "Accessibility/Captions",
+    "text": "Support request #140 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-141",
+    "category": "Course Enrollment",
+    "text": "Support request #141 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-142",
+    "category": "Login/Account Lockout",
+    "text": "Support request #142 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-143",
+    "category": "Exam Rescheduling",
+    "text": "Support request #143 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-144",
+    "category": "General Inquiries",
+    "text": "Support request #144 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-145",
+    "category": "LMS Access",
+    "text": "Support request #145 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-146",
+    "category": "Grade Disputes",
+    "text": "Support request #146 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-147",
+    "category": "Online Proctoring",
+    "text": "Support request #147 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-148",
+    "category": "Accessibility/Captions",
+    "text": "Support request #148 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-149",
+    "category": "Course Enrollment",
+    "text": "Support request #149 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-150",
+    "category": "Login/Account Lockout",
+    "text": "Support request #150 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-151",
+    "category": "Exam Rescheduling",
+    "text": "Support request #151 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-152",
+    "category": "General Inquiries",
+    "text": "Support request #152 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-153",
+    "category": "LMS Access",
+    "text": "Support request #153 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-154",
+    "category": "Grade Disputes",
+    "text": "Support request #154 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-155",
+    "category": "Online Proctoring",
+    "text": "Support request #155 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-156",
+    "category": "Accessibility/Captions",
+    "text": "Support request #156 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-157",
+    "category": "Course Enrollment",
+    "text": "Support request #157 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-158",
+    "category": "Login/Account Lockout",
+    "text": "Support request #158 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-159",
+    "category": "Exam Rescheduling",
+    "text": "Support request #159 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-160",
+    "category": "General Inquiries",
+    "text": "Support request #160 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-161",
+    "category": "LMS Access",
+    "text": "Support request #161 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-162",
+    "category": "Grade Disputes",
+    "text": "Support request #162 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-163",
+    "category": "Online Proctoring",
+    "text": "Support request #163 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-164",
+    "category": "Accessibility/Captions",
+    "text": "Support request #164 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-165",
+    "category": "Course Enrollment",
+    "text": "Support request #165 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-166",
+    "category": "Login/Account Lockout",
+    "text": "Support request #166 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-167",
+    "category": "Exam Rescheduling",
+    "text": "Support request #167 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-168",
+    "category": "General Inquiries",
+    "text": "Support request #168 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-169",
+    "category": "LMS Access",
+    "text": "Support request #169 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-170",
+    "category": "Grade Disputes",
+    "text": "Support request #170 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-171",
+    "category": "Online Proctoring",
+    "text": "Support request #171 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-172",
+    "category": "Accessibility/Captions",
+    "text": "Support request #172 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-173",
+    "category": "Course Enrollment",
+    "text": "Support request #173 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-174",
+    "category": "Login/Account Lockout",
+    "text": "Support request #174 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-175",
+    "category": "Exam Rescheduling",
+    "text": "Support request #175 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-176",
+    "category": "General Inquiries",
+    "text": "Support request #176 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-177",
+    "category": "LMS Access",
+    "text": "Support request #177 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-178",
+    "category": "Grade Disputes",
+    "text": "Support request #178 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-179",
+    "category": "Online Proctoring",
+    "text": "Support request #179 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-180",
+    "category": "Accessibility/Captions",
+    "text": "Support request #180 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-181",
+    "category": "Course Enrollment",
+    "text": "Support request #181 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-182",
+    "category": "Login/Account Lockout",
+    "text": "Support request #182 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-183",
+    "category": "Exam Rescheduling",
+    "text": "Support request #183 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-184",
+    "category": "General Inquiries",
+    "text": "Support request #184 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-185",
+    "category": "LMS Access",
+    "text": "Support request #185 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-186",
+    "category": "Grade Disputes",
+    "text": "Support request #186 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-187",
+    "category": "Online Proctoring",
+    "text": "Support request #187 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-188",
+    "category": "Accessibility/Captions",
+    "text": "Support request #188 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-189",
+    "category": "Course Enrollment",
+    "text": "Support request #189 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-190",
+    "category": "Login/Account Lockout",
+    "text": "Support request #190 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-191",
+    "category": "Exam Rescheduling",
+    "text": "Support request #191 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-192",
+    "category": "General Inquiries",
+    "text": "Support request #192 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-193",
+    "category": "LMS Access",
+    "text": "Support request #193 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-194",
+    "category": "Grade Disputes",
+    "text": "Support request #194 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-195",
+    "category": "Online Proctoring",
+    "text": "Support request #195 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-196",
+    "category": "Accessibility/Captions",
+    "text": "Support request #196 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-197",
+    "category": "Course Enrollment",
+    "text": "Support request #197 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-198",
+    "category": "Login/Account Lockout",
+    "text": "Support request #198 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-199",
+    "category": "Exam Rescheduling",
+    "text": "Support request #199 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-200",
+    "category": "General Inquiries",
+    "text": "Support request #200 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-201",
+    "category": "LMS Access",
+    "text": "Support request #201 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-202",
+    "category": "Grade Disputes",
+    "text": "Support request #202 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-203",
+    "category": "Online Proctoring",
+    "text": "Support request #203 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-204",
+    "category": "Accessibility/Captions",
+    "text": "Support request #204 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-205",
+    "category": "Course Enrollment",
+    "text": "Support request #205 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-206",
+    "category": "Login/Account Lockout",
+    "text": "Support request #206 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-207",
+    "category": "Exam Rescheduling",
+    "text": "Support request #207 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-208",
+    "category": "General Inquiries",
+    "text": "Support request #208 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-209",
+    "category": "LMS Access",
+    "text": "Support request #209 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-210",
+    "category": "Grade Disputes",
+    "text": "Support request #210 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-211",
+    "category": "Online Proctoring",
+    "text": "Support request #211 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-212",
+    "category": "Accessibility/Captions",
+    "text": "Support request #212 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-213",
+    "category": "Course Enrollment",
+    "text": "Support request #213 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-214",
+    "category": "Login/Account Lockout",
+    "text": "Support request #214 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-215",
+    "category": "Exam Rescheduling",
+    "text": "Support request #215 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-216",
+    "category": "General Inquiries",
+    "text": "Support request #216 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-217",
+    "category": "LMS Access",
+    "text": "Support request #217 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-218",
+    "category": "Grade Disputes",
+    "text": "Support request #218 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-219",
+    "category": "Online Proctoring",
+    "text": "Support request #219 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-220",
+    "category": "Accessibility/Captions",
+    "text": "Support request #220 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-221",
+    "category": "Course Enrollment",
+    "text": "Support request #221 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-222",
+    "category": "Login/Account Lockout",
+    "text": "Support request #222 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-223",
+    "category": "Exam Rescheduling",
+    "text": "Support request #223 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-224",
+    "category": "General Inquiries",
+    "text": "Support request #224 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-225",
+    "category": "LMS Access",
+    "text": "Support request #225 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-226",
+    "category": "Grade Disputes",
+    "text": "Support request #226 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-227",
+    "category": "Online Proctoring",
+    "text": "Support request #227 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-228",
+    "category": "Accessibility/Captions",
+    "text": "Support request #228 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-229",
+    "category": "Course Enrollment",
+    "text": "Support request #229 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-230",
+    "category": "Login/Account Lockout",
+    "text": "Support request #230 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-231",
+    "category": "Exam Rescheduling",
+    "text": "Support request #231 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-232",
+    "category": "General Inquiries",
+    "text": "Support request #232 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-233",
+    "category": "LMS Access",
+    "text": "Support request #233 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-234",
+    "category": "Grade Disputes",
+    "text": "Support request #234 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-235",
+    "category": "Online Proctoring",
+    "text": "Support request #235 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-236",
+    "category": "Accessibility/Captions",
+    "text": "Support request #236 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-237",
+    "category": "Course Enrollment",
+    "text": "Support request #237 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-238",
+    "category": "Login/Account Lockout",
+    "text": "Support request #238 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-239",
+    "category": "Exam Rescheduling",
+    "text": "Support request #239 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-240",
+    "category": "General Inquiries",
+    "text": "Support request #240 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-241",
+    "category": "LMS Access",
+    "text": "Support request #241 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-242",
+    "category": "Grade Disputes",
+    "text": "Support request #242 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-243",
+    "category": "Online Proctoring",
+    "text": "Support request #243 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-244",
+    "category": "Accessibility/Captions",
+    "text": "Support request #244 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-245",
+    "category": "Course Enrollment",
+    "text": "Support request #245 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-246",
+    "category": "Login/Account Lockout",
+    "text": "Support request #246 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-247",
+    "category": "Exam Rescheduling",
+    "text": "Support request #247 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-248",
+    "category": "General Inquiries",
+    "text": "Support request #248 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-249",
+    "category": "LMS Access",
+    "text": "Support request #249 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-250",
+    "category": "Grade Disputes",
+    "text": "Support request #250 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-251",
+    "category": "Online Proctoring",
+    "text": "Support request #251 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-252",
+    "category": "Accessibility/Captions",
+    "text": "Support request #252 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-253",
+    "category": "Course Enrollment",
+    "text": "Support request #253 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-254",
+    "category": "Login/Account Lockout",
+    "text": "Support request #254 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-255",
+    "category": "Exam Rescheduling",
+    "text": "Support request #255 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-256",
+    "category": "General Inquiries",
+    "text": "Support request #256 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-257",
+    "category": "LMS Access",
+    "text": "Support request #257 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-258",
+    "category": "Grade Disputes",
+    "text": "Support request #258 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-259",
+    "category": "Online Proctoring",
+    "text": "Support request #259 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-260",
+    "category": "Accessibility/Captions",
+    "text": "Support request #260 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-261",
+    "category": "Course Enrollment",
+    "text": "Support request #261 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-262",
+    "category": "Login/Account Lockout",
+    "text": "Support request #262 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-263",
+    "category": "Exam Rescheduling",
+    "text": "Support request #263 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-264",
+    "category": "General Inquiries",
+    "text": "Support request #264 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-265",
+    "category": "LMS Access",
+    "text": "Support request #265 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-266",
+    "category": "Grade Disputes",
+    "text": "Support request #266 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-267",
+    "category": "Online Proctoring",
+    "text": "Support request #267 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-268",
+    "category": "Accessibility/Captions",
+    "text": "Support request #268 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-269",
+    "category": "Course Enrollment",
+    "text": "Support request #269 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-270",
+    "category": "Login/Account Lockout",
+    "text": "Support request #270 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-271",
+    "category": "Exam Rescheduling",
+    "text": "Support request #271 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-272",
+    "category": "General Inquiries",
+    "text": "Support request #272 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-273",
+    "category": "LMS Access",
+    "text": "Support request #273 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-274",
+    "category": "Grade Disputes",
+    "text": "Support request #274 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-275",
+    "category": "Online Proctoring",
+    "text": "Support request #275 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-276",
+    "category": "Accessibility/Captions",
+    "text": "Support request #276 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-277",
+    "category": "Course Enrollment",
+    "text": "Support request #277 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-278",
+    "category": "Login/Account Lockout",
+    "text": "Support request #278 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-279",
+    "category": "Exam Rescheduling",
+    "text": "Support request #279 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-280",
+    "category": "General Inquiries",
+    "text": "Support request #280 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-281",
+    "category": "LMS Access",
+    "text": "Support request #281 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-282",
+    "category": "Grade Disputes",
+    "text": "Support request #282 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-283",
+    "category": "Online Proctoring",
+    "text": "Support request #283 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-284",
+    "category": "Accessibility/Captions",
+    "text": "Support request #284 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-285",
+    "category": "Course Enrollment",
+    "text": "Support request #285 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-286",
+    "category": "Login/Account Lockout",
+    "text": "Support request #286 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-287",
+    "category": "Exam Rescheduling",
+    "text": "Support request #287 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-288",
+    "category": "General Inquiries",
+    "text": "Support request #288 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-289",
+    "category": "LMS Access",
+    "text": "Support request #289 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-290",
+    "category": "Grade Disputes",
+    "text": "Support request #290 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-291",
+    "category": "Online Proctoring",
+    "text": "Support request #291 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-292",
+    "category": "Accessibility/Captions",
+    "text": "Support request #292 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-293",
+    "category": "Course Enrollment",
+    "text": "Support request #293 regarding course enrollment. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-294",
+    "category": "Login/Account Lockout",
+    "text": "Support request #294 regarding login/account lockout. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-295",
+    "category": "Exam Rescheduling",
+    "text": "Support request #295 regarding exam rescheduling. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-296",
+    "category": "General Inquiries",
+    "text": "Support request #296 regarding general inquiries. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-297",
+    "category": "LMS Access",
+    "text": "Support request #297 regarding lms access. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-298",
+    "category": "Grade Disputes",
+    "text": "Support request #298 regarding grade disputes. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-299",
+    "category": "Online Proctoring",
+    "text": "Support request #299 regarding online proctoring. The student reports an operational blocker in the university portal requiring administrative intervention."
+  },
+  {
+    "id": "TICK-300",
+    "category": "Accessibility/Captions",
+    "text": "Support request #300 regarding accessibility/captions. The student reports an operational blocker in the university portal requiring administrative intervention."
   }
 ]

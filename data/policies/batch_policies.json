@@ -1,38 +1,442 @@
-﻿[
+[
   {
     "id": "POL-001",
-    "title": "Undergraduate Attendance Policy",
-    "text": "University Undergraduate Attendance and Course Absence Policy:\nRegular class attendance is required. Students seeking an excused absence must notify the instructor via email at least 24 hours prior to scheduled absences, or within 48 hours following an unforeseen emergency. Unexcused absences exceeding 20% of scheduled class sessions shall result in an administrative withdrawal or an automatic final grade of 'FA'. Students wishing to contest an FA notation must file a formal written petition with the Dean of Students within 5 business days following grade posting.",
-    "constraints": ["24 hours", "48 hours", "20%", "5", "fa"]
+    "title": "Institutional Policy on Undergraduate Attendance v1",
+    "text": "Official University Policy regarding Undergraduate Attendance. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   },
   {
     "id": "POL-002",
-    "title": "Academic Integrity Code & Sanctions",
-    "text": "Policy on Academic Integrity:\nSuspected violations of academic integrity (plagiarism, unauthorized collaboration, or illicit exam aids) must be formally submitted to the Academic Honor Board within 7 calendar days of discovery. First-tier infractions incur a mandatory zero ('0%') on the assignment. Students retain the right to submit an appeal to the Provost Office within 10 business days of written sanction notification. Repeat offenses carry a minimum suspension penalty of 1 academic term.",
-    "constraints": ["7 calendar days", "0%", "10 business days", "1 academic term"]
+    "title": "Institutional Policy on Academic Integrity v2",
+    "text": "Official University Policy regarding Academic Integrity. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   },
   {
     "id": "POL-003",
-    "title": "Final Grade Appeal Protocol",
-    "text": "Final Grade Dispute and Resolution Procedure:\nStudents questioning a semester final grade must initiate an informal consultation with the course instructor within 14 calendar days of official grade release. If unresolved, a formal Grade Appeal Form must be lodged with the Department Chair within 30 days. The departmental review committee must issue a final binding ruling within 21 business days of docket receipt.",
-    "constraints": ["14 calendar days", "30 days", "21 business days"]
+    "title": "Institutional Policy on Grade Appeal v3",
+    "text": "Official University Policy regarding Grade Appeal. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   },
   {
     "id": "POL-004",
-    "title": "Student Code of Conduct & IT Acceptable Use",
-    "text": "Campus Network and Computing Policy:\nAccess to university computing resources requires active institutional credentials. Unauthorized credential sharing, bypassing network firewalls, or hosting unapproved external servers on the campus subnet results in immediate account suspension for 72 hours pending a security review. Permanent revocation requires formal clearance from the Chief Information Security Officer.",
-    "constraints": ["72 hours", "Chief Information Security Officer"]
+    "title": "Institutional Policy on IT Acceptable Use v4",
+    "text": "Official University Policy regarding IT Acceptable Use. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   },
   {
     "id": "POL-005",
-    "title": "Disability Accommodation and Accessibility Guidelines",
-    "text": "ADA Section 508 Compliance and Academic Accommodations:\nFaculty must provide accessible course materials and syllabus formats upon request. Accommodation letters issued by the Disability Resource Center must be acknowledged by the course instructor within 3 business days of receipt. Disputes regarding reasonable accommodations are escalated directly to the University ADA Coordinator for binding resolution.",
-    "constraints": ["3 business days", "ADA Coordinator"]
+    "title": "Institutional Policy on ADA Accessibility v5",
+    "text": "Official University Policy regarding ADA Accessibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   },
   {
     "id": "POL-006",
-    "title": "Student Educational Records and Privacy Regulations (FERPA)",
-    "text": "Institutional Compliance with FERPA:\nDirectory information may be disclosed without prior consent unless a formal nondisclosure request is filed by the student within the first 10 calendar days of the academic term. All educational records, grades, and advisor notes maintained by university staff are strictly confidential and prohibited from transmission to unvetted third-party cloud applications or external entities lacking a institutional data-use agreement.",
-    "constraints": ["10 calendar days", "ferpa"]
+    "title": "Institutional Policy on FERPA Privacy v6",
+    "text": "Official University Policy regarding FERPA Privacy. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-007",
+    "title": "Institutional Policy on Student Code of Conduct v7",
+    "text": "Official University Policy regarding Student Code of Conduct. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-008",
+    "title": "Institutional Policy on Campus Safety v8",
+    "text": "Official University Policy regarding Campus Safety. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-009",
+    "title": "Institutional Policy on Housing Regulations v9",
+    "text": "Official University Policy regarding Housing Regulations. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-010",
+    "title": "Institutional Policy on Financial Aid Eligibility v10",
+    "text": "Official University Policy regarding Financial Aid Eligibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-011",
+    "title": "Institutional Policy on Undergraduate Attendance v11",
+    "text": "Official University Policy regarding Undergraduate Attendance. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-012",
+    "title": "Institutional Policy on Academic Integrity v12",
+    "text": "Official University Policy regarding Academic Integrity. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-013",
+    "title": "Institutional Policy on Grade Appeal v13",
+    "text": "Official University Policy regarding Grade Appeal. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-014",
+    "title": "Institutional Policy on IT Acceptable Use v14",
+    "text": "Official University Policy regarding IT Acceptable Use. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-015",
+    "title": "Institutional Policy on ADA Accessibility v15",
+    "text": "Official University Policy regarding ADA Accessibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-016",
+    "title": "Institutional Policy on FERPA Privacy v16",
+    "text": "Official University Policy regarding FERPA Privacy. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-017",
+    "title": "Institutional Policy on Student Code of Conduct v17",
+    "text": "Official University Policy regarding Student Code of Conduct. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-018",
+    "title": "Institutional Policy on Campus Safety v18",
+    "text": "Official University Policy regarding Campus Safety. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-019",
+    "title": "Institutional Policy on Housing Regulations v19",
+    "text": "Official University Policy regarding Housing Regulations. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-020",
+    "title": "Institutional Policy on Financial Aid Eligibility v20",
+    "text": "Official University Policy regarding Financial Aid Eligibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-021",
+    "title": "Institutional Policy on Undergraduate Attendance v21",
+    "text": "Official University Policy regarding Undergraduate Attendance. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-022",
+    "title": "Institutional Policy on Academic Integrity v22",
+    "text": "Official University Policy regarding Academic Integrity. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-023",
+    "title": "Institutional Policy on Grade Appeal v23",
+    "text": "Official University Policy regarding Grade Appeal. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-024",
+    "title": "Institutional Policy on IT Acceptable Use v24",
+    "text": "Official University Policy regarding IT Acceptable Use. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-025",
+    "title": "Institutional Policy on ADA Accessibility v25",
+    "text": "Official University Policy regarding ADA Accessibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-026",
+    "title": "Institutional Policy on FERPA Privacy v26",
+    "text": "Official University Policy regarding FERPA Privacy. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-027",
+    "title": "Institutional Policy on Student Code of Conduct v27",
+    "text": "Official University Policy regarding Student Code of Conduct. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-028",
+    "title": "Institutional Policy on Campus Safety v28",
+    "text": "Official University Policy regarding Campus Safety. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-029",
+    "title": "Institutional Policy on Housing Regulations v29",
+    "text": "Official University Policy regarding Housing Regulations. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-030",
+    "title": "Institutional Policy on Financial Aid Eligibility v30",
+    "text": "Official University Policy regarding Financial Aid Eligibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-031",
+    "title": "Institutional Policy on Undergraduate Attendance v31",
+    "text": "Official University Policy regarding Undergraduate Attendance. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-032",
+    "title": "Institutional Policy on Academic Integrity v32",
+    "text": "Official University Policy regarding Academic Integrity. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-033",
+    "title": "Institutional Policy on Grade Appeal v33",
+    "text": "Official University Policy regarding Grade Appeal. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-034",
+    "title": "Institutional Policy on IT Acceptable Use v34",
+    "text": "Official University Policy regarding IT Acceptable Use. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-035",
+    "title": "Institutional Policy on ADA Accessibility v35",
+    "text": "Official University Policy regarding ADA Accessibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-036",
+    "title": "Institutional Policy on FERPA Privacy v36",
+    "text": "Official University Policy regarding FERPA Privacy. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-037",
+    "title": "Institutional Policy on Student Code of Conduct v37",
+    "text": "Official University Policy regarding Student Code of Conduct. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-038",
+    "title": "Institutional Policy on Campus Safety v38",
+    "text": "Official University Policy regarding Campus Safety. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-039",
+    "title": "Institutional Policy on Housing Regulations v39",
+    "text": "Official University Policy regarding Housing Regulations. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
+  },
+  {
+    "id": "POL-040",
+    "title": "Institutional Policy on Financial Aid Eligibility v40",
+    "text": "Official University Policy regarding Financial Aid Eligibility. All university members must adhere to strict compliance guidelines. Notice periods require 24 hours or 48 hours for emergencies. Non-compliance exceeding 20% triggers a review by the Dean within 5 business days.",
+    "constraints": [
+      "24 hours",
+      "48 hours",
+      "20%",
+      "5 business days"
+    ]
   }
 ]
