@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "TICK-001",
     "category": "LMS Access",
@@ -38,5 +38,15 @@
     "id": "TICK-008",
     "category": "General Inquiries",
     "text": "Where can I find the official academic calendar indicating when spring break begins and the last day to withdraw with a W?"
+  },
+  {
+    "id": "TICK-009",
+    "category": "LMS Access",
+    "text": "Canvas is giving me a 'Not Authorized' error when I try to open Module 2 readings for STAT 400."
+  },
+  {
+    "id": "TICK-010",
+    "category": "Grade Disputes",
+    "text": "The final letter grade submitted on my transcript does not reflect the extra credit project points recorded by my TA."
   }
 ]

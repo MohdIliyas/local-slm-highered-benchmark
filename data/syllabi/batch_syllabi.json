@@ -48,5 +48,39 @@
       ],
       "has_accessibility_statement": false
     }
+  },
+  {
+    "id": "SYLL-004",
+    "discipline": "STEM",
+    "text": "MATH 301: Ordinary Differential Equations\nInstructor: Dr. Alan Turing\nOffice Hours: Mondays 9:00 AM - 12:00 PM, Math Tower 502\nGrading Structure:\n- Weekly Problem Sets: 25%\n- Quizzes: 15%\n- Midterm Exam: 30%\n- Final Exam: 30%\nAccessibility statement: Accommodations are provided through the Center for Accessible Education.",
+    "ground_truth": {
+      "course_code": "MATH 301",
+      "instructor_name": "Dr. Alan Turing",
+      "office_hours": "Mondays 9:00 AM - 12:00 PM, Math Tower 502",
+      "grading_breakdown": [
+        {"category": "Weekly Problem Sets", "weight_percent": 25},
+        {"category": "Quizzes", "weight_percent": 15},
+        {"category": "Midterm Exam", "weight_percent": 30},
+        {"category": "Final Exam", "weight_percent": 30}
+      ],
+      "has_accessibility_statement": true
+    }
+  },
+  {
+    "id": "SYLL-005",
+    "discipline": "Humanities",
+    "text": "ENGL 102: Critical Reading and Composition\nInstructor: Prof. Emily Dickinson\nOffice Hours: Thursdays 1:00 PM - 4:00 PM, Hall of Letters 204\nEvaluation:\n- Reading Responses: 20%\n- Portfolio Drafts: 30%\n- Research Essay: 40%\n- Participation: 10%\nNote: Students requiring ADA accommodations must submit paperwork during week one.",
+    "ground_truth": {
+      "course_code": "ENGL 102",
+      "instructor_name": "Prof. Emily Dickinson",
+      "office_hours": "Thursdays 1:00 PM - 4:00 PM, Hall of Letters 204",
+      "grading_breakdown": [
+        {"category": "Reading Responses", "weight_percent": 20},
+        {"category": "Portfolio Drafts", "weight_percent": 30},
+        {"category": "Research Essay", "weight_percent": 40},
+        {"category": "Participation", "weight_percent": 10}
+      ],
+      "has_accessibility_statement": true
+    }
   }
 ]
