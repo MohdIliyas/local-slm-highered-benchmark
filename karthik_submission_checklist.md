@@ -1,11 +1,15 @@
-﻿# Karthik's Action Checklist: Cross-Platform Benchmarking & Double-Blind Review
+﻿# Karthik's Step-by-Step Action Checklist
 
-**Project Title:** Empirical Evaluation of On-Device SLMs on Consumer Laptops for Privacy-Compliant University Workflows
-**Lead Author:** Mohammed Iliyas Sanjamala
-**Collaborator:** Karthikeyan Prem Kumar
+## Part 1: Apple Silicon M4 Benchmarking
+1. Clone repo, setup venv, pip install requirements.
+2. Ensure Ollama is running and models are pulled.
+3. Run python scripts\run_benchmark.py --output results\apple_m4\ and python scripts\run_batch_eval.py --device apple_m4.
+4. Push results to GitHub.
 
-## 1. Apple Silicon M4 Benchmarking
-- Clone repository, run python scripts\run_benchmark.py --output results\apple_m4\ and python scripts\run_batch_eval.py --device apple_m4, then push results.
+## Part 2: Double-Blind Review
+1. Pull latest changes.
+2. Score items in esults/human_eval/blind_queue.json under ater_2_score.
+3. Compute Cohen's Kappa and push updates.
 
-## 2. Double-Blind Review (Phase 4)
-- Pull latest changes, open esults/human_eval/blind_queue.json, score items under ater_2_score, compute Cohen's Kappa, and push.
+## Part 3: PDF Compilation
+1. Run pdflatex build sequence inside paper/.
