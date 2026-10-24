@@ -1,30 +1,44 @@
 import json
 import random
 import os
+import requests
 
 def setup_blind_review():
     print("\n[+] Setting up Double-Blind Human Evaluation Protocol (Phase 4)")
     print("-" * 65)
     
-    # Load batch evaluation summaries or generated outputs
-    results_path = 'results/intel_i7/batch_eval_summary.json'
-    if not os.path.exists(results_path):
-        print("[!] Error: batch_eval_summary.json not found. Run batch evaluation first.")
-        return
-
-    with open(results_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    with open('data/policies/batch_policies.json', 'r', encoding='utf-8') as f:
+        policies = json.load(f)
         
+    with open('prompts/policy_prompt.txt', 'r', encoding='utf-8') as f:
+        policy_prompt = f.read()
+        
+    MODELS = ["llama3.2:3b", "qwen2.5:7b"]
     blind_items = []
-    for idx, item in enumerate(data.get('evaluations', [])):
-        blind_items.append({
-            "blind_id": f"BLIND-VAL-{idx+1:03d}",
-            "task": item.get('task'),
-            "anonymized_output": item.get('output'),
-            "rater_1_score": None,
-            "rater_2_score": None
-        })
-        
+    item_counter = 1
+
+    for model in MODELS:
+        for item in policies:
+            payload = {
+                "model": model,
+                "prompt": policy_prompt.replace("{{POLICY_TEXT}}", item['text']),
+                "stream": False,
+                "options": {"temperature": 0.0, "seed": 42}
+            }
+            res = requests.post("http://localhost:11434/api/generate", json=payload).json()
+            output_text = res.get("response", "").strip()
+            
+            blind_items.append({
+                "blind_id": f"BLIND-VAL-{item_counter:03d}",
+                "task": "Policy Summarization",
+                "source_model_hidden": model,
+                "anonymized_output": output_text,
+                "rater_1_score": None,
+                "rater_2_score": None
+            })
+            item_counter += 1
+
+    random.shuffle(blind_items)
     os.makedirs('results/human_eval', exist_ok=True)
     output_file = 'results/human_eval/blind_queue.json'
     
@@ -33,8 +47,7 @@ def setup_blind_review():
         
     print(f"[?] Generated {len(blind_items)} blinded evaluation items.")
     print(f"[?] Saved review queue to: {output_file}")
-    print("    - Mohammed and Karthikeyan can now independently score items (1-5 rubric).")
-    print("    - Run with --calculate to compute Cohen's Kappa once scored.\n")
+    print("    - Mohammed can now independently score items under 'rater_1_score' (1-5 rubric).")
 
 if __name__ == "__main__":
     setup_blind_review()
