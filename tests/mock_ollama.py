@@ -112,7 +112,8 @@ class QuietServer(ThreadingHTTPServer):
         pass  # clients closing keep-alive sockets on exit is expected
 
 
-def serve(port=11500):
+def serve(port=0):
+    """Start the mock server. port=0 lets the OS pick a free port (see srv.server_port)."""
     srv = QuietServer(("127.0.0.1", port), H)
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     return srv

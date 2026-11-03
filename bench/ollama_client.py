@@ -35,14 +35,18 @@ DEFAULT_ENDPOINT = "http://localhost:11434"
 
 
 def _ollama_processes():
+    """Find Ollama's processes by name only.
+
+    Reading every process's command line is very slow on Windows, so we match
+    on the executable name and do it once per request, not on every sample.
+    """
     if psutil is None:
         return []
     procs = []
-    for p in psutil.process_iter(["name", "cmdline"]):
+    for p in psutil.process_iter(["name"]):
         try:
             name = (p.info.get("name") or "").lower()
-            cmd = " ".join(p.info.get("cmdline") or []).lower()
-            if "ollama" in name or "ollama" in cmd or "llama-server" in name:
+            if "ollama" in name or "llama-server" in name or "llama_server" in name:
                 procs.append(p)
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
@@ -50,17 +54,22 @@ def _ollama_processes():
 
 
 class RssSampler:
-    """Samples summed RSS of Ollama processes in a background thread."""
+    """Samples summed RSS of Ollama processes in a background thread.
+
+    The process list is resolved once when sampling starts; each sample then
+    reads memory for just those few processes, which is cheap on every OS.
+    """
 
     def __init__(self, interval_s: float = 0.05):
         self.interval_s = interval_s
         self.peak = 0
+        self._procs = []
         self._stop = threading.Event()
         self._thread = None
 
     def _sample_once(self):
         total = 0
-        for p in _ollama_processes():
+        for p in self._procs:
             try:
                 total += p.memory_info().rss
             except Exception:
@@ -74,8 +83,10 @@ class RssSampler:
 
     def __enter__(self):
         if psutil is not None:
-            self._thread = threading.Thread(target=self._run, daemon=True)
-            self._thread.start()
+            self._procs = _ollama_processes()
+            if self._procs:
+                self._thread = threading.Thread(target=self._run, daemon=True)
+                self._thread.start()
         return self
 
     def __exit__(self, *exc):
