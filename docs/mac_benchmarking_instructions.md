@@ -1,57 +1,86 @@
-# Mac Benchmarking & Evaluation Guide
-**Project:** Empirical Evaluation of On-Device Large Language Models on Consumer Hardware for Privacy-Compliant University Workflows  
-**Repository:** `MohdIliyas/local-slm-highered-benchmark`
+# Running the benchmark on the Apple M4 Mac
 
----
+**For:** Karthik
+**Time needed:** about 10 minutes of setup. The full run is unattended and can take a few hours. Leave the Mac plugged in, with sleep turned off.
 
-## 1. Context & Research Focus
+Please follow these steps in order. Every command is run in Terminal from inside the repository folder.
 
-### **The Core Problem**
-Higher education institutions face increasing pressure to automate administrative workflows (such as syllabus extraction, helpdesk support ticket triage, and policy compliance audits) while strictly complying with statutory privacy mandates under:
-* **FERPA (Family Educational Rights and Privacy Act):** Protecting student records from third-party commercial cloud exposure.
-* **ADA Title II (Americans with Disabilities Act):** Ensuring digital accessibility and compliance across course materials, web content, and institutional documentation.
+## 1. Get the code
 
-### **Why Institutional Accessibility Matters Beyond Alt-Text**
-In higher education governance, compliance with ADA Title II and institutional privacy mandates extends far beyond basic website alt-text. It encompasses structural, legal, and operational requirements:
-* **Document and Syllabus Remediation:** Automated extraction must accurately capture accessibility clauses, disability resource contact routing, and accommodation timelines (e.g., ensuring required 3-day turnaround times for document remediation).
-* **Information Parity:** Automated text summarization of complex institutional policies must retain all legal constraints without omission or hallucination.
-* **Strict Data Perimeters:** Transmitting unvetted student records, PII, and accommodation grievances to third-party cloud APIs creates severe regulatory and legal exposure. Running local open-weight Large Language Models (LLMs) on commodity hardware guarantees that sensitive student data never leaves the institutional boundary.
+If you already cloned the repo earlier, run `git pull` instead of cloning.
 
----
-
-## 2. Step-by-Step Instructions for Karthik (Apple Silicon Mac Execution)
-
-Follow these exact steps in your Mac terminal (`Terminal` or `iTerm2`) to execute the benchmark suite and log your performance metrics:
-
-### **Step 1: Clone the Repository & Navigate In**
 ```bash
 git clone https://github.com/MohdIliyas/local-slm-highered-benchmark.git
 cd local-slm-highered-benchmark
 ```
 
-### **Step 2: Set Up the Python Virtual Environment**
+## 2. Set up Python
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### **Step 3: Ensure Ollama is Running & Pull Target Models**
-*(Make sure the Ollama application is running on your Mac)*
+## 3. Check that everything works without models
+
 ```bash
-ollama pull llama3.2:3b
-ollama pull qwen2.5:7b
+python tests/test_pipeline.py
 ```
 
-### **Step 4: Run the Batch Evaluation Suite**
+The last lines should say `ALL CHECKS PASSED`. If they don't, stop and send the output to Mohammed.
+
+## 4. Install the models
+
+Make sure the Ollama app is running (its icon shows in the menu bar), then:
+
 ```bash
-python scripts/run_batch_eval.py
+ollama pull llama3.2:3b-instruct-q4_K_M
+ollama pull llama3.2:3b-instruct-q8_0
+ollama pull qwen2.5:7b-instruct-q4_K_M
+ollama pull qwen2.5:7b-instruct-q8_0
 ```
 
-### **Step 5: Commit and Push Results Back to GitHub**
-Once the script finishes executing:
+These are exact tags. Please don't substitute `llama3.2:3b` or `qwen2.5:7b`, because those are different builds and the results wouldn't be comparable.
+
+## 5. Prepare the machine
+
+These steps make the timing measurements fair:
+
+- Quit other apps, especially browsers, Docker, and anything else running a model.
+- Plug in the charger. On battery, macOS may slow the chip down.
+- Turn off sleep. On recent macOS, go to System Settings → Battery → Options → "Prevent automatic sleeping on power adapter when the display is off". As an alternative, run the experiments with `caffeinate -i` in front of the command.
+
+## 6. Run
+
 ```bash
-git add results/
-git commit -m "Add Apple Silicon Mac benchmark results"
-git push origin main
+python scripts/run_experiments.py --machine apple_m4 --preset smoke
 ```
+
+The smoke run takes about 5 minutes. If it finishes without errors, start the real runs:
+
+```bash
+caffeinate -i python scripts/run_experiments.py --machine apple_m4 --preset main
+caffeinate -i python scripts/run_experiments.py --machine apple_m4 --preset temperature
+python scripts/score.py --machine apple_m4
+```
+
+If anything interrupts a run, run the same command again. It picks up where it stopped.
+
+## 7. Send the results back
+
+```bash
+git checkout -b apple-m4-results
+git add results/apple_m4
+git commit -m "Apple M4 benchmark results"
+git push -u origin apple-m4-results
+```
+
+Then open a pull request on GitHub. Please **don't** push directly to `main`, and never use `--force`. A branch keeps your results safe even if someone else pushes at the same time.
+
+## 8. Human ratings (separate step, after Mohammed shares the queue)
+
+1. Pull the latest changes.
+2. Open `results/human_eval/queue.md` and rate each item in `results/human_eval/ratings_karthik.csv`, following `docs/human_eval_rubric.md`.
+3. Don't open the `results/human_eval/key/` folder, and don't compare individual scores with Mohammed until you have both finished.
+4. Commit only your own CSV, on a branch, and open a pull request.

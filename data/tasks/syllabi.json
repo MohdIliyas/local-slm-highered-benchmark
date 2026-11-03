@@ -1,0 +1,714 @@
+[
+  {
+    "id": "SYL-01",
+    "source": "synthetic-authored",
+    "text": "CIS 265 - Introduction to Data Structures\nInstructor: Dr. Priya Raman\nOffice hours: Tuesdays and Thursdays 1:00-2:30 PM, FH 412, or by appointment\n\nGrading\nProgramming assignments 40%\nMidterm exam 25%\nFinal exam 30%\nParticipation 5%\n\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "CIS 265",
+      "instructor_name": "Dr. Priya Raman",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Programming assignments",
+          "weight_percent": 40
+        },
+        {
+          "category": "Midterm exam",
+          "weight_percent": 25
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 30
+        },
+        {
+          "category": "Participation",
+          "weight_percent": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-02",
+    "source": "synthetic-authored",
+    "text": "Course: HIS 112, World History Since 1500. Taught by Prof. Daniel Okafor. I hold office hours Mondays 10-11:30 in Rhodes Tower 1103 and on Teams Wednesday evenings 6-7. Your grade: response papers (30 percent), two map quizzes (10 percent total), a midterm essay (25 percent), and a final research paper (35 percent). Late work loses one letter grade per day.",
+    "gold": {
+      "course_code": "HIS 112",
+      "instructor_name": "Prof. Daniel Okafor",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Response papers",
+          "weight_percent": 30
+        },
+        {
+          "category": "Map quizzes",
+          "weight_percent": 10
+        },
+        {
+          "category": "Midterm essay",
+          "weight_percent": 25
+        },
+        {
+          "category": "Final research paper",
+          "weight_percent": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-03",
+    "source": "synthetic-authored",
+    "text": "NUR 340 Adult Health Nursing II\nCourse faculty: Angela Whitfield, MSN, RN\nOffice Hours: Wednesdays 9-11 AM (Health Sciences 220) and virtual by request\nEvaluation methods:\n- Unit exams (3): 45%\n- Comprehensive final: 25%\n- Care plans: 20%\n- ATI proficiency assessment: 10%\nClinical is graded pass/fail and must be passed to pass the course.\nEducational access is the provision of classroom accommodations, auxiliary aids and services to ensure equal educational opportunities for all students regardless of their disability. Please contact Disability Services to request accommodations.",
+    "gold": {
+      "course_code": "NUR 340",
+      "instructor_name": "Angela Whitfield, MSN, RN",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Unit exams",
+          "weight_percent": 45
+        },
+        {
+          "category": "Comprehensive final",
+          "weight_percent": 25
+        },
+        {
+          "category": "Care plans",
+          "weight_percent": 20
+        },
+        {
+          "category": "ATI proficiency assessment",
+          "weight_percent": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-04",
+    "source": "synthetic-authored",
+    "text": "MTH 181 Calculus I - Section 03\nInstructor: Dr. Li Wei | liwei@university.edu\nOffice hours: MWF 11:00-11:50, Math Center Room 2\nPoints: Homework 150 pts, Quizzes 100 pts, Exam 1 150 pts, Exam 2 150 pts, Final Exam 250 pts. Total 800 points; homework counts 18.75% of the grade.\nIf you have a documented disability and require reasonable accommodations, register with the campus disability resource office; accommodations are not applied retroactively.",
+    "gold": {
+      "course_code": "MTH 181",
+      "instructor_name": "Dr. Li Wei",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Homework",
+          "weight_percent": 18.75
+        },
+        {
+          "category": "Quizzes",
+          "weight_percent": 12.5
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 18.75
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 18.75
+        },
+        {
+          "category": "Final Exam",
+          "weight_percent": 31.25
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-05",
+    "source": "synthetic-authored",
+    "text": "Welcome to PSY 101! I'm Jordan Ellis, your instructor this term. Drop-in hours are Thursdays 3-5 pm in the Psych Building, room 305. Weekly online quizzes make up 20% of your grade, the three exams are 20% each, and the research participation requirement is the remaining 20%.",
+    "gold": {
+      "course_code": "PSY 101",
+      "instructor_name": "Jordan Ellis",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Weekly online quizzes",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 3",
+          "weight_percent": 20
+        },
+        {
+          "category": "Research participation",
+          "weight_percent": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-06",
+    "source": "synthetic-authored",
+    "text": "EEC-361 Digital Systems Design\nLecturer: Dr. Marcus Feld\nOffice: SH 330. Hours: Mon 2-4 PM; Fri 10-11 AM.\nGrade composition -- Labs: 30% / Homework: 10% / Midterm: 25% / Final Project: 35%\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "EEC 361",
+      "instructor_name": "Dr. Marcus Feld",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Labs",
+          "weight_percent": 30
+        },
+        {
+          "category": "Homework",
+          "weight_percent": 10
+        },
+        {
+          "category": "Midterm",
+          "weight_percent": 25
+        },
+        {
+          "category": "Final Project",
+          "weight_percent": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-07",
+    "source": "synthetic-authored",
+    "text": "ENG 101: College Writing I\nInstructor: Sarah Kowalski\nConferences/office hours: by appointment through the online scheduler, and Tuesdays 12:30-1:30 in the Writing Center.\nPortfolio 50% | Short essays 30% | Peer review and workshop 20%\nEducational access is the provision of classroom accommodations, auxiliary aids and services to ensure equal educational opportunities for all students regardless of their disability. Please contact Disability Services to request accommodations.",
+    "gold": {
+      "course_code": "ENG 101",
+      "instructor_name": "Sarah Kowalski",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Portfolio",
+          "weight_percent": 50
+        },
+        {
+          "category": "Short essays",
+          "weight_percent": 30
+        },
+        {
+          "category": "Peer review and workshop",
+          "weight_percent": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-08",
+    "source": "synthetic-authored",
+    "text": "BUS 350 Organizational Behavior. Instructor: Prof. Ramona Diaz. Office hours Tues 4:00-5:30 PM, BU 452. Assessment: case analyses 30%, team project 30%, exams 30% (two exams, 15% each), and class contribution 10%.",
+    "gold": {
+      "course_code": "BUS 350",
+      "instructor_name": "Prof. Ramona Diaz",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Case analyses",
+          "weight_percent": 30
+        },
+        {
+          "category": "Team project",
+          "weight_percent": 30
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 15
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 15
+        },
+        {
+          "category": "Class contribution",
+          "weight_percent": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-09",
+    "source": "synthetic-authored",
+    "text": "CHM 261 Organic Chemistry I (Lecture)\nInstructor of record: Dr. Helen Brooks; Lab coordinator: Mr. T. Grant\nOffice hours (Dr. Brooks): Monday and Wednesday, 3:00-4:00 PM, SR 312\nYour course grade is calculated as follows: three hour exams worth 15% each, an ACS final exam worth 30%, online homework worth 10%, and laboratory worth 15%.\nIf you have a documented disability and require reasonable accommodations, register with the campus disability resource office; accommodations are not applied retroactively.",
+    "gold": {
+      "course_code": "CHM 261",
+      "instructor_name": "Dr. Helen Brooks",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Hour exam 1",
+          "weight_percent": 15
+        },
+        {
+          "category": "Hour exam 2",
+          "weight_percent": 15
+        },
+        {
+          "category": "Hour exam 3",
+          "weight_percent": 15
+        },
+        {
+          "category": "ACS final exam",
+          "weight_percent": 30
+        },
+        {
+          "category": "Online homework",
+          "weight_percent": 10
+        },
+        {
+          "category": "Laboratory",
+          "weight_percent": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-10",
+    "source": "synthetic-authored",
+    "text": "SOC 205 - Race, Class and Gender\nDr. Kevin Mbeki\nOffice hours: Thursdays 10:00 AM-12:00 PM, RT 1702, or Zoom by appointment\nReading reflections ......... 25%\nDiscussion leadership ........ 15%\nMidterm take-home ............. 25%\nFinal paper ................... 35%\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "SOC 205",
+      "instructor_name": "Dr. Kevin Mbeki",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Reading reflections",
+          "weight_percent": 25
+        },
+        {
+          "category": "Discussion leadership",
+          "weight_percent": 15
+        },
+        {
+          "category": "Midterm take-home",
+          "weight_percent": 25
+        },
+        {
+          "category": "Final paper",
+          "weight_percent": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-11",
+    "source": "synthetic-authored",
+    "text": "CS 368 Operating Systems -- Instructor: Dr. Fatima Haddad. Office hours: Wed 1-3pm (FH 120). Coursework: 4 programming projects (10% each), 2 midterms (15% each), final exam 30%.",
+    "gold": {
+      "course_code": "CS 368",
+      "instructor_name": "Dr. Fatima Haddad",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Project 1",
+          "weight_percent": 10
+        },
+        {
+          "category": "Project 2",
+          "weight_percent": 10
+        },
+        {
+          "category": "Project 3",
+          "weight_percent": 10
+        },
+        {
+          "category": "Project 4",
+          "weight_percent": 10
+        },
+        {
+          "category": "Midterm 1",
+          "weight_percent": 15
+        },
+        {
+          "category": "Midterm 2",
+          "weight_percent": 15
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-12",
+    "source": "synthetic-authored",
+    "text": "ART 120 Foundations of Drawing\nInstructor: Maya Torres, MFA\nStudio hours / office hours: Fridays 9 AM - 12 PM in Art Building 104\nSketchbook: 20 percent\nIn-class projects: 50 percent\nFinal portfolio review: 30 percent\nEducational access is the provision of classroom accommodations, auxiliary aids and services to ensure equal educational opportunities for all students regardless of their disability. Please contact Disability Services to request accommodations.",
+    "gold": {
+      "course_code": "ART 120",
+      "instructor_name": "Maya Torres",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Sketchbook",
+          "weight_percent": 20
+        },
+        {
+          "category": "In-class projects",
+          "weight_percent": 50
+        },
+        {
+          "category": "Final portfolio review",
+          "weight_percent": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-13",
+    "source": "synthetic-authored",
+    "text": "ECO 202 Principles of Macroeconomics, Fall\nDr. Robert Nguyen (he/him)\nOffice hours: Tue/Thu 9:30-10:45, BU 520\nGrade weights\n  Aplia problem sets ...... 20%\n  Midterm I .............. 20%\n  Midterm II ............. 20%\n  Final (cumulative) ..... 40%\nIf you have a documented disability and require reasonable accommodations, register with the campus disability resource office; accommodations are not applied retroactively.",
+    "gold": {
+      "course_code": "ECO 202",
+      "instructor_name": "Dr. Robert Nguyen",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Aplia problem sets",
+          "weight_percent": 20
+        },
+        {
+          "category": "Midterm I",
+          "weight_percent": 20
+        },
+        {
+          "category": "Midterm II",
+          "weight_percent": 20
+        },
+        {
+          "category": "Final (cumulative)",
+          "weight_percent": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-14",
+    "source": "synthetic-authored",
+    "text": "PHY 241 University Physics I. Instructor: Dr. Ingrid Larsen. Office hours are held Mondays 4-5:30 PM in SI 210. Grading is points based: Homework 100, Labs 100, Three exams 300 (100 each), Final 200 -- 700 points in total.",
+    "gold": {
+      "course_code": "PHY 241",
+      "instructor_name": "Dr. Ingrid Larsen",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Homework",
+          "weight_percent": 14.29
+        },
+        {
+          "category": "Labs",
+          "weight_percent": 14.29
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 14.29
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 14.29
+        },
+        {
+          "category": "Exam 3",
+          "weight_percent": 14.29
+        },
+        {
+          "category": "Final",
+          "weight_percent": 28.57
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-15",
+    "source": "synthetic-authored",
+    "text": "COM 225 Public Speaking\nInstructor: Jasmine Carter\nOffice Hours: Mondays 1-2 PM and Wednesdays 1-2 PM, MU 241\nSpeeches (4) - 60%\nOutlines and self-evaluations - 20%\nFinal exam - 20%\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "COM 225",
+      "instructor_name": "Jasmine Carter",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Speeches",
+          "weight_percent": 60
+        },
+        {
+          "category": "Outlines and self-evaluations",
+          "weight_percent": 20
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-16",
+    "source": "synthetic-authored",
+    "text": "HSC 310 Epidemiology. Fully online, asynchronous.\nInstructor: Dr. Omar Siddiqui\nVirtual office hours: Thursdays 7-8 PM on Zoom (link in Blackboard)\nModule quizzes 25% - Discussion posts 15% - Data analysis assignments 30% - Final project 30%\nEducational access is the provision of classroom accommodations, auxiliary aids and services to ensure equal educational opportunities for all students regardless of their disability. Please contact Disability Services to request accommodations.",
+    "gold": {
+      "course_code": "HSC 310",
+      "instructor_name": "Dr. Omar Siddiqui",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Module quizzes",
+          "weight_percent": 25
+        },
+        {
+          "category": "Discussion posts",
+          "weight_percent": 15
+        },
+        {
+          "category": "Data analysis assignments",
+          "weight_percent": 30
+        },
+        {
+          "category": "Final project",
+          "weight_percent": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-17",
+    "source": "synthetic-authored",
+    "text": "MUS 150 Music Appreciation with Prof. Elena Petrova. Office hours: Tuesdays 11-12, Music & Communication 301. Concert reports count for 30%, listening quizzes 30%, and the final exam 40%.",
+    "gold": {
+      "course_code": "MUS 150",
+      "instructor_name": "Prof. Elena Petrova",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Concert reports",
+          "weight_percent": 30
+        },
+        {
+          "category": "Listening quizzes",
+          "weight_percent": 30
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-18",
+    "source": "synthetic-authored",
+    "text": "CVE 300 Structural Analysis I\nInstructor: Dr. Thomas Reilly, P.E.\nOffice hours: Wednesday 10 AM-12 PM, SH 211\nHomework 15%; Quizzes 10%; Exam 1 20%; Exam 2 20%; Final Exam 35%.\nIf you have a documented disability and require reasonable accommodations, register with the campus disability resource office; accommodations are not applied retroactively.",
+    "gold": {
+      "course_code": "CVE 300",
+      "instructor_name": "Dr. Thomas Reilly",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Homework",
+          "weight_percent": 15
+        },
+        {
+          "category": "Quizzes",
+          "weight_percent": 10
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 20
+        },
+        {
+          "category": "Final Exam",
+          "weight_percent": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-19",
+    "source": "synthetic-authored",
+    "text": "SPN 101 Elementary Spanish I\nProfesora: Lucia Fernandez\nHoras de oficina / Office hours: Mondays and Wednesdays 2:00-3:00 PM, Main Classroom 418\nParticipation 15%, Homework (online) 20%, Quizzes 15%, Oral exams 20%, Final exam 30%.\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "SPN 101",
+      "instructor_name": "Lucia Fernandez",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Participation",
+          "weight_percent": 15
+        },
+        {
+          "category": "Homework (online)",
+          "weight_percent": 20
+        },
+        {
+          "category": "Quizzes",
+          "weight_percent": 15
+        },
+        {
+          "category": "Oral exams",
+          "weight_percent": 20
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-20",
+    "source": "synthetic-authored",
+    "text": "ACT 221 Financial Accounting. Instructor: Dr. Benjamin Shore. Office hours: Monday and Wednesday 5:00-6:00 PM, BU 335. Grades are based on 1,000 points: Connect homework 200 points, three exams 600 points (200 each), and a comprehensive final 200 points.",
+    "gold": {
+      "course_code": "ACT 221",
+      "instructor_name": "Dr. Benjamin Shore",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Connect homework",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 1",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 2",
+          "weight_percent": 20
+        },
+        {
+          "category": "Exam 3",
+          "weight_percent": 20
+        },
+        {
+          "category": "Comprehensive final",
+          "weight_percent": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-21",
+    "source": "synthetic-authored",
+    "text": "IST 300 Information Systems Analysis\nInstructor: Rachel Kim\nOffice hours: Thursdays 2-4 PM via Teams, or email to arrange a time\n\nAssignments 35%\nTeam project 40%\nFinal exam 25%\n\nEducational access is the provision of classroom accommodations, auxiliary aids and services to ensure equal educational opportunities for all students regardless of their disability. Please contact Disability Services to request accommodations.",
+    "gold": {
+      "course_code": "IST 300",
+      "instructor_name": "Rachel Kim",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Assignments",
+          "weight_percent": 35
+        },
+        {
+          "category": "Team project",
+          "weight_percent": 40
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-22",
+    "source": "synthetic-authored",
+    "text": "BIO 202 Human Anatomy and Physiology II (lecture + lab)\nInstructor: Dr. Natalie Ruiz\nOffice hours: Tuesday 1-3 PM, SI 305\nLecture exams (4 x 12.5%) 50%, Lab practicals 30%, Online quizzes 20%.\nIf you have a documented disability and require reasonable accommodations, register with the campus disability resource office; accommodations are not applied retroactively.",
+    "gold": {
+      "course_code": "BIO 202",
+      "instructor_name": "Dr. Natalie Ruiz",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Lecture exam 1",
+          "weight_percent": 12.5
+        },
+        {
+          "category": "Lecture exam 2",
+          "weight_percent": 12.5
+        },
+        {
+          "category": "Lecture exam 3",
+          "weight_percent": 12.5
+        },
+        {
+          "category": "Lecture exam 4",
+          "weight_percent": 12.5
+        },
+        {
+          "category": "Lab practicals",
+          "weight_percent": 30
+        },
+        {
+          "category": "Online quizzes",
+          "weight_percent": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-23",
+    "source": "synthetic-authored",
+    "text": "PHL 215 Ethics. Professor Andre Laurent. Office hours: Fridays 1-3 PM, RT 1914. There are two papers (25% each), a midterm (20%), and a final exam (30%).",
+    "gold": {
+      "course_code": "PHL 215",
+      "instructor_name": "Prof. Andre Laurent",
+      "has_accessibility_statement": false,
+      "grading_breakdown": [
+        {
+          "category": "Paper 1",
+          "weight_percent": 25
+        },
+        {
+          "category": "Paper 2",
+          "weight_percent": 25
+        },
+        {
+          "category": "Midterm",
+          "weight_percent": 20
+        },
+        {
+          "category": "Final exam",
+          "weight_percent": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "SYL-24",
+    "source": "synthetic-authored",
+    "text": "EDU 410 Assessment in the Inclusive Classroom\nInstructor: Dr. Grace Holloway\nOffice hours: Mondays 4-6 PM, JH 290, and by appointment\nField experience log 20%; Assessment design project 35%; Weekly reflections 15%; Final case study 30%\nAccessibility: Students who need accommodations because of a disability should contact the Office of Disability Services and provide their accommodation letter to the instructor as early as possible.",
+    "gold": {
+      "course_code": "EDU 410",
+      "instructor_name": "Dr. Grace Holloway",
+      "has_accessibility_statement": true,
+      "grading_breakdown": [
+        {
+          "category": "Field experience log",
+          "weight_percent": 20
+        },
+        {
+          "category": "Assessment design project",
+          "weight_percent": 35
+        },
+        {
+          "category": "Weekly reflections",
+          "weight_percent": 15
+        },
+        {
+          "category": "Final case study",
+          "weight_percent": 30
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "id": "POL-01",
+    "title": "Digital Accessibility of Course Materials",
+    "text": "All instructional materials posted in the learning management system must conform to WCAG 2.1 Level AA. When a student or the Office of Disability Services reports an inaccessible document, the instructor must provide an accessible version within 3 business days. If remediation will take longer, the instructor must supply an interim accessible alternative within the same 3 business days and complete full remediation within 10 business days. Videos used for instruction must include accurate captions before they are assigned.",
+    "constraints": [
+      "WCAG 2.1 Level AA",
+      "3 business days",
+      "10 business days"
+    ],
+    "reference_summary": [
+      "Course materials in the LMS must meet WCAG 2.1 Level AA accessibility standards.",
+      "Once an inaccessible document is reported, an accessible version (or an interim alternative) is due within 3 business days, with full remediation within 10 business days.",
+      "Instructional videos need accurate captions before students are assigned them."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-02",
+    "title": "Disclosure of Education Records",
+    "text": "Under FERPA, the university will not disclose personally identifiable information from a student's education records without the student's prior written consent, except as permitted by law. Directory information may be released unless the student files a request to withhold it with the Registrar within the first 10 calendar days of the term. A request to withhold remains in effect until the student revokes it in writing. Staff may not upload education records to external software services that lack a signed data-use agreement with the university.",
+    "constraints": [
+      "FERPA",
+      "prior written consent",
+      "10 calendar days",
+      "data-use agreement"
+    ],
+    "reference_summary": [
+      "Under FERPA, information from your education records is not released without your prior written consent unless the law allows it.",
+      "To keep your directory information private, file a request with the Registrar within the first 10 calendar days of the term; it lasts until you revoke it in writing.",
+      "Staff cannot put education records into outside software that lacks a signed data-use agreement with the university."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-03",
+    "title": "Undergraduate Grade Appeals",
+    "text": "A student who believes a final course grade was assigned in error must first contact the instructor within 14 calendar days after grades are posted. If the matter is not resolved, the student may submit a written appeal to the department chair within 30 calendar days after grades are posted. The chair will issue a written decision within 21 business days of receiving the appeal. The decision of the dean's office on any further appeal is final.",
+    "constraints": [
+      "14 calendar days",
+      "30 calendar days",
+      "21 business days"
+    ],
+    "reference_summary": [
+      "Contact your instructor within 14 calendar days after final grades post if you think your grade is wrong.",
+      "If that doesn't resolve it, submit a written appeal to the department chair within 30 calendar days of grades posting; the chair decides in writing within 21 business days.",
+      "A further appeal goes to the dean's office, whose decision is final."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-04",
+    "title": "Class Attendance",
+    "text": "Students are expected to attend all scheduled class meetings. Instructors may lower a student's final grade if unexcused absences exceed 15% of scheduled meetings. Absences for documented illness, university-sponsored activities, or religious observance are excused if the student notifies the instructor within 48 hours of the missed class. Students who miss the first two class meetings without notifying the instructor may be administratively dropped.",
+    "constraints": [
+      "15%",
+      "48 hours",
+      "first two class meetings"
+    ],
+    "reference_summary": [
+      "Your final grade can be lowered if unexcused absences go over 15% of class meetings.",
+      "Absences for documented illness, university activities, or religious observance are excused if you tell your instructor within 48 hours.",
+      "Missing the first two class meetings without notice can get you administratively dropped."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-05",
+    "title": "Academic Integrity Violations",
+    "text": "An instructor who suspects academic misconduct must notify the student in writing within 10 business days of discovering the incident. The student has 5 business days from that notice to request a meeting. A first violation may result in a zero on the assignment; a second violation is referred to the Office of Student Conduct and may result in suspension. Records of violations are retained for 7 years.",
+    "constraints": [
+      "10 business days",
+      "5 business days",
+      "second violation",
+      "7 years"
+    ],
+    "reference_summary": [
+      "Instructors must notify you in writing within 10 business days of discovering suspected misconduct.",
+      "You have 5 business days from that notice to request a meeting; a first violation can mean a zero on the assignment.",
+      "A second violation goes to the Office of Student Conduct and can lead to suspension, and violation records are kept for 7 years."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-06",
+    "title": "Final Examination Conflicts",
+    "text": "A student with two final examinations scheduled at the same time, or more than two final examinations on one calendar day, may request to reschedule one exam. Requests must be submitted to the instructor of the later exam at least 14 days before the first day of the final examination period. The rescheduled exam must be offered during the final examination period.",
+    "constraints": [
+      "two final examinations",
+      "more than two",
+      "14 days"
+    ],
+    "reference_summary": [
+      "You can reschedule one exam if two finals overlap or you have more than two finals on the same day.",
+      "Send the request to the instructor of the later exam at least 14 days before finals week starts.",
+      "The make-up exam will still be held during the final examination period."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-07",
+    "title": "Incomplete Grades",
+    "text": "An instructor may assign a grade of Incomplete only when a student has completed at least 70% of the course work with a passing average and cannot finish because of documented circumstances beyond the student's control. The remaining work must be completed by the end of the following semester. An Incomplete that is not resolved by that deadline automatically converts to an F.",
+    "constraints": [
+      "70%",
+      "following semester",
+      "automatically converts to an F"
+    ],
+    "reference_summary": [
+      "An Incomplete requires that you finished at least 70% of the work with a passing average and were stopped by documented circumstances beyond your control.",
+      "The remaining work must be done by the end of the following semester.",
+      "If it isn't finished by then, the Incomplete automatically converts to an F."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-08",
+    "title": "Course Withdrawal",
+    "text": "Students may withdraw from a course without a grade through the end of the second week of the semester. From the third week through the end of the tenth week, withdrawal results in a grade of W, which does not affect the grade point average. After the tenth week, withdrawal is permitted only for documented extenuating circumstances with approval of the dean.",
+    "constraints": [
+      "second week",
+      "tenth week",
+      [
+        "grade of W",
+        "a W"
+      ]
+    ],
+    "reference_summary": [
+      "You can withdraw with no grade recorded through the end of the second week.",
+      "From week 3 through the end of the tenth week, withdrawing gives a W, which doesn't affect your GPA.",
+      "After the tenth week, you can only withdraw for documented extenuating circumstances with the dean's approval."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-09",
+    "title": "Testing Accommodations",
+    "text": "Students approved for testing accommodations must schedule each exam with the Testing Center at least 5 business days in advance, or at least 10 business days in advance for final examinations. Students approved for extended time receive the multiplier stated on their accommodation letter, typically 1.5x or 2x the standard time. Online exams must be configured by the instructor to apply the same extended time.",
+    "constraints": [
+      "5 business days",
+      "10 business days",
+      "1.5x",
+      "2x"
+    ],
+    "reference_summary": [
+      "Book each accommodated exam with the Testing Center at least 5 business days ahead, or 10 business days ahead for finals.",
+      "Extended time follows the multiplier on your accommodation letter, usually 1.5x or 2x.",
+      "Instructors must set online exams to give you that same extended time."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-10",
+    "title": "Remote Proctoring Data Retention",
+    "text": "Recordings captured by remote proctoring software may be reviewed only by the course instructor and authorized academic integrity staff. Recordings are deleted 90 days after the end of the term unless they are part of an open misconduct case. Students may request to view their own recording within 30 days of the exam.",
+    "constraints": [
+      "90 days",
+      "30 days",
+      "open misconduct case"
+    ],
+    "reference_summary": [
+      "Only your instructor and authorized academic integrity staff may review proctoring recordings.",
+      "Recordings are deleted 90 days after the term ends, unless they are part of an open misconduct case.",
+      "You can ask to view your own recording within 30 days of the exam."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-11",
+    "title": "Password and Account Security",
+    "text": "University account passwords must be at least 14 characters long and are not required to expire unless a compromise is suspected. After 10 consecutive failed sign-in attempts, an account is locked for 30 minutes. Multi-factor authentication is required for all students and employees. Users must report a suspected compromise to the IT Service Desk within 24 hours.",
+    "constraints": [
+      "14 characters",
+      "10 consecutive failed",
+      "30 minutes",
+      "24 hours"
+    ],
+    "reference_summary": [
+      "Passwords must be at least 14 characters and only need changing if a compromise is suspected; multi-factor authentication is required for everyone.",
+      "After 10 consecutive failed sign-in attempts, your account locks for 30 minutes.",
+      "Report a suspected compromise to the IT Service Desk within 24 hours."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-12",
+    "title": "Late Registration",
+    "text": "Students may add courses through the fifth day of the semester using the online registration system. Between the sixth and tenth day, adding a course requires the instructor's signature on a late-add form and incurs a $50 late registration fee. No courses may be added after the tenth day of the semester.",
+    "constraints": [
+      "fifth day",
+      "tenth day",
+      "$50"
+    ],
+    "reference_summary": [
+      "You can add courses online through the fifth day of the semester.",
+      "From day 6 through the tenth day, you need the instructor's signature on a late-add form and pay a $50 fee.",
+      "No courses can be added after the tenth day."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-13",
+    "title": "Lecture Capture and Recording",
+    "text": "Instructors who record class sessions must notify students at the start of the term. Recordings may be shared only with students enrolled in that section and must be removed from the LMS within 30 days after final grades are posted. Students may not record class sessions without instructor permission, except as an approved accommodation.",
+    "constraints": [
+      "30 days",
+      "approved accommodation"
+    ],
+    "reference_summary": [
+      "Instructors who record classes must tell students at the start of the term and share recordings only with that section.",
+      "Recordings must be removed from the LMS within 30 days after final grades post.",
+      "Students can't record class without the instructor's permission unless it's an approved accommodation."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-14",
+    "title": "Syllabus Requirements",
+    "text": "Every course must have a syllabus posted in the learning management system no later than the first day of classes. The syllabus must state the grading breakdown, the instructor's office hours, and the university's disability accommodation statement. Any change to the grading breakdown after the second week of the term requires written notice to students at least 7 days before it takes effect.",
+    "constraints": [
+      "first day of classes",
+      "disability accommodation statement",
+      "second week",
+      "7 days"
+    ],
+    "reference_summary": [
+      "A syllabus must be posted in the LMS by the first day of classes.",
+      "It must include the grading breakdown, office hours, and the disability accommodation statement.",
+      "Grading changes after the second week need written notice to students at least 7 days before taking effect."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-15",
+    "title": "Student Complaint Procedure",
+    "text": "A student with a complaint not covered by another university policy should first attempt to resolve it with the staff member or office involved. If unresolved, the student may file a written complaint with the Dean of Students within 60 days of the incident. The Dean of Students will acknowledge the complaint within 5 business days and provide a written response within 30 business days.",
+    "constraints": [
+      "60 days",
+      "5 business days",
+      "30 business days"
+    ],
+    "reference_summary": [
+      "First try to resolve the issue directly with the staff member or office involved.",
+      "If that fails, file a written complaint with the Dean of Students within 60 days of the incident.",
+      "The Dean of Students acknowledges it within 5 business days and responds in writing within 30 business days."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "POL-16",
+    "title": "Use of Generative AI Tools with Student Data",
+    "text": "Employees may use generative AI tools for university work only if the tool is approved by Information Technology Services. Student education records, health information, and Social Security numbers may not be entered into any AI tool that is not hosted on university-managed infrastructure. Violations must be reported to the Information Security Office within 2 business days of discovery.",
+    "constraints": [
+      "Information Technology Services",
+      "university-managed infrastructure",
+      "2 business days"
+    ],
+    "reference_summary": [
+      "Employees may use only AI tools approved by Information Technology Services.",
+      "Education records, health information, and Social Security numbers can't go into any AI tool not hosted on university-managed infrastructure.",
+      "Report violations to the Information Security Office within 2 business days of discovery."
+    ],
+    "reference_status": "draft - an author must approve or rewrite before final scoring",
+    "source": "synthetic-authored"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "_comment": "Model keys are what appears in tables. Tags must exist in the Ollama library; run `ollama pull <tag>` for each before running.",
+  "models": {
+    "llama3.2-3b-q4": "llama3.2:3b-instruct-q4_K_M",
+    "llama3.2-3b-q8": "llama3.2:3b-instruct-q8_0",
+    "qwen2.5-7b-q4":  "qwen2.5:7b-instruct-q4_K_M",
+    "qwen2.5-7b-q8":  "qwen2.5:7b-instruct-q8_0"
+  },
+  "presets": {
+    "main": {
+      "description": "Every model x every task, greedy decoding. Source of all quality and latency numbers.",
+      "models": ["llama3.2-3b-q4", "llama3.2-3b-q8", "qwen2.5-7b-q4", "qwen2.5-7b-q8"],
+      "tasks": ["extraction", "policy", "classification", "drafting"],
+      "temperatures": [0.0],
+      "seeds": [42]
+    },
+    "temperature": {
+      "description": "Sampling ablation on the Q4 models. T=0 comes from the main preset.",
+      "models": ["llama3.2-3b-q4", "qwen2.5-7b-q4"],
+      "tasks": ["extraction", "policy", "classification"],
+      "temperatures": [0.2, 0.7],
+      "seeds": [1, 2, 3]
+    },
+    "smoke": {
+      "description": "Two items per task on one model, to check the setup in a few minutes.",
+      "models": ["llama3.2-3b-q4"],
+      "tasks": ["extraction", "policy", "classification", "drafting"],
+      "temperatures": [0.0],
+      "seeds": [42],
+      "limit_per_task": 2
+    }
+  },
+  "cost_model_assumptions": {
+    "_comment": "Illustrative only. Replace with times you actually measure (e.g. time yourselves writing 5 replies by hand). Reported as a sensitivity analysis, never as a finding.",
+    "minutes_manual_draft": 6.0,
+    "minutes_review_ok_draft": 1.5,
+    "minutes_fix_flagged_draft": 4.0,
+    "monthly_ticket_volume": 1000
+  }
+}

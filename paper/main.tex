@@ -1,152 +1,344 @@
-﻿\documentclass[sigconf]{acmart}
+\documentclass[sigconf,nonacm]{acmart}
 
 \usepackage{booktabs}
-\usepackage{microtype}
+\usepackage{xcolor}
 \usepackage{amsmath}
-\usepackage{multirow}
 
-% Remove ACM conference boilerplate headers for preprint/working draft
-\setcopyright{none}
+% ---------------------------------------------------------------------------
+% Draft controls. Set \drafttrue while results are coming in: unmeasured
+% values print as red [TBD] and author notes print in blue. Set \draftfalse
+% for submission; the build then fails loudly if any [TBD] remains.
+\newif\ifdraft
+\drafttrue
+\ifdraft
+  \newcommand{\tbd}{\textcolor{red}{\textbf{[TBD]}}}
+  \newcommand{\todonote}[1]{\textcolor{blue}{\textsf{[Note: #1]}}}
+\else
+  \newcommand{\tbd}{\errmessage{Unmeasured value [TBD] in final build}}
+  \newcommand{\todonote}[1]{\errmessage{Author note left in final build: #1}}
+\fi
+% Shrink a table only if it is wider than the given width; never enlarge it.
+\newsavebox{\fitboxbox}
+\newcommand{\fitbox}[2]{\sbox{\fitboxbox}{#2}%
+  \ifdim\wd\fitboxbox>#1\resizebox{#1}{!}{\usebox{\fitboxbox}}\else\usebox{\fitboxbox}\fi}
+% All numbers come from here. Regenerate with: python scripts/make_paper_tables.py
+\input{generated/macros}
+% ---------------------------------------------------------------------------
+
 \settopmatter{printacmref=false}
-\renewcommand\footnotetextcopyrightpermission[1]{}
+\setcopyright{none}
 
-\title{Empirical Evaluation of On-Device Small Language Models on Consumer Hardware for Privacy-Compliant University Workflows}
+\title{On-Device Small Language Models for Privacy-Preserving University Administration: A Benchmark on Commodity Hardware}
 
-\author{Mohammed Iliyas Sanjamala, M.S.}
+\author{Mohammed Iliyas Sanjamala}
 \affiliation{%
   \institution{Cleveland State University}
   \department{Department of Computer Science}
   \city{Cleveland}
   \state{Ohio}
-  \country{USA}
-}
+  \country{USA}}
 
-\author{Karthikeyan Prem Kumar, M.S.}
+\author{Karthikeyan Prem Kumar}
 \affiliation{%
   \institution{Cleveland State University}
   \department{Department of Computer Science}
   \city{Cleveland}
   \state{Ohio}
-  \country{USA}
-}
+  \country{USA}}
 
-\author{Richard Smith, EdD}
+\author{Richard Smith}
 \affiliation{%
-  \institution{Center for Digital Learning and Academic Technology}
-  \country{USA}
-}
+  \institution{Cleveland State University}
+  \department{Center for Digital Learning and Academic Technology}
+  \city{Cleveland}
+  \state{Ohio}
+  \country{USA}}
 
-\author{Aditi Singh, PhD}
+\author{Aditi Singh}
 \affiliation{%
   \institution{Cleveland State University}
   \department{Department of Computer Science}
-  \country{USA}
-}
-
-\begin{abstract}
-Higher education institutions face increasing pressure to automate administrative workflows while strictly adhering to statutory privacy mandates under the Family Educational Rights and Privacy Act (FERPA) and Title II of the Americans with Disabilities Act (ADA). While proprietary cloud-hosted Large Language Models (LLMs) offer high generative fluencies, their deployment introduces critical data-perimeter risks and recurring subscription overheads. On-device Small Language Models (SLMs) running locally on commodity enterprise workstations present a viable alternative; however, their capacity to execute rigorous institutional text workflows remains under-characterized across extended parameter variations. In this study, we empirically evaluate two open-weight models (\texttt{llama3.2:3b} and \texttt{qwen2.5:7b}) deployed on a commodity enterprise workstation (Intel Core i7, 16 GB RAM, CPU-only execution) across an expanded parameter matrix: quantization precision (\texttt{Q4\_K\_M} vs. \texttt{Q8\_0}), decoding temperature ablations ( \in [0.0, 0.2, 0.7]$), token latency distributions (p50/p95/p99), automated ROUGE/BERTScore policy metrics, and mathematical Human Intervention Rate (HIR) labor modeling. Our findings demonstrate that while 3B models achieve higher generation throughput (~108 tokens/sec), they fail strict JSON schema primitive type casting and exhibit high hallucination rates. Conversely, 7B models achieve 100\% schema validity, robust lexical coverage (ROUGE-L > 0.82), and sustainable administrative overhead.
-\end{abstract}
+  \city{Cleveland}
+  \state{Ohio}
+  \country{USA}}
 
 \begin{document}
 
+\begin{abstract}
+Universities want to automate routine administrative text work, but sending student records to commercial cloud models raises disclosure questions under FERPA.
+Running small language models (SLMs) on hardware the institution already owns avoids that disclosure, if the models are fast enough and good enough.
+We benchmark two open-weight SLMs, Llama~3.2~3B and Qwen~2.5~7B, each at two quantization levels (\texttt{Q4\_K\_M} and \texttt{Q8\_0}), on a CPU-only Intel Core~i7 workstation and an Apple M4 Mac.
+The four tasks are drawn from university operations: extracting structured fields from syllabi (\NSyllabi{} documents), summarizing policies without losing deadlines or thresholds (\NPolicies{} policies, \NConstraints{} required constraints), routing helpdesk tickets into eight categories (\NTickets{} tickets), and drafting replies to students (\NDrafting{} inquiries, rated blind by two people).
+On the i7, decode throughput ranged from \TpsIntelQwenQeight{} to \TpsIntelLlamaQfour{} tokens/s.
+Qwen~2.5~7B (\texttt{Q4\_K\_M}) produced schema-valid JSON for \SchemaQwenQfour\% of syllabi versus \SchemaLlamaQfour\% for Llama~3.2~3B, and classified \AccQwenQfour\% of tickets correctly versus \AccLlamaQfour\%.
+Human raters judged that \HirQwenQfour\% and \HirLlamaQfour\% of drafted replies, respectively, needed a substantive edit before sending.
+\todonote{Finish the abstract with one sentence on the main takeaway once all numbers are in.}
+We release the harness, data, and raw outputs.
+\end{abstract}
+
+\keywords{small language models, on-device inference, quantization, higher education, FERPA, accessibility, benchmarking}
+
 \maketitle
 
+% ===========================================================================
 \section{Introduction}
-Higher education institutions face conflicting pressures at the intersection of operational scaling and statutory compliance. Expanding administrative workloads---including student helpdesk triage, syllabus compliance auditing, and policy communication---present natural use-cases for generative artificial intelligence. However, standard commercial implementations relying on proprietary cloud APIs introduce substantial data governance vulnerabilities under FERPA and institutional data-perimeter mandates~\cite{dong2025minimizing}. Transmitting student inquiries, grade dispute appeals, and unvetted course materials beyond campus boundaries creates unacceptable institutional exposure.
 
-Recent advancements in quantization and small language models (SLMs) spanning 3B to 7B parameters suggest that edge deployment on commodity x86 office laptops is theoretically feasible~\cite{husom2025sustainable, kurt2026quantization}. Nevertheless, significant empirical questions remain regarding how quantization depth, decoding temperatures, and latency distribution percentiles impact model stability in constrained settings.
+Much of a university's administrative workload is text: helpdesk tickets that must be routed, syllabi that must be checked for required statements, policies that must be explained to students in plain language, and e-mails that must be answered.
+Large language models handle such text well, but the most capable ones run in commercial clouds.
+Sending student information to a cloud provider is a disclosure that FERPA~\cite{ferpa} restricts, and institutions increasingly limit which external AI services staff may use~\cite{dong2025minimizing}.
 
-This paper extends prior edge evaluation frameworks by incorporating five rigorous experimental dimensions:
-\begin{enumerate}
-    \item \textbf{Quantization Precision Ablation} comparing 4-bit medium (\texttt{Q4\_K\_M}) against 8-bit (\texttt{Q8\_0}) memory footprints.
-    \item \textbf{Decoding Parameter Sensitivity} analyzing temperature variance ( \in [0.0, 0.2, 0.7]$) on structural constraint retention.
-    \item \textbf{Token-Level Latency Distribution Profiling} capturing p50, p95, and p99 latency percentiles to assess CPU thermal throttling.
-    \item \textbf{Automated Lexical and Semantic Evaluation} computing ROUGE-L and BERTScore for policy summarization fidelity.
-    \item \textbf{Mathematical Human Intervention Rate (HIR) Cost Modeling} quantifying administrative labor savings versus verification overhead.
-\end{enumerate}
+A practical alternative is to run a \emph{small} language model (SLM), here meaning an open-weight model of at most about 8B parameters, on a computer the institution already owns.
+Quantization makes such models fit in ordinary office hardware~\cite{husom2025sustainable,kurt2026quantization}.
+Whether they are good \emph{enough}, and fast \emph{enough}, for specific administrative tasks is an empirical question that general-purpose benchmarks do not answer.
+Structured output that a database will ingest has to be valid every time, a policy summary that drops a deadline is worse than no summary, and a reply that invents a phone number creates work instead of saving it.
 
-\section{Related Work}
-\subsection{Edge \& Consumer Hardware Model Inference}
-Benchmarking local language models on resource-constrained hardware has gained significant momentum as edge quantization formats mature. Husom et al.~\cite{husom2025sustainable} systematically evaluated quantized open models in Ollama, establishing that consumer-grade processors can sustain viable operational latencies when properly configured. Similarly, Kurt~\cite{kurt2026quantization} demonstrated that 4-bit Medium (\texttt{Q4\_K\_M}) quantization maintains approximately 99% of full-precision general capability while significantly curbing RAM consumption. Further work in federated and edge SLM deployments emphasizes the necessity of maintaining local data boundaries without sacrificing instruction-following performance~\cite{federated_slm_survey}.
+We ask four questions:
+\begin{description}
+  \item[RQ1] How fast are 3B and 7B SLMs on a CPU-only workstation and on Apple Silicon, and how much memory do they need?
+  \item[RQ2] How well do they perform four administrative tasks, and how much does model size or quantization level change that?
+  \item[RQ3] How sensitive is task performance to the sampling temperature?
+  \item[RQ4] How often does a human have to substantively correct their output before it can be used?
+\end{description}
 
-\subsection{Institutional Privacy \& FERPA Compliance}
-Cloud-based AI architectures present unresolved compliance hurdles in higher education. Dong & Liebowitz~\cite{dong2025minimizing} identified that commercial LLM APIs inherently expand an institution's data perimeter, complicating compliance with FERPA data-privacy protections. Operating models on-premises guarantees that course evaluations, student grievances, and accommodation requests never exit institutional control.
+Our contributions are (1) a four-task benchmark built around concrete failure criteria (schema validity, retention of every deadline and threshold, exact label match, invented contact details), (2) a measurement method for interactive latency that records every token and separates model memory from whole-system memory, and (3) results for four model configurations on two machines, with uncertainty intervals and a blind human evaluation.
+Code, data, prompts and every raw model output are public.\footnote{\url{https://github.com/MohdIliyas/local-slm-highered-benchmark}}
 
-\section{Methodology \& Extended Parameter Framework}
-\subsection{Hardware Environment \& Deployment Stack}
-Experiments were conducted on an enterprise-standard x86 mobile workstation: Intel Core i7 CPU (16 cores, base AVX2 instruction set), 16 GB DDR5 RAM, and integrated graphics (CPU-only execution). Local inference was orchestrated via Ollama serving quantized weights using default \texttt{llama.cpp} CPU thread allocations.
+% ===========================================================================
+\section{Background and Related Work}
 
-\subsection{Extended Evaluation Parameters}
-To rigorously characterize operational viability, our evaluation harness records:
-\begin{itemize}
-    \item \textbf{Memory & Quantization Scaling:} Evaluating base RAM allocation across \texttt{Q4\_K\_M} and \texttt{Q8\_0} formats.
-    \item \textbf{Decoding Ablations:} Testing temperature settings  \in \{0.0, 0.2, 0.7\}$ to measure output determinism and syntax collapse.
-    \item \textbf{Latency Percentiles:} Capturing p50, p95, and p99 generation latencies to identify memory bus saturation.
-    \item \textbf{Automated Quality Metrics:} Measuring ROUGE-1, ROUGE-2, ROUGE-L, and BERTScore against gold-standard references.
-\end{itemize}
+\paragraph{Regulatory context.}
+FERPA prohibits disclosing personally identifiable information from education records without consent, outside defined exceptions~\cite{ferpa}.
+Running inference locally removes one disclosure path, transmission to a model provider; it does not by itself make a workflow compliant, which still depends on access control, logging, and retention on the local machine.
+ADA Title~II requires public universities to make web content and course materials accessible; the Department of Justice's 2024 rule adopted WCAG~2.1 Level~AA as the technical standard~\cite{doj2024titleii,wcag21}, and an April 2026 interim final rule moved the first compliance date to April 26, 2027 for entities serving populations of 50,000 or more~\cite{doj2026ifr}.
+Accessibility work is largely text work: checking that syllabi contain an accommodation statement and summarizing remediation timelines without dropping them are two of our tasks.
 
-\section{Empirical Results & Advanced Parameter Analysis}
-\subsection{Quantization Depth and Latency Percentiles}
-Table~\ref{tab:extended_matrix} summarizes performance across quantization levels and latency distributions.
+\paragraph{Quantized local inference.}
+Husom et al.~\cite{husom2025sustainable} measured energy, latency and accuracy for 28 quantized models from the Ollama library on a Raspberry Pi~4, showing the trade-offs quantization creates on very constrained devices.
+Kurt~\cite{kurt2026quantization} compared llama.cpp quantization formats on Llama-3.1-8B-Instruct across standard benchmarks, perplexity, and CPU throughput.
+Both evaluate general capability; we evaluate task-specific pass/fail criteria that determine whether an output is usable in an administrative pipeline.
 
-\begin{table*}[t]
-\centering
+\paragraph{Local models in regulated domains.}
+Bhetwal et al.~\cite{bhetwal2026nlsql} benchmarked local models for natural-language-to-SQL querying of pharmaceutical manufacturing data on consumer hardware and found that human oversight remained necessary.
+Dong and Liebowitz~\cite{dong2025minimizing} studied how much student data an advising assistant exposes to a third-party model provider and how to minimize it; on-device inference is the limiting case in which nothing is exposed to a provider.
+
+\paragraph{Very large models on consumer hardware.}
+Colibri~\cite{colibri2026} runs GLM-5.2, a 744B-parameter mixture-of-experts LLM, on a machine with roughly 25\,GB of RAM by keeping the dense layers resident and streaming routed experts from an NVMe SSD.
+Its developers and users report decode speeds on the order of 0.05 to about 1~token/s on consumer machines, depending on disk bandwidth and cache state.
+We return to this alternative in Section~\ref{sec:discussion}.
+
+% ===========================================================================
+\section{Method}
+
+\subsection{Hardware and software}
+Table~\ref{tab:hardware} lists both machines.
+All inference runs through Ollama~\cite{ollama} (llama.cpp backend~\cite{llamacpp}) with default thread settings, a 4,096-token context, and one request at a time, the single-user setting of a staff member's workstation.
+
+\begin{table}[t]
+\caption{Test machines (recorded automatically by the harness).}
+\label{tab:hardware}
 \small
-\caption{Extended Empirical Matrix: Quantization, Throughput, and Latency Percentiles}
-\begin{tabular}{llllllll}
+\begin{tabular}{lll}
 \toprule
-\textbf{Model} & \textbf{Quant} & \textbf{RAM} & \textbf{Throughput} & \textbf{TTFT} & \textbf{p50 Latency} & \textbf{p95 Latency} & \textbf{p99 Latency} \\
+ & Workstation & Laptop \\
 \midrule
-\texttt{llama3.2:3b} & \texttt{Q4\_K\_M} & 2.2 GB & 108.4 tps & 0.04s & 9.2 ms & 14.5 ms & 22.1 ms \\
-\texttt{llama3.2:3b} & \texttt{Q8\_0} & 3.8 GB & 84.1 tps & 0.06s & 11.8 ms & 19.3 ms & 28.4 ms \\
-\texttt{qwen2.5:7b} & \texttt{Q4\_K\_M} & 4.9 GB & 54.2 tps & 0.08s & 18.4 ms & 29.1 ms & 42.6 ms \\
-\texttt{qwen2.5:7b} & \texttt{Q8\_0} & 8.2 GB & 38.6 tps & 0.14s & 26.2 ms & 41.5 ms & 59.8 ms \\
+CPU & \IntelCPU & \AppleCPU \\
+RAM (GB) & \IntelRAM & \AppleRAM \\
+OS & \IntelOS & \AppleOS \\
+Accelerator & none (CPU only) & Metal (unified memory) \\
+Ollama & \IntelOllama & \AppleOllama \\
 \bottomrule
 \end{tabular}
-\label{tab:extended_matrix}
+\end{table}
+
+\subsection{Models}
+We evaluate Llama~3.2~3B Instruct~\cite{llama3} and Qwen~2.5~7B Instruct~\cite{qwen25}, each in the \texttt{Q4\_K\_M} and \texttt{Q8\_0} GGUF formats published in the Ollama library, giving four configurations.
+Each configuration is pulled by its exact tag, and the harness records each model's content digest.
+
+\subsection{Tasks and data}
+All task data are synthetic and were written for this study; none comes from real students, so the dataset can be released in full.
+Items were written to resemble real university material in vocabulary, length and format variation, and were reviewed by the authors, two of whom work in university online-learning support.
+\todonote{Confirm this sentence describes the review you actually did.}
+
+\paragraph{T1: Syllabus extraction (\NSyllabi{} syllabi).}
+The model must return JSON with the course code, instructor, office hours, grading breakdown (with numeric weights), and whether the syllabus contains a disability-accommodation statement.
+Syllabi vary in layout: percentages, the word ``percent'', point totals that must be converted to weights, dot-leader tables, and distractor names such as a lab coordinator.
+Eight of the \NSyllabi{} lack an accommodation statement, so that answering ``true'' every time is penalized.
+
+\paragraph{T2: Policy summarization (\NPolicies{} policies).}
+The model must summarize a policy in exactly three bullet points with no introduction, preserving every concrete constraint.
+Each policy lists its required constraints (\NConstraints{} in total), such as ``3 business days'' or ``WCAG 2.1 Level AA''.
+
+\paragraph{T3: Ticket classification (\NTickets{} tickets, 8 classes).}
+The model must return exactly one of eight category names.
+There are eight tickets per class.
+No ticket contains its own category name, and several are deliberately ambiguous, for example a password problem that only appears during an exam.
+
+\paragraph{T4: Reply drafting (\NDrafting{} inquiries).}
+The model drafts an e-mail reply with a subject line and a fixed sign-off, and is told not to invent dates, links, or contact names.
+Two inquiries per ticket class are used.
+
+\subsection{Automatic metrics}
+\textbf{T1.} \emph{Schema validity}: the output parses as JSON and validates against the schema, including numeric types.
+\emph{Field accuracy}: course code, instructor name, accommodation flag, and grading weights match the gold labels; we accept the weights either itemized or merged (``Exams 45\%'' for three 15\% exams).
+Scoring field content separately from schema validity distinguishes a model that extracts the right numbers but writes \texttt{"45\%"} as a string from one that extracts the wrong numbers.
+\textbf{T2.} \emph{Format compliance}: exactly three bullets with nothing before or after them.
+\emph{Constraint retention}: the share of required constraints present in the summary, matched as whole phrases after normalizing number words and percent signs, so ``five business days'' matches ``5 business days'' but ``15 business days'' does not.
+We also report ROUGE~\cite{lin2004rouge} and BERTScore~\cite{zhang2020bertscore} against author-written reference summaries, as secondary measures.
+\textbf{T3.} \emph{Strict accuracy}: the output, after trimming whitespace and punctuation, equals the gold label.
+Any other output counts as wrong.
+We also report a lenient variant, which credits an output that mentions exactly one label, and macro-F1.
+\textbf{T4.} Presence of the subject line and sign-off, and whether the draft invents a URL, e-mail address, or phone number.
+
+\subsection{Systems measurements}
+Every request is streamed.
+\emph{Time to first token} (TTFT) is measured by the client from just before the request is sent until the first chunk containing text arrives.
+\emph{Inter-token latency} (ITL) is the gap between consecutive text chunks; we confirm that the server emits about one token per chunk.
+\emph{Decode throughput} is Ollama's own count of generated tokens divided by its decode time, which excludes model loading and prompt processing.
+\emph{Memory} is the size Ollama reports for the loaded model; we also log peak resident memory summed over Ollama's processes, never whole-system memory.
+Before each configuration, all models are unloaded and the first, cold load time is recorded separately.
+Latency statistics come from the same distinct prompts as the quality results, not from repeating one prompt, which Ollama's prompt cache would make artificially fast.
+
+\subsection{Human evaluation}
+For the policy summaries and drafted replies of all four configurations (\NRated{} outputs), two raters scored each output on a 1--5 usefulness scale and marked whether it needed a substantive edit and whether it contained a factual error.
+Raters worked from a written rubric, saw outputs in a fixed random order, and never saw model names.
+The \emph{Human Intervention Rate} (HIR) of a configuration is the share of its outputs marked as needing a substantive edit.
+We report agreement as Cohen's $\kappa$~\cite{cohen1960kappa}, quadratically weighted for the 1--5 scale.
+A third author adjudicated disagreements blind.
+Because the raters are also authors, they were not blind to the study's hypotheses; we discuss this in Section~\ref{sec:limitations}.
+
+\subsection{Statistics}
+Proportions are reported with Wilson 95\% intervals~\cite{wilson1927}, and means and macro-F1 with percentile bootstrap intervals (2,000 resamples)~\cite{efron1993bootstrap}.
+Paired comparisons between configurations on the same items use the exact McNemar test~\cite{mcnemar1947} with Holm correction across all comparisons~\cite{holm1979}.
+Main results use greedy decoding ($T=0$, fixed seed).
+The temperature study repeats T1--T3 at $T=0.2$ and $T=0.7$ with three seeds each.
+
+% ===========================================================================
+\section{Results}
+
+\subsection{Speed and memory (RQ1)}
+Table~\ref{tab:systems} summarizes the systems measurements.
+\todonote{Describe: decode speed on each machine relative to a comfortable reading speed; the cost of Q8 vs Q4 in speed and memory; cold-start load time; and whether p99 ITL shows stalls.}
+
+\begin{table*}[t]
+\caption{Systems measurements. Decode throughput is mean $\pm$ s.d. across requests. TTFT is the median for policy prompts. Inter-token latency is pooled over all extraction, policy and drafting requests.}
+\label{tab:systems}
+\small
+\fitbox{\textwidth}{\input{generated/tab_systems}}
 \end{table*}
 
-\subsection{Detailed Error Taxonomy & Failure Modes}
-Qualitative inspection reveals distinct failure modalities between sub-4B and 7B tiers:
-\begin{itemize}
-    \item \textbf{Primitive Type Collapse:} Sub-4B models frequently output grading breakdown weights as strings (e.g., \texttt{"30\%"}) instead of integer or float primitives, causing downstream JSON schema validation failures.
-    \item \textbf{Conversational Preamble Leakage:} When subjected to zero-shot formatting constraints, smaller models emit conversational wrappers (e.g., \textit{`Here is your requested JSON:''}), violating strict parsing pipelines.
-\end{itemize}
+\subsection{Task quality (RQ2)}
+Table~\ref{tab:quality} reports the four tasks on the Intel workstation.
+Llama~3.2~3B (\texttt{Q4\_K\_M}) produced schema-valid output for \SchemaLlamaQfour\% of syllabi; in \TypeErrLlamaQfour\% it wrote a grading weight as a string.
+Its field accuracy, which ignores types, was \FieldAccLlamaQfour\%.
+The corresponding figures for Qwen~2.5~7B are \SchemaQwenQfour\%, \TypeErrQwenQfour\%, and \FieldAccQwenQfour\%.
+For policy summaries, \FormatLlamaQfour\% and \FormatQwenQfour\% of outputs met the format rule, and all required constraints were kept in \AllRetainLlamaQfour\% and \AllRetainQwenQfour\% of summaries, respectively.
+Strict classification accuracy was \AccLlamaQfour\% and \AccQwenQfour\%; lenient matching raises these to \AccLenientLlamaQfour\% and \AccLenientQwenQfour\%.
+The gap between the two is the share of answers a downstream router could not parse.
+Drafts containing invented contact details made up \InventedLlamaQfour\% and \InventedQwenQfour\%.
+\todonote{Add the McNemar results (with Holm-adjusted p) for 3B vs 7B and Q4 vs Q8 from results/intel\_i7/summary.json, and say whether the Apple results agree.}
 
-\subsection{Automated Policy Summarization (ROUGE & BERTScore)}
-Evaluating policy summaries against reference ground truth yields strong semantic alignment for 7B models:
-\begin{itemize}
-    \item \texttt{llama3.2:3b}: ROUGE-L = .741$, BERTScore ($) = .862$.
-    \item \texttt{qwen2.5:7b}: ROUGE-L = \textbf{0.835}, BERTScore ($) = \textbf{0.914}.
-\end{itemize}
+\begin{table*}[t]
+\caption{Task quality on the Intel workstation, $T=0$. Brackets are 95\% Wilson intervals. Str.~wt.: share of extractions with a grading weight written as a string. Constr.: mean share of required constraints retained.}
+\label{tab:quality}
+\small
+\fitbox{\textwidth}{\input{generated/tab_quality}}
+\end{table*}
 
-\subsection{Human Intervention Rate (HIR) Cost Modeling}
-To quantify institutional labor impact, we model administrative net savings as:
+\begin{table}[t]
+\caption{Reference-based summary metrics (secondary).}
+\label{tab:reference}
+\small
+\fitbox{\columnwidth}{\input{generated/tab_reference}}
+\end{table}
+
+\paragraph{Quantization.}
+\todonote{State whether Q8\_0 changed any pass/fail metric relative to Q4\_K\_M, using the paired tests. A null result here is a useful finding: it would mean the cheaper format is safe for these tasks.}
+
+\subsection{Sensitivity to temperature (RQ3)}
+Table~\ref{tab:temperature} shows how performance and run-to-run agreement change with sampling temperature.
+\todonote{Describe the trend; the practical question is whether any non-zero temperature is safe for structured tasks.}
+
+\begin{table}[t]
+\caption{Effect of sampling temperature (\texttt{Q4\_K\_M}). For $T>0$, values average three seeds per item. Seed agreement is the share of items where all three seeds gave the same pass/fail outcome.}
+\label{tab:temperature}
+\small
+\fitbox{\columnwidth}{\input{generated/tab_temperature}}
+\end{table}
+
+\subsection{Human evaluation (RQ4)}
+Table~\ref{tab:human} reports the blind ratings of drafted replies.
+Agreement between raters was $\kappa_w=\KappaQuality$ for the quality score and $\kappa=\KappaEdit$ for the substantive-edit judgment.
+\todonote{Interpret HIR differences; mention the most common reasons from the raters' notes.}
+
+\begin{table}[t]
+\caption{Blind human ratings of drafted replies, averaged over raters (range across raters in parentheses).}
+\label{tab:human}
+\small
+\fitbox{\columnwidth}{\input{generated/tab_human}}
+\end{table}
+
+\subsection{Failure modes}
+Two failure patterns were already visible in a pilot run on an earlier version of the data.
+First, Llama~3.2~3B prefaced all six pilot policy summaries with a sentence such as ``Here is a summary of the university policy in three concise bullet points:'' despite an explicit instruction not to.
+A downstream system that publishes summaries automatically would have to strip such text.
+Second, in a summary of a FERPA directory-information policy, the same model's third bullet stated that ``there is no specific deadline'' for a nondisclosure request, contradicting the policy's 10-day window, which its own first bullet had stated correctly.
+Errors of this kind, which contradict the source, are the reason constraint retention and the human factual-error judgment are reported separately from fluency metrics.
+\todonote{Replace or extend with examples from the final run (see per\_item.csv).}
+
+% ===========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What local inference does and does not secure.}
+Running the model on a university-owned machine means prompts and outputs never reach a model provider, which removes the disclosure question that cloud APIs raise.
+It does not address who can access the machine, where outputs are stored, or how long logs are kept; those remain institutional controls.
+
+\paragraph{Labor.}
+The HIR translates into staff time only under assumptions about how long tasks take.
+With a manual draft time of \CostManual{} minutes, \CostReview{} minutes to review an acceptable draft, and \CostFix{} minutes to fix a flagged one, the time saved per ticket is
 \begin{equation}
-    \text{Net Savings} = (\text{Task Volume} \times t_{\text{manual}}) - (\text{Task Volume} \times \text{HIR} \times t_{\text{correction}})
+  \Delta t = t_{\text{manual}} - t_{\text{review}} - \text{HIR}\cdot t_{\text{fix}}.
 \end{equation}
-Where $\text{HIR}_{\text{3b}} = 1.0$ (complete re-authoring required due to hallucinations) and $\text{HIR}_{\text{7b}} = 0.15$ (minor slot-filling verification).
+These times are illustrative assumptions, not measurements, and the conclusion should be read as a sensitivity analysis: the break-even HIR is $(t_{\text{manual}}-t_{\text{review}})/t_{\text{fix}}$.
+\todonote{Measure the three times (for example, time yourselves on five tickets) and update configs/experiments.json, or keep this explicitly hypothetical.}
 
-\section{Institutional Governance \& Policy Implications}
-Integrating 7B open-weight models under rigorous data-perimeter constraints ensures full FERPA and ADA Title II compliance while maintaining positive net administrative labor savings. Furthermore, local execution mitigates third-party data-use agreement friction.
+\paragraph{Dense SLMs versus disk-streamed MoE\@.}
+Disk-streaming engines such as Colibri make a frontier-scale mixture-of-experts LLM runnable on a desktop, but at the reported speeds of roughly 0.05 to 1~token/s, a 200-token reply takes minutes rather than seconds.
+That rules them out for interactive helpdesk work but not for overnight batch jobs, such as auditing a semester's syllabi, where quality matters more than latency.
+We did not evaluate such a model; comparing its task quality with the dense SLMs here, at matched wall-clock budgets, is a natural next study.
 
+% ===========================================================================
+\section{Limitations}
+\label{sec:limitations}
+The data are synthetic and small (\NSyllabi{}, \NPolicies{}, \NTickets{} and \NDrafting{} items).
+They avoid privacy problems, but real tickets are messier, and the confidence intervals are correspondingly wide.
+The reference summaries and gold labels were written by the authors, and the human raters are authors.
+We test two model families, two quantization formats, one inference server, and single-user load on two machines; batch throughput, energy use, and long-context documents are out of scope.
+Results may change with Ollama or model updates, which is why the harness records versions and model digests.
+
+% ===========================================================================
 \section{Conclusion}
-This study expanded local LLM benchmarking across quantization depth, latency distributions, and automated quality metrics, establishing that 7B models at \texttt{Q4\_K\_M} represent the optimal deployment tier for privacy-compliant higher education workflows.
+\todonote{Two or three sentences answering RQ1--RQ4 directly, once results are final.}
 
-\section*{Author Contributions (CRediT Statement)}
-\textbf{Mohammed Iliyas Sanjamala:} Conceptualization, Methodology, Software, Investigation, Formal Analysis, Writing -- Original Draft, Project Administration. 
-\textbf{Karthikeyan Prem Kumar:} Data Curation, Validation, Investigation, Writing -- Review \& Editing. 
-\textbf{Richard Smith:} Conceptualization (Higher Education Context), Validation, Supervision (Institutional Domain), Writing -- Review \& Editing. 
-\textbf{Aditi Singh:} Supervision (Technical Rigor), Methodology, Formal Analysis, Writing -- Review \& Editing.
+\section*{Data and Code Availability}
+The harness, task data, prompts, raw outputs, rating sheets and the scripts that generate every table in this paper are available at \url{https://github.com/MohdIliyas/local-slm-highered-benchmark}.
+
+\section*{Ethics Statement}
+No real student data were used. All task items are synthetic.
+\todonote{Ask the CSU IRB whether the internal human-rating study, in which the authors rate model outputs, needs a determination; record the answer here.}
+
+\section*{Use of Generative AI}
+Portions of the evaluation code, the synthetic task data, and draft manuscript text were produced with the assistance of an AI model (Claude, Anthropic) and were reviewed, tested and edited by the authors, who take full responsibility for the content.
+\todonote{Check the target venue's disclosure policy and adjust the wording.}
+
+\section*{Author Contributions}
+\todonote{Each co-author should confirm their own roles before submission.}
+\textbf{M.~I.~Sanjamala:} conceptualization, methodology, software, investigation, formal analysis, writing (original draft).
+\textbf{K.~Prem Kumar:} investigation (Apple Silicon runs), validation (human rating), writing (review and editing).
+\textbf{R.~Smith:} conceptualization (institutional context), adjudication of ratings, writing (review and editing).
+\textbf{A.~Singh:} supervision, methodology, writing (review and editing).
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
 
 \end{document}
-
-
-
-
-
-
-

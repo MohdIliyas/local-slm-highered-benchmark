@@ -1,0 +1,450 @@
+[
+  {
+    "id": "TCK-GRD-03",
+    "label": "Grade Disputes",
+    "text": "I want to formally contest the grade on my capstone presentation. I think the rubric wasn't applied fairly.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-05",
+    "label": "Online Proctoring",
+    "text": "I failed the environment check because the room scan said my lighting was too dark. I need to take the test tonight.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-05",
+    "label": "Grade Disputes",
+    "text": "How long after grades are posted do I have to file an appeal?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-08",
+    "label": "Accessibility/Captions",
+    "text": "The interactive simulation for physics lab can't be used with a keyboard only and I can't use a mouse.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-03",
+    "label": "Exam Rescheduling",
+    "text": "I'm on the university soccer team and we travel during the final exam. What's the process for an alternate exam date?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-08",
+    "label": "Exam Rescheduling",
+    "text": "I missed the exam because I had the wrong date in my calendar. Is there any way to sit it later?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-04",
+    "label": "Online Proctoring",
+    "text": "Does the remote exam monitoring tool work on a Chromebook? That's the only computer I have.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-01",
+    "label": "General Inquiries",
+    "text": "Where can I find the academic calendar for next semester, specifically when spring break is?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-04",
+    "label": "Login/Account Lockout",
+    "text": "I never received my initial username and password as a new transfer student.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-06",
+    "label": "Login/Account Lockout",
+    "text": "I'm getting 'your account has been disabled' after I graduated, but I still need my transcripts and email.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-01",
+    "label": "LMS Access",
+    "text": "I enrolled in BIO 202 two weeks ago and I still can't see it on my Blackboard course list. Classmates already submitted the first lab. What do I do?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-06",
+    "label": "Online Proctoring",
+    "text": "Where does the recording of me taking the test get stored and who can watch it?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-02",
+    "label": "LMS Access",
+    "text": "When I click the Week 3 module in my stats course it just spins forever and then says 'content unavailable'. Tried Chrome and Edge.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-01",
+    "label": "Online Proctoring",
+    "text": "The lockdown browser crashed halfway through my exam and kicked me out. It won't let me back in. The exam closes at midnight!",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-01",
+    "label": "Grade Disputes",
+    "text": "My final grade in CHEM 261 posted as a C but by my own math of the gradebook I should have a B-. Who do I talk to and is there a deadline?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-07",
+    "label": "Online Proctoring",
+    "text": "Honorlock keeps asking me to share my screen and then freezes. I've reinstalled the extension twice.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-04",
+    "label": "Grade Disputes",
+    "text": "Two of my assignment scores were entered wrong in the gradebook (65 instead of 95). My instructor isn't answering emails.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-07",
+    "label": "Exam Rescheduling",
+    "text": "I need to take my final early because I start a job out of state before the scheduled day.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-06",
+    "label": "Exam Rescheduling",
+    "text": "My religious holiday falls on the date of the quiz. How do I request another date?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-03",
+    "label": "Login/Account Lockout",
+    "text": "My password expired over break and the reset link in the email goes to an error page.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-01",
+    "label": "Accessibility/Captions",
+    "text": "I'm deaf and the recorded lectures for HIST 150 have no captions, so I can't follow them. I already have accommodations on file.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-06",
+    "label": "Accessibility/Captions",
+    "text": "The color-coded diagrams in the engineering slides are impossible for me to read because I'm colorblind.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-03",
+    "label": "Online Proctoring",
+    "text": "The exam software flagged me for 'suspicious activity' because my roommate walked behind me. Am I going to get in trouble?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-02",
+    "label": "Course Enrollment",
+    "text": "The section I need is full. Is there a waitlist, and how do I get on it?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-07",
+    "label": "Accessibility/Captions",
+    "text": "The math equations in the course are posted as pictures and my screen reader just says 'image'.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-05",
+    "label": "Accessibility/Captions",
+    "text": "Can I get transcripts for the weekly podcasts assigned in my communications class? I have an auditory processing disability.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-02",
+    "label": "Exam Rescheduling",
+    "text": "I'll be at a family funeral out of state during my midterm next Tuesday. Can I take it on a different day?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-06",
+    "label": "General Inquiries",
+    "text": "What's the difference between a hybrid and a fully online course here?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-05",
+    "label": "Login/Account Lockout",
+    "text": "Every time I log in it sends me back to the sign-in page in a loop.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-01",
+    "label": "Login/Account Lockout",
+    "text": "I typed my password wrong too many times and now it says my account is locked for security reasons.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-02",
+    "label": "Online Proctoring",
+    "text": "My webcam isn't detected by Respondus Monitor so I can't start the final. I have a built-in camera that works in Zoom.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-01",
+    "label": "Exam Rescheduling",
+    "text": "I have two finals scheduled at the same time on December 12. How do I get one of them moved?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-07",
+    "label": "Course Enrollment",
+    "text": "I accidentally dropped my only online class and now I'm below full-time. Can it be reinstated?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-04",
+    "label": "General Inquiries",
+    "text": "Is the library open over Thanksgiving weekend?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-07",
+    "label": "General Inquiries",
+    "text": "Can alumni still use the campus career services office?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-08",
+    "label": "Course Enrollment",
+    "text": "How do I audit a class instead of taking it for credit?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-07",
+    "label": "Grade Disputes",
+    "text": "I was marked for plagiarism on a paper and got an F in the course. I believe this is a mistake and want to challenge it.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-08",
+    "label": "LMS Access",
+    "text": "The discussion board for my online class keeps telling me I don't have permission to post a reply.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-05",
+    "label": "Course Enrollment",
+    "text": "I need permission to add a graduate course as an undergrad. Who approves that?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-04",
+    "label": "Exam Rescheduling",
+    "text": "I was in the hospital the day of the exam. I have documentation. Can I make it up?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-07",
+    "label": "Login/Account Lockout",
+    "text": "The security questions I set up years ago aren't accepted anymore and I can't recover my account.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-04",
+    "label": "Course Enrollment",
+    "text": "Can I take 20 credit hours this semester? The system won't let me go over 18.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-08",
+    "label": "Login/Account Lockout",
+    "text": "My MFA codes from the authenticator app are always rejected as invalid.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-08",
+    "label": "Grade Disputes",
+    "text": "My incomplete from spring turned into an F automatically even though I finished the work in June.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-02",
+    "label": "General Inquiries",
+    "text": "Does the university have a free tutoring center for writing, and what are its hours?",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-03",
+    "label": "Accessibility/Captions",
+    "text": "The auto-generated subtitles on the lab videos are so inaccurate they're useless, especially the chemical names.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-04",
+    "label": "Accessibility/Captions",
+    "text": "My accommodation letter says I get 1.5x time on exams but the online quizzes still only give me the normal time.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-06",
+    "label": "LMS Access",
+    "text": "Is there a reason the mobile app shows my courses from last semester but none of my current ones?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-03",
+    "label": "LMS Access",
+    "text": "My professor says the quiz is open but it doesn't show up anywhere for me. Other people in the class can see it.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-06",
+    "label": "Grade Disputes",
+    "text": "The extra credit I completed was never added and now my final letter grade is a full step lower.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-01",
+    "label": "Course Enrollment",
+    "text": "I'm trying to register for CS 368 but it says I'm missing a prerequisite, even though I passed CS 151 last fall.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-03",
+    "label": "General Inquiries",
+    "text": "Who should I contact about getting an official letter confirming I'm enrolled, for my insurance?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-06",
+    "label": "Course Enrollment",
+    "text": "The last day to add was yesterday but my advisor told me to switch sections. Can I still do it?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-PRC-08",
+    "label": "Online Proctoring",
+    "text": "My internet dropped for 30 seconds during the quiz and the monitoring software ended my attempt.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-07",
+    "label": "LMS Access",
+    "text": "I'm a TA and I can't get into the grading area for my section even though the instructor added me last week.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ENR-03",
+    "label": "Course Enrollment",
+    "text": "I have a registration hold on my account and I don't know why. Classes start Monday.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-EXM-05",
+    "label": "Exam Rescheduling",
+    "text": "I have three exams on the same day during finals week. Is there a rule that lets me move one?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-05",
+    "label": "LMS Access",
+    "text": "I dropped and re-added ENG 101 and now the gradebook and all my old submissions are gone from my view.",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LMS-04",
+    "label": "LMS Access",
+    "text": "hi, the course page loads but every PDF the instructor uploaded gives me a 403 error",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-08",
+    "label": "General Inquiries",
+    "text": "I want to give feedback about an instructor. Is there a form for that besides course evaluations?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-ACC-02",
+    "label": "Accessibility/Captions",
+    "text": "The readings in my nursing course are scanned images, so my screen reader can't read any of them.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GRD-02",
+    "label": "Grade Disputes",
+    "text": "I got a zero on the midterm because the professor says I submitted late, but I have the confirmation email showing I turned it in on time.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-GEN-05",
+    "label": "General Inquiries",
+    "text": "How do I change my major from biology to psychology?",
+    "use_for_drafting": false,
+    "source": "synthetic-authored"
+  },
+  {
+    "id": "TCK-LOG-02",
+    "label": "Login/Account Lockout",
+    "text": "I got a new phone and now I can't approve the Duo push, so I can't sign into anything campus-related.",
+    "use_for_drafting": true,
+    "source": "synthetic-authored"
+  }
+]

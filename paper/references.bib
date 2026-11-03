@@ -1,34 +1,176 @@
-﻿@article{husom2025sustainable,
-  title={Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency},
-  author={Husom, Erik and others},
-  journal={arXiv preprint arXiv:2504.03360},
-  year={2025}
+% Every entry was checked against its source in November 2026.
+% Entries marked VERIFY need one detail confirmed by an author before submission.
+
+% ---------------------------------------------------------------- local inference
+@misc{husom2025sustainable,
+  author  = {Husom, Erik Johannes and Goknil, Arda and Astekin, Merve and Shar, Lwin Khin and K{\aa}sen, Andre and Sen, Sagar and Mithassel, Benedikt Andreas and Soylu, Ahmet},
+  title   = {Sustainable {LLM} Inference for Edge {AI}: Evaluating Quantized {LLMs} for Energy Efficiency, Output Accuracy, and Inference Latency},
+  howpublished  = {arXiv preprint},
+  eprint  = {2504.03360},
+  archiveprefix = {arXiv},
+  year    = {2025}
 }
 
-@article{kurt2026quantization,
-  title={Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization Formats},
-  author={Kurt, B.},
-  journal={arXiv preprint arXiv:2601.14277},
-  year={2026}
+@misc{kurt2026quantization,
+  author  = {Kurt, Uygar},
+  title   = {Which Quantization Should {I} Use? {A} Unified Evaluation of llama.cpp Quantization on {Llama-3.1-8B-Instruct}},
+  howpublished  = {arXiv preprint},
+  eprint  = {2601.14277},
+  archiveprefix = {arXiv},
+  year    = {2026}
 }
 
-@article{dong2025minimizing,
-  title={Minimizing Data Exposure in Higher Education LLM Applications},
-  author={Dong, Y. and Liebowitz, J.},
-  journal={Brandeis University Technical Working Paper},
-  year={2025}
+% VERIFY: confirm the arXiv identifier (the old .bib listed 2606.01338) and add it as `journal`.
+@misc{bhetwal2026nlsql,
+  author = {Bhetwal, Sagar and Bastakoti, Rajan and Acharya, Nirajan and Gupta, Gaurav Kumar and Bhandari, Ambika Baniya},
+  title  = {Benchmarking Local {LLMs} for Natural-Language-to-{SQL} Querying in Biopharmaceutical Manufacturing: An Empirical Benchmark on Consumer-Grade Hardware},
+  year   = {2026},
+  note   = {Preprint}
 }
 
-@article{bhetwal2026benchmarking,
-  title={Benchmarking Local LLMs on Consumer-Grade Hardware Under Data-Perimeter Constraints},
-  author={Bhetwal, A. and others},
-  journal={arXiv preprint arXiv:2606.01338},
-  year={2026}
+@misc{colibri2026,
+  author       = {Fornaro, Vincenzo},
+  title        = {Colibri: Running Mixture-of-Experts Models by Streaming Experts from Disk},
+  year         = {2026},
+  howpublished = {\url{https://github.com/JustVugg/colibri}},
+  note         = {Software. Accessed November 2026}
 }
 
-@article{federated_slm_survey,
-  title={A Survey on Federated Fine-Tuning of Large Language Models},
-  author={Wang, X. and others},
-  journal={arXiv preprint arXiv:2503.12016},
-  year={2025}
+@misc{ollama,
+  author       = {{Ollama}},
+  title        = {Ollama},
+  year         = {2026},
+  howpublished = {\url{https://github.com/ollama/ollama}},
+  note         = {Software. Accessed November 2026}
+}
+
+@misc{llamacpp,
+  author       = {Gerganov, Georgi and others},
+  title        = {llama.cpp},
+  year         = {2026},
+  howpublished = {\url{https://github.com/ggml-org/llama.cpp}},
+  note         = {Software. Accessed November 2026}
+}
+
+% ---------------------------------------------------------------- models
+@misc{qwen25,
+  author  = {{Qwen Team}},
+  title   = {Qwen2.5 Technical Report},
+  howpublished  = {arXiv preprint},
+  eprint  = {2412.15115},
+  archiveprefix = {arXiv},
+  year    = {2024}
+}
+
+@misc{llama3,
+  author  = {Grattafiori, Aaron and Dubey, Abhimanyu and others},
+  title   = {The {Llama} 3 Herd of Models},
+  howpublished  = {arXiv preprint},
+  eprint  = {2407.21783},
+  archiveprefix = {arXiv},
+  year    = {2024}
+}
+
+% ---------------------------------------------------------------- privacy and regulation
+% VERIFY: confirm the year and venue (currently a Brandeis University manuscript).
+@misc{dong2025minimizing,
+  author       = {Dong, Bill and Liebowitz, Jessica},
+  title        = {Minimizing Data Exposure in Higher Education {LLM} Applications: Evaluating the {Model Context Protocol} ({MCP}) for Preserving Privacy in Academic Advising},
+  year         = {2025},
+  howpublished = {Brandeis University, Department of Computer Science},
+  note         = {\url{https://www.brandeis.edu/computer-science/_pdfs/minimizing-data-exposure-in-higher-education-llm-applications.pdf}}
+}
+
+@misc{ferpa,
+  author       = {{U.S. Congress}},
+  title        = {Family Educational Rights and Privacy Act},
+  year         = {1974},
+  howpublished = {20 U.S.C. \S~1232g; implementing regulations at 34 C.F.R. Part 99}
+}
+
+@misc{doj2024titleii,
+  author       = {{U.S. Department of Justice}},
+  title        = {Nondiscrimination on the Basis of Disability; Accessibility of Web Information and Services of State and Local Government Entities},
+  year         = {2024},
+  howpublished = {Final rule, 89 Fed. Reg. 31320 (April 24, 2024)}
+}
+
+@misc{doj2026ifr,
+  author       = {{U.S. Department of Justice}},
+  title        = {Extension of Compliance Dates for the {ADA} Title {II} Web and Mobile Application Accessibility Rule},
+  year         = {2026},
+  howpublished = {Interim final rule, published in the Federal Register on April 20, 2026}
+}
+
+@misc{wcag21,
+  author       = {{World Wide Web Consortium}},
+  title        = {Web Content Accessibility Guidelines ({WCAG}) 2.1},
+  year         = {2018},
+  howpublished = {W3C Recommendation, \url{https://www.w3.org/TR/WCAG21/}}
+}
+
+% ---------------------------------------------------------------- metrics and statistics
+@inproceedings{lin2004rouge,
+  author    = {Lin, Chin-Yew},
+  title     = {{ROUGE}: A Package for Automatic Evaluation of Summaries},
+  booktitle = {Text Summarization Branches Out (ACL Workshop)},
+  publisher = {Association for Computational Linguistics},
+  address   = {Barcelona, Spain},
+  pages     = {74--81},
+  year      = {2004}
+}
+
+@inproceedings{zhang2020bertscore,
+  author    = {Zhang, Tianyi and Kishore, Varsha and Wu, Felix and Weinberger, Kilian Q. and Artzi, Yoav},
+  title     = {{BERTScore}: Evaluating Text Generation with {BERT}},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2020}
+}
+
+@article{cohen1960kappa,
+  author  = {Cohen, Jacob},
+  title   = {A Coefficient of Agreement for Nominal Scales},
+  journal = {Educational and Psychological Measurement},
+  volume  = {20},
+  number  = {1},
+  pages   = {37--46},
+  year    = {1960}
+}
+
+@article{mcnemar1947,
+  author  = {McNemar, Quinn},
+  title   = {Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages},
+  journal = {Psychometrika},
+  volume  = {12},
+  number  = {2},
+  pages   = {153--157},
+  year    = {1947}
+}
+
+@article{wilson1927,
+  author  = {Wilson, Edwin B.},
+  title   = {Probable Inference, the Law of Succession, and Statistical Inference},
+  journal = {Journal of the American Statistical Association},
+  volume  = {22},
+  number  = {158},
+  pages   = {209--212},
+  year    = {1927}
+}
+
+@article{holm1979,
+  author  = {Holm, Sture},
+  title   = {A Simple Sequentially Rejective Multiple Test Procedure},
+  journal = {Scandinavian Journal of Statistics},
+  volume  = {6},
+  number  = {2},
+  pages   = {65--70},
+  year    = {1979}
+}
+
+@book{efron1993bootstrap,
+  author    = {Efron, Bradley and Tibshirani, Robert J.},
+  title     = {An Introduction to the Bootstrap},
+  publisher = {Chapman \& Hall},
+  address   = {New York},
+  year      = {1993}
 }

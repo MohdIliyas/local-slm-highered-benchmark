@@ -1,8 +1,7 @@
 requests>=2.31.0
-pydantic>=2.5.0
 jsonschema>=4.20.0
-scikit-learn>=1.3.0
-pandas>=2.1.0
-rouge-score>=0.1.2
-evaluate>=0.4.0
+numpy>=1.26.0
 psutil>=5.9.0
+rouge-score>=0.1.2
+# Optional, only for `score.py --bertscore` (downloads a ~1.4 GB model on first use):
+# bert-score>=0.3.13
