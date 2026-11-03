@@ -1,0 +1,22 @@
+[
+  {
+    "id": "PUB-POL-001",
+    "title": "ADA Title II Web and Digital Accessibility Policy",
+    "text": "In accordance with Title II of the Americans with Disabilities Act (ADA) and WCAG 2.1 Level AA standards, all institutional web content, course management systems, and instructional documents must be fully accessible to individuals with disabilities. Remediation requests for inaccessible documents must be processed by campus departments within 3 business days of receipt.",
+    "constraints": [
+      "Title II",
+      "WCAG 2.1 Level AA",
+      "3 business days"
+    ]
+  },
+  {
+    "id": "PUB-POL-002",
+    "title": "FERPA Annual Notification of Student Privacy Rights",
+    "text": "The Family Educational Rights and Privacy Act (FERPA) affords eligible students certain rights with respect to their education records. Educational records cannot be disclosed to third-party commercial cloud vendors without prior written student consent or explicit statutory exemption under data-perimeter safety rules.",
+    "constraints": [
+      "FERPA",
+      "education records",
+      "prior written student consent"
+    ]
+  }
+]

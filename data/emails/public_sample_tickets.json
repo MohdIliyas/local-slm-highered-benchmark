@@ -1,0 +1,12 @@
+[
+  {
+    "id": "PUB-TICK-001",
+    "category": "Accessibility/Captions",
+    "text": "The lecture videos posted for Week 4 on Canvas lack synchronized closed captions, preventing screen-reader access for visually and hearing-impaired students under ADA guidelines."
+  },
+  {
+    "id": "PUB-TICK-002",
+    "category": "LMS Access",
+    "text": "My student account is receiving a permission error when attempting to access FERPA-protected grade feedback on the institutional portal."
+  }
+]

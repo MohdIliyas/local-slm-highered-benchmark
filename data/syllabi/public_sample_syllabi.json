@@ -1,0 +1,14 @@
+[
+  {
+    "id": "PUB-SYL-001",
+    "course_code": "CMSC 389L",
+    "discipline": "Computer Science",
+    "text": "Course: CMSC389L - Cloud Computing Infrastructure and Deployment (University of Maryland). Instructor: Staff. Grading: Projects 50%, Quizzes 20%, Final Exam 30%. Accessibility Policy: Students requesting accommodations due to a disability must submit documentation to the Accessibility and Disability Service (ADS) office."
+  },
+  {
+    "id": "PUB-SYL-002",
+    "course_code": "PPD 534",
+    "discipline": "Public Policy",
+    "text": "Course: PPD 534 - Data Analysis and Spatial Analytics (University of Southern California). Instructor: Prof. G. Boeing. Grading: Weekly Assignments 40%, Midterm Project 30%, Final Portfolio 30%. Accommodations: Reasonable accommodations for disability or religious observance are handled in accordance with university standards."
+  }
+]

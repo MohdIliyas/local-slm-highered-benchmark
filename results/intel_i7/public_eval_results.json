@@ -1,0 +1,58 @@
+{
+  "llama3.2:3b": {
+    "policy_summarization": [
+      {
+        "id": "PUB-POL-001",
+        "output": "\u2022 All institutional web content, course management systems, and instructional documents must be fully accessible to individuals with disabilities.\n\u2022 Remediation requests for inaccessible documents must be processed by campus departments within 3 business days of receipt.\n\u2022 Compliance is governed by Title II of the Americans with Disabilities Act (ADA) and WCAG 2.1 Level AA standards.",
+        "has_preamble_violation": true
+      },
+      {
+        "id": "PUB-POL-002",
+        "output": "\u2022 Educational records cannot be disclosed to third-party commercial cloud vendors without prior written student consent.\n\u2022 There are explicit statutory exemptions under data-perimeter safety rules that allow for disclosure without consent.\n\u2022 FERPA affords eligible students certain rights with respect to their education records.",
+        "has_preamble_violation": true
+      }
+    ],
+    "ticket_classification": [
+      {
+        "id": "PUB-TICK-001",
+        "expected": "Accessibility/Captions",
+        "predicted": "Accessibility/Captions",
+        "correct": true
+      },
+      {
+        "id": "PUB-TICK-002",
+        "expected": "LMS Access",
+        "predicted": "Login/Account Lockout",
+        "correct": false
+      }
+    ]
+  },
+  "qwen2.5:7b": {
+    "policy_summarization": [
+      {
+        "id": "PUB-POL-001",
+        "output": "- In accordance with Title II of the ADA and WCAG 2.1 Level AA, all institutional web content, course management systems, and instructional documents must be fully accessible.\n- Remediation requests for inaccessible documents must be processed by campus departments within 3 business days of receipt.\n- Compliance with these standards ensures equal access for individuals with disabilities.",
+        "has_preamble_violation": false
+      },
+      {
+        "id": "PUB-POL-002",
+        "output": "- FERPA grants students rights over their education records.\n- Disclosure to third-party commercial cloud vendors requires prior written student consent.\n- Statutory exemptions allow for data-perimeter safety rules without consent.",
+        "has_preamble_violation": false
+      }
+    ],
+    "ticket_classification": [
+      {
+        "id": "PUB-TICK-001",
+        "expected": "Accessibility/Captions",
+        "predicted": "Accessibility/Captions",
+        "correct": true
+      },
+      {
+        "id": "PUB-TICK-002",
+        "expected": "LMS Access",
+        "predicted": "Login/Account Lockout",
+        "correct": false
+      }
+    ]
+  }
+}
