@@ -1,0 +1,2181 @@
+{
+  "machine": "intel_i7",
+  "models": [
+    "llama3.2-3b-q4",
+    "llama3.2-3b-q8",
+    "qwen2.5-7b-q4",
+    "qwen2.5-7b-q8"
+  ],
+  "quality": {
+    "llama3.2-3b-q4": {
+      "classification": {
+        "n_calls": 64,
+        "truncated": 0,
+        "accuracy_strict": {
+          "value": 0.5625,
+          "ci_low": 0.4408599177828787,
+          "ci_high": 0.6770618293457267,
+          "k": 36,
+          "n": 64
+        },
+        "accuracy_lenient": {
+          "value": 0.5625,
+          "ci_low": 0.4408599177828787,
+          "ci_high": 0.6770618293457267,
+          "k": 36,
+          "n": 64
+        },
+        "valid_label_rate": {
+          "value": 1.0,
+          "ci_low": 0.9433739770288436,
+          "ci_high": 1.0,
+          "k": 64,
+          "n": 64
+        },
+        "macro_f1": {
+          "value": 0.5017303108135027,
+          "ci_low": 0.3933337391258945,
+          "ci_high": 0.5981849758542649,
+          "n": 64
+        },
+        "confusion": {
+          "LMS Access": {
+            "LMS Access": 1,
+            "Grade Disputes": 2,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 1,
+            "Login/Account Lockout": 3,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 1,
+            "INVALID": 0
+          },
+          "Grade Disputes": {
+            "LMS Access": 0,
+            "Grade Disputes": 8,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Online Proctoring": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 4,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 4,
+            "INVALID": 0
+          },
+          "Accessibility/Captions": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 8,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Course Enrollment": {
+            "LMS Access": 0,
+            "Grade Disputes": 1,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 3,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 4,
+            "INVALID": 0
+          },
+          "Login/Account Lockout": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 7,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 1,
+            "INVALID": 0
+          },
+          "Exam Rescheduling": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 2,
+            "General Inquiries": 6,
+            "INVALID": 0
+          },
+          "General Inquiries": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 1,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 7,
+            "INVALID": 0
+          }
+        }
+      },
+      "drafting": {
+        "n_calls": 16,
+        "truncated": 0,
+        "has_subject_line": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "has_required_signoff": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "invented_url": {
+          "value": 0.125,
+          "ci_low": 0.034976749337057134,
+          "ci_high": 0.3602333143674828,
+          "k": 2,
+          "n": 16
+        },
+        "invented_email": {
+          "value": 0.0625,
+          "ci_low": 0.01111905730833121,
+          "ci_high": 0.2832926836802987,
+          "k": 1,
+          "n": 16
+        },
+        "invented_phone": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "uses_placeholders": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        }
+      },
+      "extraction": {
+        "n_calls": 24,
+        "truncated": 0,
+        "json_valid": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "schema_valid": {
+          "value": 0.125,
+          "ci_low": 0.04344255039315584,
+          "ci_high": 0.3100428814785757,
+          "k": 3,
+          "n": 24
+        },
+        "weight_type_error": {
+          "value": 0.875,
+          "ci_low": 0.6899571185214243,
+          "ci_high": 0.9565574496068442,
+          "k": 21,
+          "n": 24
+        },
+        "wrapper_text": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.13798057582897535,
+          "k": 0,
+          "n": 24
+        },
+        "course_code_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "instructor_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "accessibility_correct": {
+          "value": 0.6666666666666666,
+          "ci_low": 0.4670595949408046,
+          "ci_high": 0.8202802131162036,
+          "k": 16,
+          "n": 24
+        },
+        "grading_correct": {
+          "value": 0.5,
+          "ci_low": 0.31427131627763083,
+          "ci_high": 0.6857286837223692,
+          "k": 12,
+          "n": 24
+        },
+        "field_accuracy": {
+          "value": 0.7916666666666666,
+          "ci_low": 0.71875,
+          "ci_high": 0.8645833333333334,
+          "n": 24
+        }
+      },
+      "policy": {
+        "n_calls": 16,
+        "truncated": 0,
+        "exactly_three_bullets": {
+          "value": 0.9375,
+          "ci_low": 0.7167073163197013,
+          "ci_high": 0.9888809426916687,
+          "k": 15,
+          "n": 16
+        },
+        "no_preamble": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "no_trailing_text": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "format_compliant": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "all_constraints_retained": {
+          "value": 0.6875,
+          "ci_low": 0.4440393186673406,
+          "ci_high": 0.8583556494803894,
+          "k": 11,
+          "n": 16
+        },
+        "constraint_retention": {
+          "value": 0.8854166666666666,
+          "ci_low": 0.78125,
+          "ci_high": 0.96875,
+          "n": 16
+        },
+        "rouge1_f": {
+          "value": 0.6932823566739637,
+          "ci_low": 0.6578129389068079,
+          "ci_high": 0.7299312193639215,
+          "n": 16
+        },
+        "rouge2_f": {
+          "value": 0.4697454912154415,
+          "ci_low": 0.4219029095180276,
+          "ci_high": 0.5197606552673334,
+          "n": 16
+        },
+        "rougeL_f": {
+          "value": 0.6014499775670771,
+          "ci_low": 0.5562218101708635,
+          "ci_high": 0.6435608554909474,
+          "n": 16
+        }
+      }
+    },
+    "llama3.2-3b-q8": {
+      "classification": {
+        "n_calls": 64,
+        "truncated": 0,
+        "accuracy_strict": {
+          "value": 0.65625,
+          "ci_low": 0.5340341181762038,
+          "ci_high": 0.7607702496453097,
+          "k": 42,
+          "n": 64
+        },
+        "accuracy_lenient": {
+          "value": 0.65625,
+          "ci_low": 0.5340341181762038,
+          "ci_high": 0.7607702496453097,
+          "k": 42,
+          "n": 64
+        },
+        "valid_label_rate": {
+          "value": 1.0,
+          "ci_low": 0.9433739770288436,
+          "ci_high": 1.0,
+          "k": 64,
+          "n": 64
+        },
+        "macro_f1": {
+          "value": 0.6082947118241235,
+          "ci_low": 0.47741049983193656,
+          "ci_high": 0.7160502705513567,
+          "n": 64
+        },
+        "confusion": {
+          "LMS Access": {
+            "LMS Access": 2,
+            "Grade Disputes": 2,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 1,
+            "Login/Account Lockout": 2,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 1,
+            "INVALID": 0
+          },
+          "Grade Disputes": {
+            "LMS Access": 0,
+            "Grade Disputes": 8,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Online Proctoring": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 1,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 4,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 3,
+            "INVALID": 0
+          },
+          "Accessibility/Captions": {
+            "LMS Access": 0,
+            "Grade Disputes": 1,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 7,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Course Enrollment": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 7,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 1,
+            "INVALID": 0
+          },
+          "Login/Account Lockout": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 8,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Exam Rescheduling": {
+            "LMS Access": 0,
+            "Grade Disputes": 1,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 2,
+            "General Inquiries": 5,
+            "INVALID": 0
+          },
+          "General Inquiries": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 1,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 7,
+            "INVALID": 0
+          }
+        }
+      },
+      "drafting": {
+        "n_calls": 16,
+        "truncated": 0,
+        "has_subject_line": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "has_required_signoff": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "invented_url": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "invented_email": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "invented_phone": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "uses_placeholders": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        }
+      },
+      "extraction": {
+        "n_calls": 24,
+        "truncated": 0,
+        "json_valid": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "schema_valid": {
+          "value": 0.4583333333333333,
+          "ci_low": 0.2789105835168143,
+          "ci_high": 0.6492544644689336,
+          "k": 11,
+          "n": 24
+        },
+        "weight_type_error": {
+          "value": 0.5416666666666666,
+          "ci_low": 0.35074553553106635,
+          "ci_high": 0.7210894164831857,
+          "k": 13,
+          "n": 24
+        },
+        "wrapper_text": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.13798057582897535,
+          "k": 0,
+          "n": 24
+        },
+        "course_code_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "instructor_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "accessibility_correct": {
+          "value": 0.75,
+          "ci_low": 0.5510017468789357,
+          "ci_high": 0.8800079652065766,
+          "k": 18,
+          "n": 24
+        },
+        "grading_correct": {
+          "value": 0.5833333333333334,
+          "ci_low": 0.3883433764938864,
+          "ci_high": 0.7553265275346177,
+          "k": 14,
+          "n": 24
+        },
+        "field_accuracy": {
+          "value": 0.8333333333333334,
+          "ci_low": 0.7604166666666666,
+          "ci_high": 0.90625,
+          "n": 24
+        }
+      },
+      "policy": {
+        "n_calls": 16,
+        "truncated": 0,
+        "exactly_three_bullets": {
+          "value": 0.875,
+          "ci_low": 0.6397666856325173,
+          "ci_high": 0.9650232506629428,
+          "k": 14,
+          "n": 16
+        },
+        "no_preamble": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "no_trailing_text": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "format_compliant": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "all_constraints_retained": {
+          "value": 0.625,
+          "ci_low": 0.3864064709793481,
+          "ci_high": 0.815190174452472,
+          "k": 10,
+          "n": 16
+        },
+        "constraint_retention": {
+          "value": 0.875,
+          "ci_low": 0.7916666666666666,
+          "ci_high": 0.9479166666666666,
+          "n": 16
+        },
+        "rouge1_f": {
+          "value": 0.6620651041834285,
+          "ci_low": 0.6251225473579495,
+          "ci_high": 0.6978564280895563,
+          "n": 16
+        },
+        "rouge2_f": {
+          "value": 0.41779544954598646,
+          "ci_low": 0.3680616509939394,
+          "ci_high": 0.467340455189018,
+          "n": 16
+        },
+        "rougeL_f": {
+          "value": 0.5485511155298353,
+          "ci_low": 0.4974268578949216,
+          "ci_high": 0.5987678914964839,
+          "n": 16
+        }
+      }
+    },
+    "qwen2.5-7b-q4": {
+      "classification": {
+        "n_calls": 64,
+        "truncated": 0,
+        "accuracy_strict": {
+          "value": 0.875,
+          "ci_low": 0.7722521366978408,
+          "ci_high": 0.9352783460737919,
+          "k": 56,
+          "n": 64
+        },
+        "accuracy_lenient": {
+          "value": 0.875,
+          "ci_low": 0.7722521366978408,
+          "ci_high": 0.9352783460737919,
+          "k": 56,
+          "n": 64
+        },
+        "valid_label_rate": {
+          "value": 1.0,
+          "ci_low": 0.9433739770288436,
+          "ci_high": 1.0,
+          "k": 64,
+          "n": 64
+        },
+        "macro_f1": {
+          "value": 0.8659876071640777,
+          "ci_low": 0.7744552089061361,
+          "ci_high": 0.9428575458119937,
+          "n": 64
+        },
+        "confusion": {
+          "LMS Access": {
+            "LMS Access": 3,
+            "Grade Disputes": 2,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 3,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Grade Disputes": {
+            "LMS Access": 0,
+            "Grade Disputes": 8,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Online Proctoring": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 7,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 1,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Accessibility/Captions": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 8,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Course Enrollment": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 8,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Login/Account Lockout": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 8,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Exam Rescheduling": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 8,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "General Inquiries": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 2,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 6,
+            "INVALID": 0
+          }
+        }
+      },
+      "drafting": {
+        "n_calls": 16,
+        "truncated": 0,
+        "has_subject_line": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "has_required_signoff": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "invented_url": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "invented_email": {
+          "value": 0.0625,
+          "ci_low": 0.01111905730833121,
+          "ci_high": 0.2832926836802987,
+          "k": 1,
+          "n": 16
+        },
+        "invented_phone": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "uses_placeholders": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        }
+      },
+      "extraction": {
+        "n_calls": 24,
+        "truncated": 0,
+        "json_valid": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "schema_valid": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "weight_type_error": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.13798057582897535,
+          "k": 0,
+          "n": 24
+        },
+        "wrapper_text": {
+          "value": 0.8333333333333334,
+          "ci_low": 0.6414652961213058,
+          "ci_high": 0.9332143199927109,
+          "k": 20,
+          "n": 24
+        },
+        "course_code_correct": {
+          "value": 0.7916666666666666,
+          "ci_low": 0.5952915551476452,
+          "ci_high": 0.9075531089521192,
+          "k": 19,
+          "n": 24
+        },
+        "instructor_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "accessibility_correct": {
+          "value": 0.9583333333333334,
+          "ci_low": 0.7975777375115778,
+          "ci_high": 0.992606734645195,
+          "k": 23,
+          "n": 24
+        },
+        "grading_correct": {
+          "value": 0.7916666666666666,
+          "ci_low": 0.5952915551476452,
+          "ci_high": 0.9075531089521192,
+          "k": 19,
+          "n": 24
+        },
+        "field_accuracy": {
+          "value": 0.8854166666666666,
+          "ci_low": 0.8229166666666666,
+          "ci_high": 0.9375,
+          "n": 24
+        }
+      },
+      "policy": {
+        "n_calls": 16,
+        "truncated": 0,
+        "exactly_three_bullets": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "no_preamble": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "no_trailing_text": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "format_compliant": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "all_constraints_retained": {
+          "value": 0.8125,
+          "ci_low": 0.5699064013154177,
+          "ci_high": 0.9340852122641324,
+          "k": 13,
+          "n": 16
+        },
+        "constraint_retention": {
+          "value": 0.9427083333333333,
+          "ci_low": 0.8802083333333333,
+          "ci_high": 1.0,
+          "n": 16
+        },
+        "rouge1_f": {
+          "value": 0.6965428994653705,
+          "ci_low": 0.666353350689902,
+          "ci_high": 0.7266781329701132,
+          "n": 16
+        },
+        "rouge2_f": {
+          "value": 0.4561478608976902,
+          "ci_low": 0.4127566197875726,
+          "ci_high": 0.5003544760190788,
+          "n": 16
+        },
+        "rougeL_f": {
+          "value": 0.5920865649788738,
+          "ci_low": 0.5456729945465906,
+          "ci_high": 0.6346293709255438,
+          "n": 16
+        }
+      }
+    },
+    "qwen2.5-7b-q8": {
+      "classification": {
+        "n_calls": 64,
+        "truncated": 0,
+        "accuracy_strict": {
+          "value": 0.859375,
+          "ci_low": 0.7538349160536257,
+          "ci_high": 0.9242151299358556,
+          "k": 55,
+          "n": 64
+        },
+        "accuracy_lenient": {
+          "value": 0.859375,
+          "ci_low": 0.7538349160536257,
+          "ci_high": 0.9242151299358556,
+          "k": 55,
+          "n": 64
+        },
+        "valid_label_rate": {
+          "value": 1.0,
+          "ci_low": 0.9433739770288436,
+          "ci_high": 1.0,
+          "k": 64,
+          "n": 64
+        },
+        "macro_f1": {
+          "value": 0.8506695918460625,
+          "ci_low": 0.7552677966222374,
+          "ci_high": 0.931408287452912,
+          "n": 64
+        },
+        "confusion": {
+          "LMS Access": {
+            "LMS Access": 3,
+            "Grade Disputes": 2,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 3,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Grade Disputes": {
+            "LMS Access": 0,
+            "Grade Disputes": 8,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Online Proctoring": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 7,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 1,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Accessibility/Captions": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 8,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Course Enrollment": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 8,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Login/Account Lockout": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 8,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "Exam Rescheduling": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 0,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 8,
+            "General Inquiries": 0,
+            "INVALID": 0
+          },
+          "General Inquiries": {
+            "LMS Access": 0,
+            "Grade Disputes": 0,
+            "Online Proctoring": 0,
+            "Accessibility/Captions": 0,
+            "Course Enrollment": 3,
+            "Login/Account Lockout": 0,
+            "Exam Rescheduling": 0,
+            "General Inquiries": 5,
+            "INVALID": 0
+          }
+        }
+      },
+      "drafting": {
+        "n_calls": 16,
+        "truncated": 0,
+        "has_subject_line": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "has_required_signoff": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "invented_url": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "invented_email": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "invented_phone": {
+          "value": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.19361341827271994,
+          "k": 0,
+          "n": 16
+        },
+        "uses_placeholders": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        }
+      },
+      "extraction": {
+        "n_calls": 24,
+        "truncated": 0,
+        "json_valid": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "schema_valid": {
+          "value": 0.9583333333333334,
+          "ci_low": 0.7975777375115778,
+          "ci_high": 0.992606734645195,
+          "k": 23,
+          "n": 24
+        },
+        "weight_type_error": {
+          "value": 0.041666666666666664,
+          "ci_low": 0.007393265354805126,
+          "ci_high": 0.20242226248842232,
+          "k": 1,
+          "n": 24
+        },
+        "wrapper_text": {
+          "value": 0.25,
+          "ci_low": 0.1199920347934233,
+          "ci_high": 0.4489982531210644,
+          "k": 6,
+          "n": 24
+        },
+        "course_code_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "instructor_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "accessibility_correct": {
+          "value": 1.0,
+          "ci_low": 0.8620194241710247,
+          "ci_high": 1.0,
+          "k": 24,
+          "n": 24
+        },
+        "grading_correct": {
+          "value": 0.9166666666666666,
+          "ci_low": 0.741507847985494,
+          "ci_high": 0.9768416721570266,
+          "k": 22,
+          "n": 24
+        },
+        "field_accuracy": {
+          "value": 0.9791666666666666,
+          "ci_low": 0.9479166666666666,
+          "ci_high": 1.0,
+          "n": 24
+        }
+      },
+      "policy": {
+        "n_calls": 16,
+        "truncated": 0,
+        "exactly_three_bullets": {
+          "value": 0.875,
+          "ci_low": 0.6397666856325173,
+          "ci_high": 0.9650232506629428,
+          "k": 14,
+          "n": 16
+        },
+        "no_preamble": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "no_trailing_text": {
+          "value": 1.0,
+          "ci_low": 0.8063865817272802,
+          "ci_high": 1.0,
+          "k": 16,
+          "n": 16
+        },
+        "format_compliant": {
+          "value": 0.875,
+          "ci_low": 0.6397666856325173,
+          "ci_high": 0.9650232506629428,
+          "k": 14,
+          "n": 16
+        },
+        "all_constraints_retained": {
+          "value": 0.8125,
+          "ci_low": 0.5699064013154177,
+          "ci_high": 0.9340852122641324,
+          "k": 13,
+          "n": 16
+        },
+        "constraint_retention": {
+          "value": 0.921875,
+          "ci_low": 0.8177083333333333,
+          "ci_high": 1.0,
+          "n": 16
+        },
+        "rouge1_f": {
+          "value": 0.6947003270813346,
+          "ci_low": 0.6577506461137139,
+          "ci_high": 0.7335239217096586,
+          "n": 16
+        },
+        "rouge2_f": {
+          "value": 0.45430270103718357,
+          "ci_low": 0.4042582885098208,
+          "ci_high": 0.5051176190322333,
+          "n": 16
+        },
+        "rougeL_f": {
+          "value": 0.6053186202153291,
+          "ci_low": 0.5550056367248515,
+          "ci_high": 0.6520467634303092,
+          "n": 16
+        }
+      }
+    }
+  },
+  "systems": {
+    "llama3.2-3b-q4": {
+      "n_calls": 120,
+      "decode_tps": {
+        "mean": 114.33715556684933,
+        "sd": 7.722272201472076
+      },
+      "prefill_tps_median": 1417.0829410118351,
+      "itl_ms": {
+        "p50": 8.878799970261753,
+        "p95": 13.980349968187499,
+        "p99": 26.749439993873214
+      },
+      "n_itl_samples": 9327,
+      "chunks_per_token_median": 0.9908673894912428,
+      "ttft_s_by_task": {
+        "extraction": {
+          "p50": 2.101905399991665,
+          "p95": 2.2783249200088904
+        },
+        "policy": {
+          "p50": 2.1281463500054087,
+          "p95": 2.3013545500143664
+        },
+        "classification": {
+          "p50": 2.1491045000148006,
+          "p95": 2.203106854984071
+        },
+        "drafting": {
+          "p50": 2.2252552999998443,
+          "p95": 2.356228375036153
+        }
+      },
+      "model_size_gb": 2.3851171862334013,
+      "model_size_vram_gb": 2.3851171862334013,
+      "peak_ollama_rss_gb": 2.6623687744140625,
+      "cold_start_load_s": [
+        4.6274438
+      ]
+    },
+    "llama3.2-3b-q8": {
+      "n_calls": 120,
+      "decode_tps": {
+        "mean": 86.27170112894605,
+        "sd": 3.5814573094215594
+      },
+      "prefill_tps_median": 2020.1230075950766,
+      "itl_ms": {
+        "p50": 11.358999996446073,
+        "p95": 16.365209984360266,
+        "p99": 29.515924002043924
+      },
+      "n_itl_samples": 9399,
+      "chunks_per_token_median": 0.9910707167344335,
+      "ttft_s_by_task": {
+        "extraction": {
+          "p50": 2.149178400024539,
+          "p95": 2.3131670350499918
+        },
+        "policy": {
+          "p50": 2.2212065499916207,
+          "p95": 2.3365703750023386
+        },
+        "classification": {
+          "p50": 2.0914158999803476,
+          "p95": 2.2570732449996287
+        },
+        "drafting": {
+          "p50": 2.227724450000096,
+          "p95": 2.3295950000174344
+        }
+      },
+      "model_size_gb": 3.691318358294666,
+      "model_size_vram_gb": 3.691318358294666,
+      "peak_ollama_rss_gb": 2.837963104248047,
+      "cold_start_load_s": [
+        3.0895566
+      ]
+    },
+    "qwen2.5-7b-q4": {
+      "n_calls": 120,
+      "decode_tps": {
+        "mean": 65.86849130100317,
+        "sd": 1.3570731835899525
+      },
+      "prefill_tps_median": 4607.6592708985445,
+      "itl_ms": {
+        "p50": 15.024099964648485,
+        "p95": 21.7022149998229,
+        "p99": 30.783241966273607
+      },
+      "n_itl_samples": 9538,
+      "chunks_per_token_median": 0.9933771929824562,
+      "ttft_s_by_task": {
+        "extraction": {
+          "p50": 2.227549650007859,
+          "p95": 2.371147444983944
+        },
+        "policy": {
+          "p50": 2.1824128499720246,
+          "p95": 2.329656050002086
+        },
+        "classification": {
+          "p50": 2.0918922000273596,
+          "p95": 2.3089383399870713
+        },
+        "drafting": {
+          "p50": 2.1803034500044305,
+          "p95": 2.3623427000275115
+        }
+      },
+      "model_size_gb": 4.428808592259884,
+      "model_size_vram_gb": 4.428808592259884,
+      "peak_ollama_rss_gb": 1.81378173828125,
+      "cold_start_load_s": [
+        3.537169
+      ]
+    },
+    "qwen2.5-7b-q8": {
+      "n_calls": 120,
+      "decode_tps": {
+        "mean": 21.732524248326644,
+        "sd": 0.5069763556900986
+      },
+      "prefill_tps_median": 679.6280899105559,
+      "itl_ms": {
+        "p50": 47.224000038113445,
+        "p95": 50.02268003881909,
+        "p99": 51.94443596410566
+      },
+      "n_itl_samples": 9023,
+      "chunks_per_token_median": 0.9929078014184397,
+      "ttft_s_by_task": {
+        "extraction": {
+          "p50": 2.267498400004115,
+          "p95": 2.3088583800039486
+        },
+        "policy": {
+          "p50": 2.2687415999826044,
+          "p95": 2.305728050021571
+        },
+        "classification": {
+          "p50": 2.2954311500070617,
+          "p95": 2.5261594749928915
+        },
+        "drafting": {
+          "p50": 2.285331649967702,
+          "p95": 2.3580995250231354
+        }
+      },
+      "model_size_gb": 7.961005857214332,
+      "model_size_vram_gb": 5.7206445299088955,
+      "peak_ollama_rss_gb": 3.6817169189453125,
+      "cold_start_load_s": [
+        5.8622601
+      ]
+    }
+  },
+  "temperature": {
+    "llama3.2-3b-q4": {
+      "0.2": {
+        "classification": {
+          "n_calls": 192,
+          "truncated": 0,
+          "accuracy_strict": {
+            "value": 0.5625,
+            "ci_low": 0.44791666666666663,
+            "ci_high": 0.671875,
+            "n_items": 64,
+            "seed_agreement": 0.875
+          },
+          "accuracy_lenient": {
+            "value": 0.5625,
+            "ci_low": 0.44791666666666663,
+            "ci_high": 0.671875,
+            "n_items": 64,
+            "seed_agreement": 0.875
+          },
+          "valid_label_rate": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 64,
+            "seed_agreement": 1.0
+          }
+        },
+        "extraction": {
+          "n_calls": 72,
+          "truncated": 0,
+          "json_valid": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "schema_valid": {
+            "value": 0.16666666666666666,
+            "ci_low": 0.05555555555555555,
+            "ci_high": 0.3055555555555555,
+            "n_items": 24,
+            "seed_agreement": 0.8333333333333334
+          },
+          "weight_type_error": {
+            "value": 0.8333333333333334,
+            "ci_low": 0.6944444444444443,
+            "ci_high": 0.9444444444444443,
+            "n_items": 24,
+            "seed_agreement": 0.8333333333333334
+          },
+          "wrapper_text": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "course_code_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "instructor_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "accessibility_correct": {
+            "value": 0.6805555555555557,
+            "ci_low": 0.5,
+            "ci_high": 0.8611111111111112,
+            "n_items": 24,
+            "seed_agreement": 0.9583333333333334
+          },
+          "grading_correct": {
+            "value": 0.5,
+            "ci_low": 0.3194444444444444,
+            "ci_high": 0.6666666666666666,
+            "n_items": 24,
+            "seed_agreement": 0.75
+          },
+          "field_accuracy": {
+            "value": 0.7951388888888888,
+            "ci_low": 0.7222222222222223,
+            "ci_high": 0.8645833333333334,
+            "n_items": 24,
+            "seed_agreement": 0.7916666666666666
+          }
+        },
+        "policy": {
+          "n_calls": 48,
+          "truncated": 0,
+          "exactly_three_bullets": {
+            "value": 0.9166666666666666,
+            "ci_low": 0.7708333333333333,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 0.9375
+          },
+          "no_preamble": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "no_trailing_text": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "format_compliant": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "all_constraints_retained": {
+            "value": 0.5833333333333333,
+            "ci_low": 0.39583333333333326,
+            "ci_high": 0.7708333333333333,
+            "n_items": 16,
+            "seed_agreement": 0.625
+          },
+          "constraint_retention": {
+            "value": 0.8402777777777778,
+            "ci_low": 0.7552083333333333,
+            "ci_high": 0.9201388888888888,
+            "n_items": 16,
+            "seed_agreement": 0.5
+          },
+          "rouge1_f": {
+            "value": 0.6908732986394521,
+            "ci_low": 0.659179562435461,
+            "ci_high": 0.7231950865824646,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          },
+          "rouge2_f": {
+            "value": 0.4610934217195216,
+            "ci_low": 0.4155634341887037,
+            "ci_high": 0.5079800330447718,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          },
+          "rougeL_f": {
+            "value": 0.5947771949488236,
+            "ci_low": 0.5520867348604612,
+            "ci_high": 0.6339477920982032,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          }
+        }
+      },
+      "0.7": {
+        "classification": {
+          "n_calls": 192,
+          "truncated": 0,
+          "accuracy_strict": {
+            "value": 0.5677083333333334,
+            "ci_low": 0.45833333333333337,
+            "ci_high": 0.6666666666666667,
+            "n_items": 64,
+            "seed_agreement": 0.734375
+          },
+          "accuracy_lenient": {
+            "value": 0.5677083333333334,
+            "ci_low": 0.45833333333333337,
+            "ci_high": 0.6666666666666667,
+            "n_items": 64,
+            "seed_agreement": 0.734375
+          },
+          "valid_label_rate": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 64,
+            "seed_agreement": 1.0
+          }
+        },
+        "extraction": {
+          "n_calls": 72,
+          "truncated": 0,
+          "json_valid": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "schema_valid": {
+            "value": 0.3055555555555555,
+            "ci_low": 0.19444444444444442,
+            "ci_high": 0.4305555555555555,
+            "n_items": 24,
+            "seed_agreement": 0.4166666666666667
+          },
+          "weight_type_error": {
+            "value": 0.6666666666666666,
+            "ci_low": 0.5416666666666666,
+            "ci_high": 0.7777777777777777,
+            "n_items": 24,
+            "seed_agreement": 0.375
+          },
+          "wrapper_text": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "course_code_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "instructor_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "accessibility_correct": {
+            "value": 0.7222222222222223,
+            "ci_low": 0.5555555555555555,
+            "ci_high": 0.875,
+            "n_items": 24,
+            "seed_agreement": 0.8333333333333334
+          },
+          "grading_correct": {
+            "value": 0.5277777777777778,
+            "ci_low": 0.375,
+            "ci_high": 0.6805555555555555,
+            "n_items": 24,
+            "seed_agreement": 0.5416666666666666
+          },
+          "field_accuracy": {
+            "value": 0.8125,
+            "ci_low": 0.75,
+            "ci_high": 0.8715277777777777,
+            "n_items": 24,
+            "seed_agreement": 0.4166666666666667
+          }
+        },
+        "policy": {
+          "n_calls": 48,
+          "truncated": 0,
+          "exactly_three_bullets": {
+            "value": 0.9583333333333333,
+            "ci_low": 0.875,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 0.9375
+          },
+          "no_preamble": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "no_trailing_text": {
+            "value": 0.9791666666666666,
+            "ci_low": 0.9375,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 0.9375
+          },
+          "format_compliant": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "all_constraints_retained": {
+            "value": 0.6458333333333333,
+            "ci_low": 0.4375,
+            "ci_high": 0.8338541666666639,
+            "n_items": 16,
+            "seed_agreement": 0.75
+          },
+          "constraint_retention": {
+            "value": 0.8645833333333333,
+            "ci_low": 0.767361111111111,
+            "ci_high": 0.9479166666666667,
+            "n_items": 16,
+            "seed_agreement": 0.6875
+          },
+          "rouge1_f": {
+            "value": 0.673583619421456,
+            "ci_low": 0.639377699624109,
+            "ci_high": 0.7075067209951776,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          },
+          "rouge2_f": {
+            "value": 0.4421653410576282,
+            "ci_low": 0.3946110896247052,
+            "ci_high": 0.4909270547556163,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          },
+          "rougeL_f": {
+            "value": 0.580773263861724,
+            "ci_low": 0.5391322658710856,
+            "ci_high": 0.6209773881484968,
+            "n_items": 16,
+            "seed_agreement": 0.0
+          }
+        }
+      }
+    },
+    "qwen2.5-7b-q4": {
+      "0.2": {
+        "classification": {
+          "n_calls": 192,
+          "truncated": 0,
+          "accuracy_strict": {
+            "value": 0.8645833333333333,
+            "ci_low": 0.7760416666666667,
+            "ci_high": 0.9375,
+            "n_items": 64,
+            "seed_agreement": 0.96875
+          },
+          "accuracy_lenient": {
+            "value": 0.8645833333333333,
+            "ci_low": 0.7760416666666667,
+            "ci_high": 0.9375,
+            "n_items": 64,
+            "seed_agreement": 0.96875
+          },
+          "valid_label_rate": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 64,
+            "seed_agreement": 1.0
+          }
+        },
+        "extraction": {
+          "n_calls": 72,
+          "truncated": 0,
+          "json_valid": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "schema_valid": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "weight_type_error": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "wrapper_text": {
+            "value": 0.75,
+            "ci_low": 0.6388888888888888,
+            "ci_high": 0.861111111111111,
+            "n_items": 24,
+            "seed_agreement": 0.5
+          },
+          "course_code_correct": {
+            "value": 0.7916666666666666,
+            "ci_low": 0.625,
+            "ci_high": 0.9583333333333334,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "instructor_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "accessibility_correct": {
+            "value": 0.9722222222222223,
+            "ci_low": 0.9166666666666666,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 0.9583333333333334
+          },
+          "grading_correct": {
+            "value": 0.8333333333333334,
+            "ci_low": 0.6805555555555555,
+            "ci_high": 0.9583333333333334,
+            "n_items": 24,
+            "seed_agreement": 0.9166666666666666
+          },
+          "field_accuracy": {
+            "value": 0.8993055555555557,
+            "ci_low": 0.8472222222222223,
+            "ci_high": 0.951388888888889,
+            "n_items": 24,
+            "seed_agreement": 0.875
+          }
+        },
+        "policy": {
+          "n_calls": 48,
+          "truncated": 0,
+          "exactly_three_bullets": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "no_preamble": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "no_trailing_text": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "format_compliant": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "all_constraints_retained": {
+            "value": 0.8125,
+            "ci_low": 0.625,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "constraint_retention": {
+            "value": 0.9427083333333333,
+            "ci_low": 0.8802083333333333,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "rouge1_f": {
+            "value": 0.6986531736207,
+            "ci_low": 0.664781440553681,
+            "ci_high": 0.7325574670688644,
+            "n_items": 16,
+            "seed_agreement": 0.25
+          },
+          "rouge2_f": {
+            "value": 0.4568928332354789,
+            "ci_low": 0.41023876511734053,
+            "ci_high": 0.5044939116573208,
+            "n_items": 16,
+            "seed_agreement": 0.375
+          },
+          "rougeL_f": {
+            "value": 0.5928920776707026,
+            "ci_low": 0.5366569379968708,
+            "ci_high": 0.643519215495803,
+            "n_items": 16,
+            "seed_agreement": 0.25
+          }
+        }
+      },
+      "0.7": {
+        "classification": {
+          "n_calls": 192,
+          "truncated": 0,
+          "accuracy_strict": {
+            "value": 0.8697916666666667,
+            "ci_low": 0.7864583333333333,
+            "ci_high": 0.9427083333333333,
+            "n_items": 64,
+            "seed_agreement": 0.953125
+          },
+          "accuracy_lenient": {
+            "value": 0.8697916666666667,
+            "ci_low": 0.7864583333333333,
+            "ci_high": 0.9427083333333333,
+            "n_items": 64,
+            "seed_agreement": 0.953125
+          },
+          "valid_label_rate": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 64,
+            "seed_agreement": 1.0
+          }
+        },
+        "extraction": {
+          "n_calls": 72,
+          "truncated": 0,
+          "json_valid": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "schema_valid": {
+            "value": 0.986111111111111,
+            "ci_low": 0.9583333333333334,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 0.9583333333333334
+          },
+          "weight_type_error": {
+            "value": 0.013888888888888888,
+            "ci_low": 0.0,
+            "ci_high": 0.041666666666666664,
+            "n_items": 24,
+            "seed_agreement": 0.9583333333333334
+          },
+          "wrapper_text": {
+            "value": 0.6666666666666666,
+            "ci_low": 0.596875,
+            "ci_high": 0.75,
+            "n_items": 24,
+            "seed_agreement": 0.16666666666666666
+          },
+          "course_code_correct": {
+            "value": 0.8333333333333334,
+            "ci_low": 0.6944444444444443,
+            "ci_high": 0.9583333333333334,
+            "n_items": 24,
+            "seed_agreement": 0.875
+          },
+          "instructor_correct": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 1.0
+          },
+          "accessibility_correct": {
+            "value": 0.9722222222222223,
+            "ci_low": 0.9166666666666666,
+            "ci_high": 1.0,
+            "n_items": 24,
+            "seed_agreement": 0.9583333333333334
+          },
+          "grading_correct": {
+            "value": 0.9027777777777777,
+            "ci_low": 0.8055555555555555,
+            "ci_high": 0.9722222222222223,
+            "n_items": 24,
+            "seed_agreement": 0.8333333333333334
+          },
+          "field_accuracy": {
+            "value": 0.9270833333333334,
+            "ci_low": 0.8853298611111111,
+            "ci_high": 0.9652777777777778,
+            "n_items": 24,
+            "seed_agreement": 0.7083333333333334
+          }
+        },
+        "policy": {
+          "n_calls": 48,
+          "truncated": 0,
+          "exactly_three_bullets": {
+            "value": 0.9791666666666666,
+            "ci_low": 0.9375,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 0.9375
+          },
+          "no_preamble": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "no_trailing_text": {
+            "value": 1.0,
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 1.0
+          },
+          "format_compliant": {
+            "value": 0.9791666666666666,
+            "ci_low": 0.9375,
+            "ci_high": 1.0,
+            "n_items": 16,
+            "seed_agreement": 0.9375
+          },
+          "all_constraints_retained": {
+            "value": 0.7291666666666666,
+            "ci_low": 0.5208333333333333,
+            "ci_high": 0.9166666666666666,
+            "n_items": 16,
+            "seed_agreement": 0.8125
+          },
+          "constraint_retention": {
+            "value": 0.9045138888888888,
+            "ci_low": 0.828125,
+            "ci_high": 0.9722222222222222,
+            "n_items": 16,
+            "seed_agreement": 0.75
+          },
+          "rouge1_f": {
+            "value": 0.6926097084199132,
+            "ci_low": 0.6637920468340622,
+            "ci_high": 0.7233009765441515,
+            "n_items": 16,
+            "seed_agreement": 0.0625
+          },
+          "rouge2_f": {
+            "value": 0.4497973928008562,
+            "ci_low": 0.4052661547631025,
+            "ci_high": 0.49526417602337836,
+            "n_items": 16,
+            "seed_agreement": 0.0625
+          },
+          "rougeL_f": {
+            "value": 0.5950808275335099,
+            "ci_low": 0.5482076707313457,
+            "ci_high": 0.6392723867531606,
+            "n_items": 16,
+            "seed_agreement": 0.0625
+          }
+        }
+      }
+    }
+  },
+  "paired_tests": {
+    "extraction:schema_valid:llama3.2-3b-q4_vs_llama3.2-3b-q8": {
+      "b01": 8,
+      "b10": 0,
+      "p": 0.0078125,
+      "n": 24,
+      "p_holm": 0.09375
+    },
+    "extraction:schema_valid:llama3.2-3b-q4_vs_qwen2.5-7b-q4": {
+      "b01": 21,
+      "b10": 0,
+      "p": 9.5367431640625e-07,
+      "n": 24,
+      "p_holm": 2.288818359375e-05
+    },
+    "extraction:schema_valid:llama3.2-3b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 20,
+      "b10": 0,
+      "p": 1.9073486328125e-06,
+      "n": 24,
+      "p_holm": 4.38690185546875e-05
+    },
+    "extraction:schema_valid:llama3.2-3b-q8_vs_qwen2.5-7b-q4": {
+      "b01": 13,
+      "b10": 0,
+      "p": 0.000244140625,
+      "n": 24,
+      "p_holm": 0.00390625
+    },
+    "extraction:schema_valid:llama3.2-3b-q8_vs_qwen2.5-7b-q8": {
+      "b01": 12,
+      "b10": 0,
+      "p": 0.00048828125,
+      "n": 24,
+      "p_holm": 0.00732421875
+    },
+    "extraction:schema_valid:qwen2.5-7b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 1,
+      "p": 1.0,
+      "n": 24,
+      "p_holm": 1.0
+    },
+    "policy:format_compliant:llama3.2-3b-q4_vs_llama3.2-3b-q8": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "policy:format_compliant:llama3.2-3b-q4_vs_qwen2.5-7b-q4": {
+      "b01": 16,
+      "b10": 0,
+      "p": 3.0517578125e-05,
+      "n": 16,
+      "p_holm": 0.000640869140625
+    },
+    "policy:format_compliant:llama3.2-3b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 14,
+      "b10": 0,
+      "p": 0.0001220703125,
+      "n": 16,
+      "p_holm": 0.002197265625
+    },
+    "policy:format_compliant:llama3.2-3b-q8_vs_qwen2.5-7b-q4": {
+      "b01": 16,
+      "b10": 0,
+      "p": 3.0517578125e-05,
+      "n": 16,
+      "p_holm": 0.000640869140625
+    },
+    "policy:format_compliant:llama3.2-3b-q8_vs_qwen2.5-7b-q8": {
+      "b01": 14,
+      "b10": 0,
+      "p": 0.0001220703125,
+      "n": 16,
+      "p_holm": 0.002197265625
+    },
+    "policy:format_compliant:qwen2.5-7b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 2,
+      "p": 0.5,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "classification:correct_strict:llama3.2-3b-q4_vs_llama3.2-3b-q8": {
+      "b01": 7,
+      "b10": 1,
+      "p": 0.0703125,
+      "n": 64,
+      "p_holm": 0.7734375
+    },
+    "classification:correct_strict:llama3.2-3b-q4_vs_qwen2.5-7b-q4": {
+      "b01": 21,
+      "b10": 1,
+      "p": 1.0967254638671875e-05,
+      "n": 64,
+      "p_holm": 0.00024127960205078125
+    },
+    "classification:correct_strict:llama3.2-3b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 21,
+      "b10": 2,
+      "p": 6.604194641113281e-05,
+      "n": 64,
+      "p_holm": 0.0012547969818115234
+    },
+    "classification:correct_strict:llama3.2-3b-q8_vs_qwen2.5-7b-q4": {
+      "b01": 16,
+      "b10": 2,
+      "p": 0.001312255859375,
+      "n": 64,
+      "p_holm": 0.01837158203125
+    },
+    "classification:correct_strict:llama3.2-3b-q8_vs_qwen2.5-7b-q8": {
+      "b01": 16,
+      "b10": 3,
+      "p": 0.004425048828125,
+      "n": 64,
+      "p_holm": 0.057525634765625
+    },
+    "classification:correct_strict:qwen2.5-7b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 1,
+      "p": 1.0,
+      "n": 64,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:llama3.2-3b-q4_vs_llama3.2-3b-q8": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:llama3.2-3b-q4_vs_qwen2.5-7b-q4": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:llama3.2-3b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:llama3.2-3b-q8_vs_qwen2.5-7b-q4": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:llama3.2-3b-q8_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    },
+    "drafting:has_required_signoff:qwen2.5-7b-q4_vs_qwen2.5-7b-q8": {
+      "b01": 0,
+      "b10": 0,
+      "p": 1.0,
+      "n": 16,
+      "p_holm": 1.0
+    }
+  }
+}
