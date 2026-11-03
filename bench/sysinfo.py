@@ -29,6 +29,28 @@ def _cpu_name() -> str:
     return platform.processor() or "unknown"
 
 
+def _gpus() -> list[str]:
+    """Best-effort list of GPUs, so a run's hardware is never ambiguous."""
+    out = []
+    try:
+        q = subprocess.check_output(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader"],
+                                    text=True, stderr=subprocess.DEVNULL, timeout=10)
+        out += [f"NVIDIA {l.strip()}" for l in q.splitlines() if l.strip()]
+    except Exception:
+        pass
+    try:
+        if sys.platform == "win32":
+            q = subprocess.check_output(["powershell", "-NoProfile", "-Command",
+                                         "(Get-CimInstance Win32_VideoController).Name"], text=True, timeout=20)
+            out += [f"adapter: {l.strip()}" for l in q.splitlines() if l.strip()]
+        elif sys.platform == "darwin":
+            q = subprocess.check_output(["sysctl", "-n", "machdep.cpu.brand_string"], text=True)
+            out.append(f"integrated (Apple Silicon): {q.strip()}")
+    except Exception:
+        pass
+    return out
+
+
 def _git_commit() -> str | None:
     try:
         return subprocess.check_output(["git", "rev-parse", "HEAD"], text=True, stderr=subprocess.DEVNULL).strip()
@@ -49,6 +71,7 @@ def collect(client=None, models=()) -> dict:
         "os": platform.platform(),
         "machine_arch": platform.machine(),
         "cpu": _cpu_name(),
+        "gpus": _gpus(),
         "python": sys.version.split()[0],
         "git_commit": _git_commit(),
         "git_dirty": _git_dirty(),

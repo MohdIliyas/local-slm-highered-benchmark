@@ -208,9 +208,11 @@ def main():
         print("rouge-score not installed; skipping ROUGE")
 
     main_calls, colds = load_raw(args.machine, "main")
+    if not main_calls:  # a CPU-only machine label stores its greedy run under cpu_only/
+        main_calls, colds = load_raw(args.machine, "cpu_only")
     temp_calls, _ = load_raw(args.machine, "temperature")
     if not main_calls:
-        sys.exit(f"No results/{args.machine}/main/raw.jsonl yet. Run scripts/run_experiments.py first.")
+        sys.exit(f"No results/{args.machine}/main (or cpu_only)/raw.jsonl yet. Run scripts/run_experiments.py first.")
     score_calls(main_calls, rouge)
     score_calls(temp_calls, rouge)
     if args.bertscore:

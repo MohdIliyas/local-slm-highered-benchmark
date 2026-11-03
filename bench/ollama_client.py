@@ -31,7 +31,9 @@ except ImportError:  # memory sampling is optional
     psutil = None
 
 
-DEFAULT_ENDPOINT = "http://localhost:11434"
+# 127.0.0.1, not "localhost": on Windows, "localhost" tries IPv6 first and Ollama
+# listens on IPv4 only, which adds a ~2 s connection fallback to every request.
+DEFAULT_ENDPOINT = "http://127.0.0.1:11434"
 
 
 def _ollama_processes():
@@ -174,7 +176,7 @@ class OllamaClient:
     # ---- generation ------------------------------------------------------
     def generate(self, model: str, prompt: str, *, temperature: float, seed: int,
                  num_predict: int = 512, num_ctx: int = 4096,
-                 keep_alive: str = "30m") -> GenerationResult:
+                 keep_alive: str = "30m", num_gpu: int | None = None) -> GenerationResult:
         payload = {
             "model": model,
             "prompt": prompt,
@@ -187,6 +189,8 @@ class OllamaClient:
                 "num_ctx": num_ctx,
             },
         }
+        if num_gpu is not None:
+            payload["options"]["num_gpu"] = num_gpu  # 0 = CPU only
         pieces: list[str] = []
         chunk_times: list[float] = []
         final: dict = {}

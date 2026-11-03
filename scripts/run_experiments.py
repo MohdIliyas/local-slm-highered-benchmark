@@ -79,16 +79,19 @@ def main():
                 continue
             print(f"[{mk}] unloading other models, cold-start load of {tag}")
             client.unload_all()
-            cold = client.generate(tag, "Reply with the word ready.", temperature=0.0, seed=0, num_predict=8)
+            num_gpu = preset.get("num_gpu")
+            cold = client.generate(tag, "Reply with the word ready.", temperature=0.0, seed=0, num_predict=8,
+                                   num_gpu=num_gpu)
             fh.write(json.dumps({"kind": "cold_start", "machine": args.machine, "model_key": mk, "model": tag,
                                  **{k: v for k, v in cold.to_dict().items() if k != "itl_s"}}) + "\n")
             fh.flush()
             for task, it, T, seed in todo:
                 n += 1
-                res = client.generate(tag, it["prompt"], temperature=T, seed=seed, num_predict=NUM_PREDICT[task])
+                res = client.generate(tag, it["prompt"], temperature=T, seed=seed, num_predict=NUM_PREDICT[task],
+                                      num_gpu=num_gpu)
                 rec = {"kind": "call", "machine": args.machine, "preset": args.preset, "model_key": mk,
                        "task": task, "item_id": it["id"], "temperature": T, "seed": seed,
-                       "num_predict": NUM_PREDICT[task], **res.to_dict()}
+                       "num_predict": NUM_PREDICT[task], "num_gpu": num_gpu, **res.to_dict()}
                 fh.write(json.dumps(rec) + "\n")
                 fh.flush()
                 status = "ERR " + res.error if res.error else f"{res.decode_tps or 0:.1f} tok/s"

@@ -4,11 +4,17 @@
 \cmidrule(lr){7-9}
 Model & Quant. & (GB) & (tok/s) & (tok/s) & p50 (s) & p50 & p95 & p99 \\
 \midrule
-\multicolumn{9}{l}{\textit{Intel Core i7 (CPU only)}} \\
+\multicolumn{9}{l}{\textit{Windows laptop, GPU offload (Ollama default)}} \\
 Llama 3.2 3B & \texttt{Q4\_K\_M} & 2.4 & 114.3 $\pm$ 7.7 & 1417 & 2.13 & 8.9 & 14.0 & 26.7 \\
 Llama 3.2 3B & \texttt{Q8\_0} & 3.7 & 86.3 $\pm$ 3.6 & 2020 & 2.22 & 11.4 & 16.4 & 29.5 \\
 Qwen 2.5 7B & \texttt{Q4\_K\_M} & 4.4 & 65.9 $\pm$ 1.4 & 4608 & 2.18 & 15.0 & 21.7 & 30.8 \\
 Qwen 2.5 7B & \texttt{Q8\_0} & 8.0 & 21.7 $\pm$ 0.5 & 680 & 2.27 & 47.2 & 50.0 & 51.9 \\
+\midrule
+\multicolumn{9}{l}{\textit{Windows laptop, CPU only (\texttt{num\_gpu}=0)}} \\
+Llama 3.2 3B & \texttt{Q4\_K\_M} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} \\
+Llama 3.2 3B & \texttt{Q8\_0} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} \\
+Qwen 2.5 7B & \texttt{Q4\_K\_M} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} \\
+Qwen 2.5 7B & \texttt{Q8\_0} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} \\
 \midrule
 \multicolumn{9}{l}{\textit{Apple M4 (Metal)}} \\
 Llama 3.2 3B & \texttt{Q4\_K\_M} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} & \tbd{} \\

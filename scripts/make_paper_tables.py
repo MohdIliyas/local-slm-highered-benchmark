@@ -26,7 +26,10 @@ PRETTY = {"llama3.2-3b-q4": r"Llama 3.2 3B & \texttt{Q4\_K\_M}",
           "qwen2.5-7b-q8": r"Qwen 2.5 7B & \texttt{Q8\_0}"}
 MACRO = {"llama3.2-3b-q4": "LlamaQfour", "llama3.2-3b-q8": "LlamaQeight",
          "qwen2.5-7b-q4": "QwenQfour", "qwen2.5-7b-q8": "QwenQeight"}
-MACHINE_MACRO = {"intel_i7": "Intel", "apple_m4": "Apple"}
+MACHINE_MACRO = {"intel_i7": "Intel", "intel_i7_cpu": "IntelNoGPU", "apple_m4": "Apple"}
+MACHINE_LABEL = {"intel_i7": "Windows laptop, GPU offload (Ollama default)",
+                 "intel_i7_cpu": "Windows laptop, CPU only (\\texttt{num\\_gpu}=0)",
+                 "apple_m4": "Apple M4 (Metal)"}
 TBD = r"\tbd{}"
 
 
@@ -73,13 +76,14 @@ def load_summary(machine):
 
 
 def load_manifest(machine):
-    ms = sorted((ROOT / "results" / machine / "main").glob("manifest_*.json"))
+    ms = sorted((ROOT / "results" / machine / "main").glob("manifest_*.json")) or \
+        sorted((ROOT / "results" / machine / "cpu_only").glob("manifest_*.json"))
     return json.loads(ms[-1].read_text(encoding="utf-8")) if ms else None
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--machines", nargs="+", default=["intel_i7", "apple_m4"])
+    ap.add_argument("--machines", nargs="+", default=["intel_i7", "intel_i7_cpu", "apple_m4"])
     ap.add_argument("--primary", default="intel_i7", help="machine whose quality results the paper reports")
     args = ap.parse_args()
     GEN.mkdir(parents=True, exist_ok=True)
@@ -104,6 +108,8 @@ def main():
         man = mans.get(machine) or {}
         L.append(rf"\newcommand{{\{mm}CPU}}{{{tex_escape(man['cpu']) if man.get('cpu') else TBD}}}")
         L.append(rf"\newcommand{{\{mm}RAM}}{{{man['ram_total_gb'] if man.get('ram_total_gb') else TBD}}}")
+        gpus = [g for g in (man.get("gpus") or []) if g.startswith("NVIDIA")] or (man.get("gpus") or [])
+        L.append(rf"\newcommand{{\{mm}GPU}}{{{tex_escape('; '.join(gpus)) if gpus else TBD}}}")
         L.append(rf"\newcommand{{\{mm}OS}}{{{tex_escape(man['os']) if man.get('os') else TBD}}}")
         L.append(rf"\newcommand{{\{mm}Ollama}}{{{tex_escape(man['ollama_version']) if man.get('ollama_version') else TBD}}}")
         s = sums.get(machine) or {}
@@ -121,6 +127,7 @@ def main():
         L += [rf"\newcommand{{\Schema{k}}}{{{pct(get(qm, 'extraction', 'schema_valid'))}}}",
               rf"\newcommand{{\FieldAcc{k}}}{{{pct(get(qm, 'extraction', 'field_accuracy'))}}}",
               rf"\newcommand{{\TypeErr{k}}}{{{pct(get(qm, 'extraction', 'weight_type_error'))}}}",
+              rf"\newcommand{{\Wrap{k}}}{{{pct(get(qm, 'extraction', 'wrapper_text'))}}}",
               rf"\newcommand{{\Format{k}}}{{{pct(get(qm, 'policy', 'format_compliant'))}}}",
               rf"\newcommand{{\Preamble{k}}}{{{pct(get(qm, 'policy', 'no_preamble'))}}}",
               rf"\newcommand{{\Retain{k}}}{{{pct(get(qm, 'policy', 'constraint_retention'))}}}",
@@ -152,7 +159,7 @@ def main():
     for i, machine in enumerate(args.machines):
         if i:
             T.append(r"\midrule")
-        label = {"intel_i7": "Intel Core i7 (CPU only)", "apple_m4": "Apple M4 (Metal)"}.get(machine, machine)
+        label = MACHINE_LABEL.get(machine, tex_escape(machine))
         T.append(rf"\multicolumn{{9}}{{l}}{{\textit{{{label}}}}} \\")
         s = sums.get(machine) or {}
         for model in MODELS:
