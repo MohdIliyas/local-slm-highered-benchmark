@@ -35,7 +35,7 @@ def _gpus() -> list[str]:
     try:
         q = subprocess.check_output(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader"],
                                     text=True, stderr=subprocess.DEVNULL, timeout=10)
-        out += [f"NVIDIA {l.strip()}" for l in q.splitlines() if l.strip()]
+        out += [f"nvidia-smi: {l.strip()}" for l in q.splitlines() if l.strip()]
     except Exception:
         pass
     try:

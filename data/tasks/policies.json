@@ -110,7 +110,12 @@
     "constraints": [
       "70%",
       "following semester",
-      "automatically converts to an F"
+      [
+        "automatically converts to an F",
+        "automatically convert to an F",
+        "automatically becomes an F",
+        "automatically become an F"
+      ]
     ],
     "reference_summary": [
       "An Incomplete requires that you finished at least 70% of the work with a passing average and were stopped by documented circumstances beyond your control.",

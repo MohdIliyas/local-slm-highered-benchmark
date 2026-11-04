@@ -26,3 +26,7 @@ All items are **synthetic**. They were written for this study, with AI assistanc
 ## Before final scoring
 
 The `reference_summary` entries in `policies.json` are drafts (`reference_status`). An author must approve or rewrite each one before ROUGE and BERTScore are reported. If you change them, set `reference_status` to `"approved"` and rerun `scripts/score.py`.
+
+## Changes made after inspecting model outputs
+
+**POL-07 (Incomplete grades).** The constraint "automatically converts to an F" now also accepts "automatically convert to an F" and "automatically become(s) an F". On the first full run, correct summaries that wrote "will automatically convert to an F" were scored as having dropped the constraint. Only the verb form was added; no constraint was removed or loosened in meaning. This is disclosed in the paper's method section.

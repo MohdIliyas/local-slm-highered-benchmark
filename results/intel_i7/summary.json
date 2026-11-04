@@ -571,16 +571,16 @@
           "n": 16
         },
         "all_constraints_retained": {
-          "value": 0.625,
-          "ci_low": 0.3864064709793481,
-          "ci_high": 0.815190174452472,
-          "k": 10,
+          "value": 0.6875,
+          "ci_low": 0.4440393186673406,
+          "ci_high": 0.8583556494803894,
+          "k": 11,
           "n": 16
         },
         "constraint_retention": {
-          "value": 0.875,
-          "ci_low": 0.7916666666666666,
-          "ci_high": 0.9479166666666666,
+          "value": 0.8958333333333333,
+          "ci_low": 0.8125,
+          "ci_high": 0.96875,
           "n": 16
         },
         "rouge1_f": {
@@ -869,15 +869,15 @@
           "n": 16
         },
         "all_constraints_retained": {
-          "value": 0.8125,
-          "ci_low": 0.5699064013154177,
-          "ci_high": 0.9340852122641324,
-          "k": 13,
+          "value": 0.875,
+          "ci_low": 0.6397666856325173,
+          "ci_high": 0.9650232506629428,
+          "k": 14,
           "n": 16
         },
         "constraint_retention": {
-          "value": 0.9427083333333333,
-          "ci_low": 0.8802083333333333,
+          "value": 0.9635416666666666,
+          "ci_low": 0.9114583333333333,
           "ci_high": 1.0,
           "n": 16
         },
@@ -1167,15 +1167,15 @@
           "n": 16
         },
         "all_constraints_retained": {
-          "value": 0.8125,
-          "ci_low": 0.5699064013154177,
-          "ci_high": 0.9340852122641324,
-          "k": 13,
+          "value": 0.875,
+          "ci_low": 0.6397666856325173,
+          "ci_high": 0.9650232506629428,
+          "k": 14,
           "n": 16
         },
         "constraint_retention": {
-          "value": 0.921875,
-          "ci_low": 0.8177083333333333,
+          "value": 0.9427083333333333,
+          "ci_low": 0.85390625,
           "ci_high": 1.0,
           "n": 16
         },
@@ -1485,18 +1485,18 @@
             "seed_agreement": 1.0
           },
           "all_constraints_retained": {
-            "value": 0.5833333333333333,
-            "ci_low": 0.39583333333333326,
-            "ci_high": 0.7708333333333333,
+            "value": 0.6041666666666666,
+            "ci_low": 0.39583333333333337,
+            "ci_high": 0.7916666666666666,
             "n_items": 16,
-            "seed_agreement": 0.625
+            "seed_agreement": 0.6875
           },
           "constraint_retention": {
-            "value": 0.8402777777777778,
-            "ci_low": 0.7552083333333333,
-            "ci_high": 0.9201388888888888,
+            "value": 0.8472222222222222,
+            "ci_low": 0.7604166666666666,
+            "ci_high": 0.928862847222222,
             "n_items": 16,
-            "seed_agreement": 0.5
+            "seed_agreement": 0.5625
           },
           "rouge1_f": {
             "value": 0.6908732986394521,
@@ -1646,18 +1646,18 @@
             "seed_agreement": 1.0
           },
           "all_constraints_retained": {
-            "value": 0.6458333333333333,
-            "ci_low": 0.4375,
-            "ci_high": 0.8338541666666639,
+            "value": 0.6666666666666666,
+            "ci_low": 0.4583333333333333,
+            "ci_high": 0.875,
             "n_items": 16,
-            "seed_agreement": 0.75
+            "seed_agreement": 0.8125
           },
           "constraint_retention": {
-            "value": 0.8645833333333333,
-            "ci_low": 0.767361111111111,
-            "ci_high": 0.9479166666666667,
+            "value": 0.8715277777777777,
+            "ci_low": 0.7725260416666666,
+            "ci_high": 0.9565972222222222,
             "n_items": 16,
-            "seed_agreement": 0.6875
+            "seed_agreement": 0.75
           },
           "rouge1_f": {
             "value": 0.673583619421456,
@@ -1809,15 +1809,15 @@
             "seed_agreement": 1.0
           },
           "all_constraints_retained": {
-            "value": 0.8125,
-            "ci_low": 0.625,
+            "value": 0.875,
+            "ci_low": 0.6875,
             "ci_high": 1.0,
             "n_items": 16,
             "seed_agreement": 1.0
           },
           "constraint_retention": {
-            "value": 0.9427083333333333,
-            "ci_low": 0.8802083333333333,
+            "value": 0.9635416666666666,
+            "ci_low": 0.9114583333333333,
             "ci_high": 1.0,
             "n_items": 16,
             "seed_agreement": 1.0
@@ -1970,18 +1970,18 @@
             "seed_agreement": 0.9375
           },
           "all_constraints_retained": {
-            "value": 0.7291666666666666,
-            "ci_low": 0.5208333333333333,
-            "ci_high": 0.9166666666666666,
-            "n_items": 16,
-            "seed_agreement": 0.8125
-          },
-          "constraint_retention": {
-            "value": 0.9045138888888888,
-            "ci_low": 0.828125,
-            "ci_high": 0.9722222222222222,
+            "value": 0.7708333333333333,
+            "ci_low": 0.5833333333333333,
+            "ci_high": 0.9375,
             "n_items": 16,
             "seed_agreement": 0.75
+          },
+          "constraint_retention": {
+            "value": 0.9184027777777777,
+            "ci_low": 0.8524305555555556,
+            "ci_high": 0.974001736111111,
+            "n_items": 16,
+            "seed_agreement": 0.6875
           },
           "rouge1_f": {
             "value": 0.6926097084199132,

@@ -926,7 +926,7 @@ cpu_only,llama3.2-3b-q8,policy,POL-06,0.0,42,19.39967098983519,1.409912300005089
 • If you have two or more final exams scheduled at the same time or more than two exams on the same day, you can request to reschedule one exam.
 • To request a reschedule, submit your request to the instructor of the later exam at least 14 days before the first day of the final examination period.
 • The rescheduled exam must be offered during the final examination period."
-cpu_only,llama3.2-3b-q8,policy,POL-07,0.0,42,19.695886027738453,1.2586188999703154,83,False,,False,0.6666666666666666,,,,True,,False,,,,,,,,,3,,False,True,,,0.6055045871559633,0.42990654205607476,0.5871559633027522,,,,,,"Here is a summary of the policy in three concise bullet points:
+cpu_only,llama3.2-3b-q8,policy,POL-07,0.0,42,19.695886027738453,1.2586188999703154,83,False,,True,1.0,,,,True,,False,,,,,,,,,3,,False,True,,,0.6055045871559633,0.42990654205607476,0.5871559633027522,,,,,,"Here is a summary of the policy in three concise bullet points:
 
 • To receive an Incomplete grade, you must have completed at least 70% of the course work with a passing average.
 • You must complete the remaining work by the end of the following semester.
@@ -1928,7 +1928,7 @@ cpu_only,qwen2.5-7b-q4,policy,POL-05,0.0,42,12.904880673666634,1.389316499989945
 cpu_only,qwen2.5-7b-q4,policy,POL-06,0.0,42,12.98921547516837,1.3270667999750003,71,False,,False,0.6666666666666666,,,,True,,True,,,,,,,,,3,,True,True,,,0.7207207207207207,0.4587155963302752,0.6486486486486486,,,,,,"- Students can request to reschedule one exam if they have two finals at the same time or more than two finals on a single day.
 - Requests must be made to the instructor of the later exam at least 14 days before the first day of the final examination period.
 - The rescheduled exam must be taken during the final examination period."
-cpu_only,qwen2.5-7b-q4,policy,POL-07,0.0,42,12.858316752578528,1.3291840000310913,96,False,,False,0.6666666666666666,,,,True,,True,,,,,,,,,3,,True,True,,,0.5777777777777777,0.42105263157894735,0.5333333333333332,,,,,,"- An incomplete grade can be assigned only if a student has completed at least 70% of the course work with a passing average and is unable to finish due to documented circumstances beyond their control.
+cpu_only,qwen2.5-7b-q4,policy,POL-07,0.0,42,12.858316752578528,1.3291840000310913,96,False,,True,1.0,,,,True,,True,,,,,,,,,3,,True,True,,,0.5777777777777777,0.42105263157894735,0.5333333333333332,,,,,,"- An incomplete grade can be assigned only if a student has completed at least 70% of the course work with a passing average and is unable to finish due to documented circumstances beyond their control.
 - The remaining work must be completed by the end of the following semester; otherwise, the incomplete grade will automatically convert to an F.
 - Notification windows and appeal deadlines are not specified in this policy, but students should check with their instructor or academic advisor for any specific requirements."
 cpu_only,qwen2.5-7b-q4,policy,POL-08,0.0,42,12.992267744653683,1.3239171000313945,70,False,,True,1.0,,,,True,,True,,,,,,,,,3,,True,True,,,0.6055045871559633,0.29906542056074764,0.4954128440366972,,,,,,"- Courses can be withdrawn from without a grade until the end of the second week of the semester.
@@ -2725,7 +2725,7 @@ cpu_only,qwen2.5-7b-q8,policy,POL-05,0.0,42,9.527223866886949,2.9678019999992102
 cpu_only,qwen2.5-7b-q8,policy,POL-06,0.0,42,9.682400841548331,2.828097300021909,59,False,,False,0.3333333333333333,,,,True,,True,,,,,,,,,3,,True,True,,,0.5656565656565657,0.37113402061855666,0.42424242424242425,,,,,,"- Requests to reschedule one exam due to scheduling conflicts must be submitted at least 14 days before the first day of the final examination period.
 - The request should be made to the instructor of the later exam.
 - The rescheduled exam must take place during the final examination period."
-cpu_only,qwen2.5-7b-q8,policy,POL-07,0.0,42,9.617786750104173,2.7985855999868363,80,False,,False,0.6666666666666666,,,,True,,True,,,,,,,,,3,,True,True,,,0.6218487394957983,0.4273504273504274,0.5714285714285714,,,,,,"- A grade of Incomplete can only be assigned if a student has completed at least 70% of the course work with a passing average and is unable to finish due to documented exceptional circumstances.
+cpu_only,qwen2.5-7b-q8,policy,POL-07,0.0,42,9.617786750104173,2.7985855999868363,80,False,,True,1.0,,,,True,,True,,,,,,,,,3,,True,True,,,0.6218487394957983,0.4273504273504274,0.5714285714285714,,,,,,"- A grade of Incomplete can only be assigned if a student has completed at least 70% of the course work with a passing average and is unable to finish due to documented exceptional circumstances.
 - The remaining work must be completed by the end of the following semester.
 - If the Incomplete is not resolved by the end of the following semester, it will automatically convert to an F."
 cpu_only,qwen2.5-7b-q8,policy,POL-08,0.0,42,9.672587315984522,2.882361199997831,66,False,,True,1.0,,,,True,,True,,,,,,,,,3,,True,True,,,0.576923076923077,0.2549019607843137,0.4615384615384615,,,,,,"- Courses can be withdrawn from without a grade until the end of the second week of the semester.

@@ -72,7 +72,7 @@ The four tasks are drawn from university operations: extracting structured field
 On the laptop's CPU alone, decode throughput ranged from \TpsIntelNoGPUQwenQeight{} to \TpsIntelNoGPULlamaQfour{} tokens/s.
 Qwen~2.5~7B (\texttt{Q4\_K\_M}) produced schema-valid JSON for \SchemaQwenQfour\% of syllabi versus \SchemaLlamaQfour\% for Llama~3.2~3B, and classified \AccQwenQfour\% of tickets correctly versus \AccLlamaQfour\%.
 Human raters judged that \HirQwenQfour\% and \HirLlamaQfour\% of drafted replies, respectively, needed a substantive edit before sending.
-\todonote{Finish the abstract with one sentence on the main takeaway once all numbers are in.}
+The 7B model at 4-bit quantization met the structural requirements of every extraction and summarization item, quantization level made no significant difference to any pass/fail metric, and even without a GPU a reply was drafted in about \DraftSecIntelNoGPUQwenQfour{}\,s; human review remains necessary because both models occasionally invented contact details or altered a policy's conditions.
 We release the harness, data, and raw outputs.
 \end{abstract}
 
@@ -134,7 +134,8 @@ Table~\ref{tab:hardware} lists both machines.
 All inference runs through Ollama~\cite{ollama} (llama.cpp backend~\cite{llamacpp}) with default thread settings, a 4,096-token context, and one request at a time, the single-user setting of a staff member's computer.
 The Windows laptop has a discrete GPU, which Ollama uses by default; we therefore measure it twice, once with Ollama's default GPU offload and once with offload disabled (\texttt{num\_gpu}=0), which stands in for the many office machines without a usable GPU.
 Quality results are reported from the default configuration; the CPU-only run is used for speed.
-\todonote{Confirm whether the CPU-only outputs match the GPU outputs at $T=0$ and say so here.}
+Greedy decoding is reproducible within a configuration: a complete rerun with GPU offload produced byte-identical outputs for all \IdentRerun{} of \NRerunCompared{} items.
+Across configurations, \IdentGpuCpu{} of \NIdentCompared{} outputs were identical between the GPU and CPU-only runs; the rest, mostly long reply drafts, diverge after small floating-point differences change one token, and the headline metrics differ by at most about six percentage points.
 
 \begin{table}[t]
 \caption{Test machines (recorded automatically by the harness).}
@@ -186,6 +187,7 @@ Two inquiries per ticket class are used.
 Scoring field content separately from schema validity distinguishes a model that extracts the right numbers but writes \texttt{"45\%"} as a string from one that extracts the wrong numbers.
 \textbf{T2.} \emph{Format compliance}: exactly three bullets with nothing before or after them.
 \emph{Constraint retention}: the share of required constraints present in the summary, matched as whole phrases after normalizing number words and percent signs, so ``five business days'' matches ``5 business days'' but ``15 business days'' does not.
+After inspecting the first run we added inflected forms (``automatically convert to an F'') for one constraint whose verb form correct summaries changed; no constraint was removed or weakened.
 We also report ROUGE~\cite{lin2004rouge} and BERTScore~\cite{zhang2020bertscore} against author-written reference summaries, as secondary measures.
 \textbf{T3.} \emph{Strict accuracy}: the output, after trimming whitespace and punctuation, equals the gold label.
 Any other output counts as wrong.
@@ -220,7 +222,12 @@ The temperature study repeats T1--T3 at $T=0.2$ and $T=0.7$ with three seeds eac
 
 \subsection{Speed and memory (RQ1)}
 Table~\ref{tab:systems} summarizes the systems measurements.
-\todonote{Describe: decode speed on each machine relative to a comfortable reading speed; the cost of Q8 vs Q4 in speed and memory; cold-start load time; and whether p99 ITL shows stalls.}
+With GPU offload, the three configurations that fit in the laptop's 8\,GB of GPU memory decoded at \TpsIntelQwenQfour{} to \TpsIntelLlamaQfour{} tokens/s and returned the first token of a policy summary in \TtftIntelLlamaQeight{} to \TtftIntelQwenQfour{}\,s.
+Qwen~2.5~7B at \texttt{Q8\_0} (\SizeIntelQwenQeight{}\,GB) did not fit; Ollama split it between GPU and CPU and its decode rate fell to \TpsIntelQwenQeight{} tokens/s.
+Without the GPU, decode ranged from \TpsIntelNoGPUQwenQeight{} tokens/s (Qwen, \texttt{Q8\_0}) to \TpsIntelNoGPULlamaQfour{} tokens/s (Llama, \texttt{Q4\_K\_M}), and first-token latency rose to \TtftIntelNoGPULlamaQfour{}--\TtftIntelNoGPUQwenQeight{}\,s.
+Adults read silently at about 240 words per minute~\cite{brysbaert2019reading}, roughly five to six tokens per second, so every configuration generates text faster than a person reads it.
+For a whole reply the wait is what matters: the median draft took \DraftSecIntelQwenQfour{}\,s with Qwen \texttt{Q4\_K\_M} on the GPU and \DraftSecIntelNoGPUQwenQfour{}\,s on the CPU alone (\DraftSecIntelNoGPUQwenQeight{}\,s at \texttt{Q8\_0}).
+Generation did not stall: the 99th-percentile inter-token latency was at most 2.1 times the median with GPU offload and within 1.1 times on the CPU alone, where timing was steadiest.
 
 \begin{table*}[t]
 \caption{Systems measurements. Decode throughput is mean $\pm$ s.d. across requests. TTFT is the median for policy prompts. Inter-token latency is pooled over all extraction, policy and drafting requests.}
@@ -239,7 +246,9 @@ For policy summaries, \FormatLlamaQfour\% and \FormatQwenQfour\% of outputs met 
 Strict classification accuracy was \AccLlamaQfour\% and \AccQwenQfour\%; lenient matching raises these to \AccLenientLlamaQfour\% and \AccLenientQwenQfour\%.
 The gap between the two is the share of answers a downstream router could not parse.
 Drafts containing invented contact details made up \InventedLlamaQfour\% and \InventedQwenQfour\%.
-\todonote{Add the McNemar results (with Holm-adjusted p) for 3B vs 7B and Q4 vs Q8 from results/intel\_i7/summary.json, and say whether the Apple results agree.}
+Model size mattered more than anything else we varied.
+Of the \NSizeTests{} paired comparisons between a 3B and a 7B configuration on schema validity, format compliance and classification accuracy, \NSizeSig{} remained significant after Holm correction; the exception was classification accuracy between the two \texttt{Q8\_0} models ($p_{\text{Holm}}=\MaxHolmSize$).
+\todonote{Once the Apple M4 results are in, say whether they agree.}
 
 \begin{table*}[t]
 \caption{Task quality on the Intel workstation, $T=0$. Brackets are 95\% Wilson intervals. Str.~wt.: share of extractions with a grading weight written as a string. Constr.: mean share of required constraints retained.}
@@ -257,11 +266,18 @@ Drafts containing invented contact details made up \InventedLlamaQfour\% and \In
 
 \paragraph{Quantization.}
 With GPU offload, Qwen~2.5~7B at \texttt{Q8\_0} (\SizeIntelQwenQeight{}\,GB) did not fit entirely in GPU memory, and Ollama placed part of the model on the CPU; its decode speed (\TpsIntelQwenQeight{} versus \TpsIntelQwenQfour{} tokens/s at \texttt{Q4\_K\_M}) therefore reflects memory spill-over as much as quantization, and the CPU-only comparison is the clean one.
-\todonote{State whether Q8\_0 changed any pass/fail metric relative to Q4\_K\_M, using the paired tests. A null result here is a useful finding: it would mean the cheaper format is safe for these tasks.}
+Moving from \texttt{Q4\_K\_M} to \texttt{Q8\_0} changed no pass/fail metric significantly after correction (smallest $p_{\text{Holm}}=\MinHolmQuant$).
+The largest effect was on Llama's schema validity: \QuantLlamaSchemaImp{} syllabi became valid at \texttt{Q8\_0} and \QuantLlamaSchemaWor{} became invalid (uncorrected $p=\QuantLlamaSchemaP$), because the higher-precision model wrote weights as strings less often (\TypeErrLlamaQeight\% versus \TypeErrLlamaQfour\%).
+For Qwen, \texttt{Q8\_0} raised field accuracy from \FieldAccQwenQfour\% to \FieldAccQwenQeight\%, but it needs 1.7 to 1.8 times the memory and, on the CPU, decodes at \TpsIntelNoGPUQwenQeight{} rather than \TpsIntelNoGPUQwenQfour{} tokens/s.
+For these tasks the 4-bit format is the better default.
 
 \subsection{Sensitivity to temperature (RQ3)}
 Table~\ref{tab:temperature} shows how performance and run-to-run agreement change with sampling temperature.
-\todonote{Describe the trend; the practical question is whether any non-zero temperature is safe for structured tasks.}
+Sampling barely affected Qwen: at $T=0.2$ its three seeds gave the same schema-validity outcome on \TempAgreeSchemaQwenQfourLo\% of syllabi, and even at $T=0.7$ they agreed on \TempAgreeSchemaQwenQfourHi\% and accuracy stayed at \TempAccQwenQfourHi\%.
+The one cost was constraint retention: the share of summaries keeping every constraint fell from \AllRetainQwenQfour\% at $T=0$ to \TempAllRetainQwenQfourHi\% at $T=0.7$.
+Llama was unstable: at $T=0.7$ its seeds agreed on schema validity for only \TempAgreeSchemaLlamaQfourHi\% of syllabi.
+Its schema-valid rate rose from \SchemaLlamaQfour\% to \TempSchemaLlamaQfourHi\%, but only because sampling sometimes avoided the string-typed weights; that is luck, not reliability.
+Structured administrative tasks should use greedy decoding.
 
 \begin{table}[t]
 \caption{Effect of sampling temperature (\texttt{Q4\_K\_M}). For $T>0$, values average three seeds per item. Seed agreement is the share of items where all three seeds gave the same pass/fail outcome.}
@@ -283,12 +299,12 @@ Agreement between raters was $\kappa_w=\KappaQuality$ for the quality score and 
 \end{table}
 
 \subsection{Failure modes}
-Two failure patterns were already visible in a pilot run on an earlier version of the data.
-First, Llama~3.2~3B prefaced all six pilot policy summaries with a sentence such as ``Here is a summary of the university policy in three concise bullet points:'' despite an explicit instruction not to.
-A downstream system that publishes summaries automatically would have to strip such text.
-Second, in a summary of a FERPA directory-information policy, the same model's third bullet stated that ``there is no specific deadline'' for a nondisclosure request, contradicting the policy's 10-day window, which its own first bullet had stated correctly.
-Errors of this kind, which contradict the source, are the reason constraint retention and the human factual-error judgment are reported separately from fluency metrics.
-\todonote{Replace or extend with examples from the final run (see per\_item.csv).}
+Four patterns account for most errors.
+\emph{Preambles}: Llama began every policy summary with a sentence such as ``Here is a summary of the policy in three concise bullet points:'', despite an explicit instruction not to; a system that publishes summaries automatically would have to strip it.
+\emph{Changed conditions}: the finals policy lets a student reschedule if two exams fall at the same \emph{time}; Qwen \texttt{Q4\_K\_M} summarized this as two finals on the same \emph{day}, Llama as ``two or more'' exams on the same day, and Qwen \texttt{Q8\_0} dropped the condition altogether.
+Each changes who is eligible, and none would be caught by a fluency metric.
+\emph{Invented contacts}: Llama \texttt{Q4\_K\_M} invented addresses such as \texttt{disability.services@\allowbreak university.edu} and matching web links, and Qwen \texttt{Q4\_K\_M} once invented a support e-mail address, despite being told not to.
+\emph{Field boundaries}: Qwen \texttt{Q4\_K\_M} put the course title into the course-code field (``ENG 101: College Writing I'') for 5 of \NSyllabi{} syllabi, while Llama's misclassified tickets most often fell back to ``General Inquiries''.
 
 % ===========================================================================
 \section{Discussion}
@@ -323,7 +339,9 @@ Results may change with Ollama or model updates, which is why the harness record
 
 % ===========================================================================
 \section{Conclusion}
-\todonote{Two or three sentences answering RQ1--RQ4 directly, once results are final.}
+On a mid-range Windows laptop, open-weight SLMs are fast enough for administrative text work with a GPU and still usable without one, at roughly 13 to 26 tokens per second on the CPU at 4-bit quantization.
+The 7B model met the structural requirements of nearly every item, while the 3B model's failures were mostly formatting errors that downstream code would have to repair; 4-bit quantization cost nothing measurable in quality, and greedy decoding should be the default.
+\todonote{Add the human-evaluation finding (HIR) and the Apple M4 result in one sentence each.}
 
 \section*{Data and Code Availability}
 The harness, task data, prompts, raw outputs, rating sheets and the scripts that generate every table in this paper are available at \url{https://github.com/MohdIliyas/local-slm-highered-benchmark}.

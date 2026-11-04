@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -81,6 +82,77 @@ def load_manifest(machine):
     return json.loads(ms[-1].read_text(encoding="utf-8")) if ms else None
 
 
+def _raw_calls(machine, preset):
+    p = ROOT / "results" / machine / preset / "raw.jsonl"
+    if not p.exists():
+        return {}
+    out = {}
+    for line in p.read_text(encoding="utf-8").splitlines():
+        r = json.loads(line)
+        if r.get("kind") == "call" and not r.get("error"):
+            out[(r["model_key"], r["task"], r["item_id"], r["temperature"], r["seed"])] = r
+    return out
+
+
+def extra_macros(sums, primary_machine) -> list[str]:
+    """Numbers the prose cites that are not in a table, computed from raw logs."""
+    import statistics as st
+    L = ["% ---- prose numbers (from raw logs)"]
+    for machine, preset in [("intel_i7", "main"), ("intel_i7_cpu", "cpu_only"), ("apple_m4", "main")]:
+        mm = MACHINE_MACRO[machine]
+        calls = _raw_calls(machine, preset)
+        sy = get(sums.get(machine) or {}, "systems") or {}
+        for model in MODELS:
+            k = f"{mm}{MACRO[model]}"
+            w = [r["wall_s"] for key, r in calls.items() if key[0] == model and key[1] == "drafting"]
+            L.append(rf"\newcommand{{\DraftSec{k}}}{{{num(st.median(w)) if w else TBD}}}")
+            L.append(rf"\newcommand{{\Ttft{k}}}{{{num(get(sy, model, 'ttft_s_by_task', 'policy', 'p50'), '{:.2f}')}}}")
+    gpu, cpu = _raw_calls("intel_i7", "main"), _raw_calls("intel_i7_cpu", "cpu_only")
+    common = [k for k in gpu if k in cpu]
+    L.append(rf"\newcommand{{\IdentGpuCpu}}{{{sum(gpu[k]['text'] == cpu[k]['text'] for k in common) if common else TBD}}}")
+    L.append(rf"\newcommand{{\NIdentCompared}}{{{len(common) if common else TBD}}}")
+    old = {}
+    ap = ROOT / "results" / "archive" / "intel_i7_main_run1" / "raw.jsonl"
+    if ap.exists():
+        for line in ap.read_text(encoding="utf-8").splitlines():
+            r = json.loads(line)
+            if r.get("kind") == "call":
+                old[(r["model_key"], r["task"], r["item_id"], r["temperature"], r["seed"])] = r
+    rc = [k for k in gpu if k in old]
+    L.append(rf"\newcommand{{\IdentRerun}}{{{sum(gpu[k]['text'] == old[k]['text'] for k in rc) if rc else TBD}}}")
+    L.append(rf"\newcommand{{\NRerunCompared}}{{{len(rc) if rc else TBD}}}")
+    pt = get(sums.get(primary_machine) or {}, "paired_tests") or {}
+    def test(task, key, a, b):
+        return pt.get(f"{task}:{key}:{a}_vs_{b}") or {}
+    t = test("extraction", "schema_valid", "llama3.2-3b-q4", "llama3.2-3b-q8")
+    L += [rf"\newcommand{{\QuantLlamaSchemaImp}}{{{t.get('b01', TBD)}}}",
+          rf"\newcommand{{\QuantLlamaSchemaWor}}{{{t.get('b10', TBD)}}}",
+          rf"\newcommand{{\QuantLlamaSchemaP}}{{{num(t.get('p'), '{:.3f}')}}}",
+          rf"\newcommand{{\QuantLlamaSchemaHolm}}{{{num(t.get('p_holm'), '{:.3f}')}}}"]
+    quant = [v.get("p_holm") for k, v in pt.items()
+             if k.split(":")[2] in ("llama3.2-3b-q4_vs_llama3.2-3b-q8", "qwen2.5-7b-q4_vs_qwen2.5-7b-q8")]
+    L.append(rf"\newcommand{{\MinHolmQuant}}{{{num(min(quant), '{:.2f}') if quant else TBD}}}")
+    size = [v.get("p_holm") for k, v in pt.items()
+            if k.split(":")[0] in ("extraction", "policy", "classification")
+            and k.split(":")[2].startswith("llama") and "_vs_qwen" in k.split(":")[2]]
+    L.append(rf"\newcommand{{\MaxHolmSize}}{{{num(max(size), '{:.3f}') if size else TBD}}}")
+    L.append(rf"\newcommand{{\NSizeSig}}{{{sum(p < 0.05 for p in size) if size else TBD}}}")
+    L.append(rf"\newcommand{{\NSizeTests}}{{{len(size) if size else TBD}}}")
+    temp = get(sums.get(primary_machine) or {}, "temperature") or {}
+    for model in ("llama3.2-3b-q4", "qwen2.5-7b-q4"):
+        for T, tag in (("0.2", "Lo"), ("0.7", "Hi")):
+            tb = get(temp, model, T) or {}
+            k = f"{MACRO[model]}{tag}"
+            sa = get(tb, "extraction", "schema_valid", "seed_agreement")
+            ca = get(tb, "classification", "accuracy_strict", "seed_agreement")
+            L += [rf"\newcommand{{\TempSchema{k}}}{{{pct(get(tb, 'extraction', 'schema_valid'))}}}",
+                  rf"\newcommand{{\TempAgreeSchema{k}}}{{{num(sa * 100 if sa is not None else None, '{:.0f}')}}}",
+                  rf"\newcommand{{\TempAcc{k}}}{{{pct(get(tb, 'classification', 'accuracy_strict'))}}}",
+                  rf"\newcommand{{\TempAgreeAcc{k}}}{{{num(ca * 100 if ca is not None else None, '{:.0f}')}}}",
+                  rf"\newcommand{{\TempAllRetain{k}}}{{{pct(get(tb, 'policy', 'all_constraints_retained'))}}}"]
+    return L
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--machines", nargs="+", default=["intel_i7", "intel_i7_cpu", "apple_m4"])
@@ -108,7 +180,11 @@ def main():
         man = mans.get(machine) or {}
         L.append(rf"\newcommand{{\{mm}CPU}}{{{tex_escape(man['cpu']) if man.get('cpu') else TBD}}}")
         L.append(rf"\newcommand{{\{mm}RAM}}{{{man['ram_total_gb'] if man.get('ram_total_gb') else TBD}}}")
-        gpus = [g for g in (man.get("gpus") or []) if g.startswith("NVIDIA")] or (man.get("gpus") or [])
+        raw_gpus = man.get("gpus") or []
+        smi = [g.split(":", 1)[-1].strip() if g.startswith("nvidia-smi:") else g.replace("NVIDIA NVIDIA", "NVIDIA", 1)
+               for g in raw_gpus if g.startswith(("nvidia-smi:", "NVIDIA"))]
+        gpus = [re.sub(r",\s*(\d+)\s*MiB", lambda m: f", {round(int(m.group(1)) / 1024)} GB", g) for g in smi] \
+            or [g.removeprefix("adapter: ") for g in raw_gpus]
         L.append(rf"\newcommand{{\{mm}GPU}}{{{tex_escape('; '.join(gpus)) if gpus else TBD}}}")
         L.append(rf"\newcommand{{\{mm}OS}}{{{tex_escape(man['os']) if man.get('os') else TBD}}}")
         L.append(rf"\newcommand{{\{mm}Ollama}}{{{tex_escape(man['ollama_version']) if man.get('ollama_version') else TBD}}}")
@@ -149,6 +225,7 @@ def main():
     for name, key in [("CostManual", "minutes_manual_draft"), ("CostReview", "minutes_review_ok_draft"),
                       ("CostFix", "minutes_fix_flagged_draft"), ("CostVolume", "monthly_ticket_volume")]:
         L.append(rf"\newcommand{{\{name}}}{{{cs[key] if key in cs else TBD}}}")
+    L += extra_macros(sums, args.primary)
     (GEN / "macros.tex").write_text("\n".join(L) + "\n", encoding="utf-8")
 
     # ---------------------------------------------------------------- systems table

@@ -8,7 +8,7 @@
 % ---- values
 \newcommand{\IntelCPU}{Intel Core 7 240H}
 \newcommand{\IntelRAM}{31.7}
-\newcommand{\IntelGPU}{NVIDIA NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB}
+\newcommand{\IntelGPU}{NVIDIA GeForce RTX 5060 Laptop GPU, 8 GB}
 \newcommand{\IntelOS}{Windows-11-10.0.26300-SP0}
 \newcommand{\IntelOllama}{0.40.6}
 \newcommand{\TpsIntelLlamaQfour}{100.3}
@@ -29,7 +29,7 @@
 \newcommand{\SizeIntelQwenQeight}{8.0}
 \newcommand{\IntelNoGPUCPU}{Intel Core 7 240H}
 \newcommand{\IntelNoGPURAM}{31.7}
-\newcommand{\IntelNoGPUGPU}{NVIDIA NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB}
+\newcommand{\IntelNoGPUGPU}{NVIDIA GeForce RTX 5060 Laptop GPU, 8 GB}
 \newcommand{\IntelNoGPUOS}{Windows-11-10.0.26300-SP0}
 \newcommand{\IntelNoGPUOllama}{0.40.6}
 \newcommand{\TpsIntelNoGPULlamaQfour}{26.1}
@@ -88,8 +88,8 @@
 \newcommand{\WrapLlamaQeight}{0}
 \newcommand{\FormatLlamaQeight}{0}
 \newcommand{\PreambleLlamaQeight}{0}
-\newcommand{\RetainLlamaQeight}{88}
-\newcommand{\AllRetainLlamaQeight}{62}
+\newcommand{\RetainLlamaQeight}{90}
+\newcommand{\AllRetainLlamaQeight}{69}
 \newcommand{\AccLlamaQeight}{66}
 \newcommand{\AccLenientLlamaQeight}{66}
 \newcommand{\MacroFoneLlamaQeight}{0.61}
@@ -101,8 +101,8 @@
 \newcommand{\WrapQwenQfour}{83}
 \newcommand{\FormatQwenQfour}{100}
 \newcommand{\PreambleQwenQfour}{100}
-\newcommand{\RetainQwenQfour}{94}
-\newcommand{\AllRetainQwenQfour}{81}
+\newcommand{\RetainQwenQfour}{96}
+\newcommand{\AllRetainQwenQfour}{88}
 \newcommand{\AccQwenQfour}{88}
 \newcommand{\AccLenientQwenQfour}{88}
 \newcommand{\MacroFoneQwenQfour}{0.87}
@@ -114,8 +114,8 @@
 \newcommand{\WrapQwenQeight}{25}
 \newcommand{\FormatQwenQeight}{88}
 \newcommand{\PreambleQwenQeight}{100}
-\newcommand{\RetainQwenQeight}{92}
-\newcommand{\AllRetainQwenQeight}{81}
+\newcommand{\RetainQwenQeight}{94}
+\newcommand{\AllRetainQwenQeight}{88}
 \newcommand{\AccQwenQeight}{86}
 \newcommand{\AccLenientQwenQeight}{86}
 \newcommand{\MacroFoneQwenQeight}{0.85}
@@ -128,3 +128,60 @@
 \newcommand{\CostReview}{1.5}
 \newcommand{\CostFix}{4.0}
 \newcommand{\CostVolume}{1000}
+% ---- prose numbers (from raw logs)
+\newcommand{\DraftSecIntelLlamaQfour}{3.3}
+\newcommand{\TtftIntelLlamaQfour}{0.06}
+\newcommand{\DraftSecIntelLlamaQeight}{4.0}
+\newcommand{\TtftIntelLlamaQeight}{0.05}
+\newcommand{\DraftSecIntelQwenQfour}{5.5}
+\newcommand{\TtftIntelQwenQfour}{0.08}
+\newcommand{\DraftSecIntelQwenQeight}{15.2}
+\newcommand{\TtftIntelQwenQeight}{0.19}
+\newcommand{\DraftSecIntelNoGPULlamaQfour}{13.6}
+\newcommand{\TtftIntelNoGPULlamaQfour}{0.61}
+\newcommand{\DraftSecIntelNoGPULlamaQeight}{17.9}
+\newcommand{\TtftIntelNoGPULlamaQeight}{1.24}
+\newcommand{\DraftSecIntelNoGPUQwenQfour}{22.1}
+\newcommand{\TtftIntelNoGPUQwenQfour}{1.34}
+\newcommand{\DraftSecIntelNoGPUQwenQeight}{33.1}
+\newcommand{\TtftIntelNoGPUQwenQeight}{2.86}
+\newcommand{\DraftSecAppleLlamaQfour}{\tbd{}}
+\newcommand{\TtftAppleLlamaQfour}{\tbd{}}
+\newcommand{\DraftSecAppleLlamaQeight}{\tbd{}}
+\newcommand{\TtftAppleLlamaQeight}{\tbd{}}
+\newcommand{\DraftSecAppleQwenQfour}{\tbd{}}
+\newcommand{\TtftAppleQwenQfour}{\tbd{}}
+\newcommand{\DraftSecAppleQwenQeight}{\tbd{}}
+\newcommand{\TtftAppleQwenQeight}{\tbd{}}
+\newcommand{\IdentGpuCpu}{372}
+\newcommand{\NIdentCompared}{480}
+\newcommand{\IdentRerun}{480}
+\newcommand{\NRerunCompared}{480}
+\newcommand{\QuantLlamaSchemaImp}{8}
+\newcommand{\QuantLlamaSchemaWor}{0}
+\newcommand{\QuantLlamaSchemaP}{0.008}
+\newcommand{\QuantLlamaSchemaHolm}{0.094}
+\newcommand{\MinHolmQuant}{0.09}
+\newcommand{\MaxHolmSize}{0.058}
+\newcommand{\NSizeSig}{11}
+\newcommand{\NSizeTests}{12}
+\newcommand{\TempSchemaLlamaQfourLo}{17}
+\newcommand{\TempAgreeSchemaLlamaQfourLo}{83}
+\newcommand{\TempAccLlamaQfourLo}{56}
+\newcommand{\TempAgreeAccLlamaQfourLo}{88}
+\newcommand{\TempAllRetainLlamaQfourLo}{60}
+\newcommand{\TempSchemaLlamaQfourHi}{31}
+\newcommand{\TempAgreeSchemaLlamaQfourHi}{42}
+\newcommand{\TempAccLlamaQfourHi}{57}
+\newcommand{\TempAgreeAccLlamaQfourHi}{73}
+\newcommand{\TempAllRetainLlamaQfourHi}{67}
+\newcommand{\TempSchemaQwenQfourLo}{100}
+\newcommand{\TempAgreeSchemaQwenQfourLo}{100}
+\newcommand{\TempAccQwenQfourLo}{86}
+\newcommand{\TempAgreeAccQwenQfourLo}{97}
+\newcommand{\TempAllRetainQwenQfourLo}{88}
+\newcommand{\TempSchemaQwenQfourHi}{99}
+\newcommand{\TempAgreeSchemaQwenQfourHi}{96}
+\newcommand{\TempAccQwenQfourHi}{87}
+\newcommand{\TempAgreeAccQwenQfourHi}{95}
+\newcommand{\TempAllRetainQwenQfourHi}{77}
