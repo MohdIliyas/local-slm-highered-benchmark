@@ -1,0 +1,100 @@
+{
+  "timestamp_utc": "2026-11-03T21:46:17.304709+00:00",
+  "os": "Windows-11-10.0.26300-SP0",
+  "machine_arch": "AMD64",
+  "cpu": "Intel(R) Core(TM) 7 240H",
+  "gpus": [
+    "NVIDIA NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB",
+    "adapter: Intel(R) Graphics",
+    "adapter: NVIDIA GeForce RTX 5060 Laptop GPU"
+  ],
+  "python": "3.15.2",
+  "git_commit": "b8c326c1b00b0a3092723acc8b7047a1f72dadbf",
+  "git_dirty": true,
+  "cores_physical": 10,
+  "cores_logical": 16,
+  "ram_total_gb": 31.7,
+  "ollama_version": "0.40.6",
+  "models": {
+    "llama3.2:3b-instruct-q4_K_M": {
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q4_K_M"
+      },
+      "model_info_keys": 29
+    },
+    "llama3.2:3b-instruct-q8_0": {
+      "digest": "e410b836fe6132b8c5e09bd83156dab0ce2c19f371e0bce2d77e993f8a65241a",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q8_0"
+      },
+      "model_info_keys": 29
+    },
+    "qwen2.5:7b-instruct-q4_K_M": {
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M"
+      },
+      "model_info_keys": 33
+    },
+    "qwen2.5:7b-instruct-q8_0": {
+      "digest": "2d9500c948416525a044cc51a47a1ef93deb045aebf2f61e8d6b3ac3a3cf2290",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q8_0"
+      },
+      "model_info_keys": 33
+    }
+  },
+  "machine": "intel_i7_cpu",
+  "preset": "cpu_only",
+  "preset_config": {
+    "description": "Same as main but with GPU offload disabled (num_gpu=0), to measure CPU-only inference on a machine that has a GPU. Run with --machine intel_i7_cpu.",
+    "models": [
+      "llama3.2-3b-q4",
+      "llama3.2-3b-q8",
+      "qwen2.5-7b-q4",
+      "qwen2.5-7b-q8"
+    ],
+    "tasks": [
+      "extraction",
+      "policy",
+      "classification",
+      "drafting"
+    ],
+    "temperatures": [
+      0.0
+    ],
+    "seeds": [
+      42
+    ],
+    "num_gpu": 0
+  }
+}
