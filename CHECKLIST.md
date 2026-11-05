@@ -4,7 +4,7 @@ Work through this in order. Each step lists who does it.
 
 ## 1. Run the experiments
 - [ ] **Mohammed:** on the i7, run `python tests/test_pipeline.py`, then the `smoke`, `main`, and `temperature` presets, then `score.py`. See the README.
-- [ ] **Karthik:** do the same on the M4, following `docs/mac_benchmarking_instructions.md`.
+- [ ] **Karthik:** do the same on the M2 Max, following `docs/mac_benchmarking_instructions.md`.
 - [ ] Check `results/<machine>/per_item.csv` for anything odd: empty outputs, `truncated = True`, or errors.
 
 ## 2. Approve the reference summaries

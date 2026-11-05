@@ -4,7 +4,7 @@
 Usage:
     python scripts/run_experiments.py --machine intel_i7 --preset smoke
     python scripts/run_experiments.py --machine intel_i7 --preset main
-    python scripts/run_experiments.py --machine apple_m4 --preset main
+    python scripts/run_experiments.py --machine apple_m2max --preset main
 
 Raw output: results/<machine>/<preset>/raw.jsonl (one JSON object per call).
 The run is resumable: rerunning skips calls already in raw.jsonl, so a crash
@@ -30,7 +30,7 @@ def call_key(model_key, task, item_id, temp, seed):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--machine", required=True, help="label, e.g. intel_i7 or apple_m4")
+    ap.add_argument("--machine", required=True, help="label, e.g. intel_i7 or apple_m2max")
     ap.add_argument("--preset", default="main")
     ap.add_argument("--endpoint", default=DEFAULT_ENDPOINT)
     ap.add_argument("--config", default=str(ROOT / "configs" / "experiments.json"))

@@ -9,7 +9,7 @@ Benchmark harness, data, and manuscript for evaluating open-weight **small langu
 | Ticket classification | 64 tickets (8 classes) | Output is exactly the correct category name |
 | Reply drafting | 16 inquiries | Rated blind by two people; no invented contact details |
 
-The models are Llama 3.2 3B and Qwen 2.5 7B, each at `Q4_K_M` and `Q8_0`, run through Ollama. The machines are an Intel Core i7 workstation (CPU only) and an Apple M4 Mac.
+The models are Llama 3.2 3B and Qwen 2.5 7B, each at `Q4_K_M` and `Q8_0`, run through Ollama. The machines are an Intel Core i7 workstation (CPU only) and an Apple M2 Max Mac.
 
 All task data are **synthetic** and written for this study (`data/tasks/`). No real student information is used or stored.
 
@@ -34,7 +34,7 @@ python scripts/make_paper_tables.py
 
 Runs are resumable. If one stops partway, run the same command again, and calls that already finished are skipped.
 
-Use `--machine apple_m4` on the Mac. Step-by-step instructions are in [`docs/mac_benchmarking_instructions.md`](docs/mac_benchmarking_instructions.md).
+Use `--machine apple_m2max` on the Mac. Step-by-step instructions are in [`docs/mac_benchmarking_instructions.md`](docs/mac_benchmarking_instructions.md).
 
 ## Human evaluation
 

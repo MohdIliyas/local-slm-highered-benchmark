@@ -67,7 +67,7 @@
 \begin{abstract}
 Universities want to automate routine administrative text work, but sending student records to commercial cloud models raises disclosure questions under FERPA.
 Running small language models (SLMs) on hardware the institution already owns avoids that disclosure, if the models are fast enough and good enough.
-We benchmark two open-weight SLMs, Llama~3.2~3B and Qwen~2.5~7B, each at two quantization levels (\texttt{Q4\_K\_M} and \texttt{Q8\_0}), on a Windows laptop (with and without its GPU) and an Apple M4 Mac.
+We benchmark two open-weight SLMs, Llama~3.2~3B and Qwen~2.5~7B, each at two quantization levels (\texttt{Q4\_K\_M} and \texttt{Q8\_0}), on a Windows laptop (with and without its GPU) and an Apple M2 Max laptop.
 The four tasks are drawn from university operations: extracting structured fields from syllabi (\NSyllabi{} documents), summarizing policies without losing deadlines or thresholds (\NPolicies{} policies, \NConstraints{} required constraints), routing helpdesk tickets into eight categories (\NTickets{} tickets), and drafting replies to students (\NDrafting{} inquiries, rated blind by two people).
 On the laptop's CPU alone, decode throughput ranged from \TpsIntelNoGPUQwenQeight{} to \TpsIntelNoGPULlamaQfour{} tokens/s.
 Qwen~2.5~7B (\texttt{Q4\_K\_M}) produced schema-valid JSON for \SchemaQwenQfour\% of syllabi versus \SchemaLlamaQfour\% for Llama~3.2~3B, and classified \AccQwenQfour\% of tickets correctly versus \AccLlamaQfour\%.
@@ -248,7 +248,7 @@ The gap between the two is the share of answers a downstream router could not pa
 Drafts containing invented contact details made up \InventedLlamaQfour\% and \InventedQwenQfour\%.
 Model size mattered more than anything else we varied.
 Of the \NSizeTests{} paired comparisons between a 3B and a 7B configuration on schema validity, format compliance and classification accuracy, \NSizeSig{} remained significant after Holm correction; the exception was classification accuracy between the two \texttt{Q8\_0} models ($p_{\text{Holm}}=\MaxHolmSize$).
-\todonote{Once the Apple M4 results are in, say whether they agree.}
+\todonote{Once the Apple M2 Max results are in, say whether they agree.}
 
 \begin{table*}[t]
 \caption{Task quality on the Intel workstation, $T=0$. Brackets are 95\% Wilson intervals. Str.~wt.: share of extractions with a grading weight written as a string. Constr.: mean share of required constraints retained.}
@@ -341,7 +341,7 @@ Results may change with Ollama or model updates, which is why the harness record
 \section{Conclusion}
 On a mid-range Windows laptop, open-weight SLMs are fast enough for administrative text work with a GPU and still usable without one, at roughly 13 to 26 tokens per second on the CPU at 4-bit quantization.
 The 7B model met the structural requirements of nearly every item, while the 3B model's failures were mostly formatting errors that downstream code would have to repair; 4-bit quantization cost nothing measurable in quality, and greedy decoding should be the default.
-\todonote{Add the human-evaluation finding (HIR) and the Apple M4 result in one sentence each.}
+\todonote{Add the human-evaluation finding (HIR) and the Apple M2 Max result in one sentence each.}
 
 \section*{Data and Code Availability}
 The harness, task data, prompts, raw outputs, rating sheets and the scripts that generate every table in this paper are available at \url{https://github.com/MohdIliyas/local-slm-highered-benchmark}.

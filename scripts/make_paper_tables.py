@@ -2,7 +2,7 @@
 """Write paper/generated/*.tex from results. Never type a number into main.tex.
 
 Usage:
-    python scripts/make_paper_tables.py                       # intel_i7 + apple_m4
+    python scripts/make_paper_tables.py                       # intel_i7 + apple_m2max
     python scripts/make_paper_tables.py --machines intel_i7   # one machine
 
 Anything not yet measured renders as \\tbd (a red [TBD] in the PDF), so a
@@ -27,10 +27,10 @@ PRETTY = {"llama3.2-3b-q4": r"Llama 3.2 3B & \texttt{Q4\_K\_M}",
           "qwen2.5-7b-q8": r"Qwen 2.5 7B & \texttt{Q8\_0}"}
 MACRO = {"llama3.2-3b-q4": "LlamaQfour", "llama3.2-3b-q8": "LlamaQeight",
          "qwen2.5-7b-q4": "QwenQfour", "qwen2.5-7b-q8": "QwenQeight"}
-MACHINE_MACRO = {"intel_i7": "Intel", "intel_i7_cpu": "IntelNoGPU", "apple_m4": "Apple"}
+MACHINE_MACRO = {"intel_i7": "Intel", "intel_i7_cpu": "IntelNoGPU", "apple_m2max": "Apple"}
 MACHINE_LABEL = {"intel_i7": "Windows laptop, GPU offload (Ollama default)",
                  "intel_i7_cpu": "Windows laptop, CPU only (\\texttt{num\\_gpu}=0)",
-                 "apple_m4": "Apple M4 (Metal)"}
+                 "apple_m2max": "Apple M2 Max (Metal)"}
 TBD = r"\tbd{}"
 
 
@@ -98,7 +98,7 @@ def extra_macros(sums, primary_machine) -> list[str]:
     """Numbers the prose cites that are not in a table, computed from raw logs."""
     import statistics as st
     L = ["% ---- prose numbers (from raw logs)"]
-    for machine, preset in [("intel_i7", "main"), ("intel_i7_cpu", "cpu_only"), ("apple_m4", "main")]:
+    for machine, preset in [("intel_i7", "main"), ("intel_i7_cpu", "cpu_only"), ("apple_m2max", "main")]:
         mm = MACHINE_MACRO[machine]
         calls = _raw_calls(machine, preset)
         sy = get(sums.get(machine) or {}, "systems") or {}
@@ -155,7 +155,7 @@ def extra_macros(sums, primary_machine) -> list[str]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--machines", nargs="+", default=["intel_i7", "intel_i7_cpu", "apple_m4"])
+    ap.add_argument("--machines", nargs="+", default=["intel_i7", "intel_i7_cpu", "apple_m2max"])
     ap.add_argument("--primary", default="intel_i7", help="machine whose quality results the paper reports")
     args = ap.parse_args()
     GEN.mkdir(parents=True, exist_ok=True)

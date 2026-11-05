@@ -1,7 +1,7 @@
-# Running the benchmark on the Apple M4 Mac
+# Running the benchmark on the Apple M2 Max
 
 **For:** Karthik
-**Time needed:** about 10 minutes of setup. The full run is unattended and can take a few hours. Leave the Mac plugged in, with sleep turned off.
+**Time needed:** about 10 minutes of setup. The full run is unattended and takes roughly 1–2 hours. Only the `main` preset is needed on the Mac; the temperature study is run on the Windows laptop. Leave the Mac plugged in, with sleep turned off.
 
 Please follow these steps in order. Every command is run in Terminal from inside the repository folder.
 
@@ -54,15 +54,14 @@ These steps make the timing measurements fair:
 ## 6. Run
 
 ```bash
-python scripts/run_experiments.py --machine apple_m4 --preset smoke
+python scripts/run_experiments.py --machine apple_m2max --preset smoke
 ```
 
 The smoke run takes about 5 minutes. If it finishes without errors, start the real runs:
 
 ```bash
-caffeinate -i python scripts/run_experiments.py --machine apple_m4 --preset main
-caffeinate -i python scripts/run_experiments.py --machine apple_m4 --preset temperature
-python scripts/score.py --machine apple_m4
+caffeinate -i python scripts/run_experiments.py --machine apple_m2max --preset main
+python scripts/score.py --machine apple_m2max
 ```
 
 If anything interrupts a run, run the same command again. It picks up where it stopped.
@@ -70,10 +69,10 @@ If anything interrupts a run, run the same command again. It picks up where it s
 ## 7. Send the results back
 
 ```bash
-git checkout -b apple-m4-results
-git add results/apple_m4
-git commit -m "Apple M4 benchmark results"
-git push -u origin apple-m4-results
+git checkout -b apple-m2max-results
+git add results/apple_m2max
+git commit -m "Apple M2 Max benchmark results"
+git push -u origin apple-m2max-results
 ```
 
 Then open a pull request on GitHub. Please **don't** push directly to `main`, and never use `--force`. A branch keeps your results safe even if someone else pushes at the same time.
